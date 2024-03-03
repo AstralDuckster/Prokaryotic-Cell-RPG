@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1708433186
+::res://::1709474145
 icon.svg::CompressedTexture2D::754348935821895696::1708172603::1708172614::1::::<><>::
 ::res://ART/::1708172718
 ::res://ART/Legacy-Fantasy - High Forest 2.3/::1708172711
@@ -67,8 +67,8 @@ Golden-Tree.png::CompressedTexture2D::1753661733434083892::1708172679::170817272
 Green-Tree.png::CompressedTexture2D::7407506876880890868::1708172679::1708172722::1::::<><>::
 Red-Tree.png::CompressedTexture2D::6300193828204992584::1708172679::1708172722::1::::<><>::
 Yellow-Tree.png::CompressedTexture2D::5939447558542868095::1708172679::1708172722::1::::<><>::
-::res://Characters/::1708430789
-player.gd::GDScript::-1::1708174578::0::1::::<>CharacterBody2D<>::
-player.tscn::PackedScene::432485537501280826::1708430789::0::1::::<><>::uid://dsf3fuby4flv8::::res://ART/Legacy-Fantasy - High Forest 2.3/Character/Idle/Idle-Sheet.png<>res://Characters/player.gd<>uid://bwcsii503316l::::res://ART/Legacy-Fantasy - High Forest 2.3/Character/Run/Run-Sheet.png<>uid://dlm5ntiro1phm::::res://ART/Legacy-Fantasy - High Forest 2.3/Character/Jumlp-All/Jump-All-Sheet.png<>uid://nlybobr2ata1::::res://ART/Legacy-Fantasy - High Forest 2.3/Character/Jump-End/Jump-End-Sheet.png<>uid://byoiqy4snkf4o::::res://ART/Legacy-Fantasy - High Forest 2.3/Character/Jump-Start/Jump-Start-Sheet.png
-::res://Levels/::1708430788
-test_level.tscn::PackedScene::1404962825927599650::1708430788::0::1::::<><>::uid://d2cynp4lihd73::::res://ART/Legacy-Fantasy - High Forest 2.3/Assets/Tiles.png<>uid://gfq8dq8y8dag::::res://Characters/player.tscn
+::res://Characters/::1709474134
+player.gd::GDScript::-1::1709474134::0::1::::<>CharacterBody2D<>::
+player.tscn::PackedScene::432485537501280826::1709474113::0::1::::<><>::uid://dsf3fuby4flv8::::res://ART/Legacy-Fantasy - High Forest 2.3/Character/Idle/Idle-Sheet.png<>res://Characters/player.gd<>uid://bwcsii503316l::::res://ART/Legacy-Fantasy - High Forest 2.3/Character/Run/Run-Sheet.png<>uid://dlm5ntiro1phm::::res://ART/Legacy-Fantasy - High Forest 2.3/Character/Jumlp-All/Jump-All-Sheet.png<>uid://nlybobr2ata1::::res://ART/Legacy-Fantasy - High Forest 2.3/Character/Jump-End/Jump-End-Sheet.png<>uid://byoiqy4snkf4o::::res://ART/Legacy-Fantasy - High Forest 2.3/Character/Jump-Start/Jump-Start-Sheet.png
+::res://Levels/::1709474134
+test_level.tscn::PackedScene::1404962825927599650::1709474133::0::1::::<><>::uid://d2cynp4lihd73::::res://ART/Legacy-Fantasy - High Forest 2.3/Assets/Tiles.png<>uid://gfq8dq8y8dag::::res://Characters/player.tscn
