@@ -3,11 +3,13 @@ extends CharacterBody2D
 const SPEED = 300.0
 const JUMP = -200.0
 const GRAVITY = 700
-const JUMP_VELOCITY = 50
+const JUMP_VELOCITY = 100
+const DOUBLE_JUMP_VELOCITY = -200
 
 enum State { Idle, Run, Jump }
 
 var current_state
+var has_double_jumped: bool = false
 
 func _ready():
 	current_state = State.Idle
@@ -27,6 +29,8 @@ func _physics_process(delta):
 func player_falling(delta):
 	if !is_on_floor():
 		velocity.y += GRAVITY * delta
+	else:
+		has_double_jumped = false
 
 func player_idle(delta):
 	if is_on_floor():
@@ -49,14 +53,13 @@ func player_run(delta):
 
 func player_jump(delta):
 	if Input.is_action_just_pressed("jump"):
-		current_state = State.Jump
 		if is_on_floor():
 			velocity.y = JUMP
+			current_state = State.Jump
 		
-		
-	if !is_on_floor() and current_state == State.Jump:
-		var direction = Input.get_axis("left", "right")
-		velocity.x += direction * JUMP_VELOCITY * delta
+		elif not has_double_jumped:
+			velocity.y = DOUBLE_JUMP_VELOCITY
+			has_double_jumped = true
 		
 func player_animations():
 	if current_state == State.Idle:
@@ -69,4 +72,5 @@ func player_animations():
 
 func _on_hurtbox_body_entered(body : Node2D):
 	if body.is_in_group("Enemy"):
-		print("Enemy entered")
+		print("Enemy entered", body.damage_amount)
+		HealthManager.decrease_health(1)
