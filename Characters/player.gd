@@ -1,9 +1,9 @@
 extends CharacterBody2D
 
 const SPEED = 300.0
-const JUMP = -300.0
+const JUMP = -200.0
 const GRAVITY = 700
-const JUMP_VELOCITY = 100
+const JUMP_VELOCITY = 50
 
 enum State { Idle, Run, Jump }
 
@@ -65,3 +65,8 @@ func player_animations():
 		$AnimatedSprite2D.animation = "run"
 	elif current_state == State.Jump:
 		$AnimatedSprite2D.animation = "jump"
+
+
+func _on_hurtbox_body_entered(body : Node2D):
+	if body.is_in_group("Enemy"):
+		print("Enemy entered")

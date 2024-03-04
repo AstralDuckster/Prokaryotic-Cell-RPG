@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bwcsii503316l"
-path="res://.godot/imported/Run-Sheet.png-94f90bf34b6aa0230e168f93a43530dd.ctex"
+uid="uid://yu12cfad11i3"
+path="res://.godot/imported/running sprite sheet.PNG-674ceb7874024fd93223f96fdf516d2a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ART/Legacy-Fantasy - High Forest 2.3/Character/Run/Run-Sheet.png"
-dest_files=["res://.godot/imported/Run-Sheet.png-94f90bf34b6aa0230e168f93a43530dd.ctex"]
+source_file="res://ART/Legacy-Fantasy - High Forest 2.3/Character/Run/running sprite sheet.PNG"
+dest_files=["res://.godot/imported/running sprite sheet.PNG-674ceb7874024fd93223f96fdf516d2a.ctex"]
 
 [params]
 
