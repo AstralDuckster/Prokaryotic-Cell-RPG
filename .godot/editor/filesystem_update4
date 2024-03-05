@@ -1,3 +1,13 @@
 res://Characters/player.tscn
+res://UI/health_bar/health_bar.tscn
+res://UI/game_screen.tscn
+res://Levels/test_level.tscn
+res://UI/health_bar/health_bar.gd
 res://Scripts/health_manager.gd
+res://Character/player.tscn
+res://Character/player.gd
 res://Characters/player.gd
+res://Levels/test_levels/test_level.tscn
+res://Enemies/enemy_slime.tscn
+res://Enemies/enemy_slime.gd
+res://Levels/base_level.tscn

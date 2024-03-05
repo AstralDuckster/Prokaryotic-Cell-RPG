@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://dvfnrrvitv4du"]
+
+[ext_resource type="PackedScene" uid="uid://uatsdsobdsdm" path="res://Levels/base_level.tscn" id="1_6r52s"]
+[ext_resource type="PackedScene" uid="uid://dv0tb0y4hcg20" path="res://Enemies/enemy_slime.tscn" id="2_6rc60"]
+
+[node name="TestLevel" instance=ExtResource("1_6r52s")]
+
+[node name="EnemySlime" parent="." index="4" instance=ExtResource("2_6rc60")]
+position = Vector2(383, -150)

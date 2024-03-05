@@ -3,13 +3,14 @@ extends CharacterBody2D
 const SPEED = 300.0
 const JUMP = -200.0
 const GRAVITY = 700
-const JUMP_VELOCITY = 100
-const DOUBLE_JUMP_VELOCITY = -200
+const JUMP_VELOCITY = 170
+const DOUBLE_JUMP = -200
+const DOUBLE_JUMP_VELOCITY = 140
 
 enum State { Idle, Run, Jump }
 
 var current_state
-var has_double_jumped: bool = false
+var can_double_jump = false
 
 func _ready():
 	current_state = State.Idle
@@ -29,11 +30,10 @@ func _physics_process(delta):
 func player_falling(delta):
 	if !is_on_floor():
 		velocity.y += GRAVITY * delta
-	else:
-		has_double_jumped = false
+	
 
 func player_idle(delta):
-	if is_on_floor():
+	if is_on_floor()	:
 		current_state = State.Idle
 
 func player_run(delta):
@@ -52,14 +52,22 @@ func player_run(delta):
 		$AnimatedSprite2D.flip_h = velocity.x < 0
 
 func player_jump(delta):
+	var direction = Input.get_axis("left", "right")
 	if Input.is_action_just_pressed("jump"):
 		if is_on_floor():
 			velocity.y = JUMP
+			velocity.x = direction * JUMP_VELOCITY
 			current_state = State.Jump
-		
-		elif not has_double_jumped:
-			velocity.y = DOUBLE_JUMP_VELOCITY
-			has_double_jumped = true
+			can_double_jump = true
+		elif can_double_jump:
+			velocity.y = DOUBLE_JUMP
+			velocity.x = direction * DOUBLE_JUMP_VELOCITY
+			current_state = State.Jump
+			can_double_jump = false
+
+	if !is_on_floor() and current_state == State.Jump:
+		velocity.x += direction * JUMP_VELOCITY * delta
+	
 		
 func player_animations():
 	if current_state == State.Idle:

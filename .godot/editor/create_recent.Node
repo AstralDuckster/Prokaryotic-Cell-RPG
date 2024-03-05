@@ -1,8 +1,13 @@
 CollisionShape2D
-Area2D
-AnimationPlayer
 AnimatedSprite2D
+CharacterBody2D
+Area2D
+Sprite2D
+StaticBody2D
+ParallaxLayer
+ParallaxBackground
+CanvasLayer
+AnimationPlayer
 RemoteTransform2D
 Camera2D
-CharacterBody2D
 TileMap
