@@ -1,2 +1,3 @@
 res://Levels/base_level.tscn
 res://Characters/player.gd
+res://UI/health_bar/health_bar.gd

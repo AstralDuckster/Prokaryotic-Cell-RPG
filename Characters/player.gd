@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
-const SPEED = 500.0
-const JUMP = -600.0
+const SPEED = 300.0
+const JUMP = -500.0
 const GRAVITY = 700
 const JUMP_VELOCITY = 200
 const DOUBLE_JUMP = -400
@@ -33,7 +33,7 @@ func player_falling(delta):
 	
 
 func player_idle(delta):
-	if is_on_floor()	:
+	if is_on_floor():
 		current_state = State.Idle
 
 func player_run(delta):
@@ -67,7 +67,6 @@ func player_jump(delta):
 
 	if !is_on_floor() and current_state == State.Jump:
 		velocity.x += direction * JUMP_VELOCITY * delta
-	
 		
 func player_animations():
 	if current_state == State.Idle:
@@ -81,4 +80,4 @@ func player_animations():
 func _on_hurtbox_body_entered(body : Node2D):
 	if body.is_in_group("Enemy"):
 		print("Enemy entered", body.damage_amount)
-		HealthManager.decrease_health(1)
+		
