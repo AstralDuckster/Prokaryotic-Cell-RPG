@@ -1798,12 +1798,14 @@ position = Vector2(1523, -393)
 scale = Vector2(0.8, 0.8)
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+visible = false
 offset = Vector2(0, -336)
 scale = Vector2(1.25, 1.25)
 transform = Transform2D(1.25, 0, 0, 1.25, 0, -336)
 follow_viewport_scale = 100.0
 
 [node name="ParallaxLayer5" type="ParallaxLayer" parent="ParallaxBackground"]
+visible = false
 
 [node name="Sprite2D2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer5"]
 position = Vector2(2444.8, -464)
@@ -1823,7 +1825,6 @@ speed_scale = 0.422
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="ParallaxBackground/ParallaxLayer5/CharacterBody2D"]
 position = Vector2(-1.77594, -0.65848)
-rotation = -2.52964
 sprite_frames = SubResource("SpriteFrames_73vf5")
 frame_progress = 0.273731
 
@@ -2017,4 +2018,4 @@ drag_vertical_offset = 0.06
 editor_draw_limits = true
 
 [node name="EnemySlime" parent="." instance=ExtResource("6_p3xrf")]
-position = Vector2(519, -215)
+position = Vector2(-755, -113.75)
