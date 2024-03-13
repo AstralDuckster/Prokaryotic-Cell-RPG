@@ -1,6 +1,6 @@
 [gd_scene load_steps=48 format=3 uid="uid://jfbb0iht2n34"]
 
-[ext_resource type="Script" path="res://Character/player.gd" id="1_n1yer"]
+[ext_resource type="Script" path="res://Characters/player.gd" id="1_n1yer"]
 [ext_resource type="Texture2D" uid="uid://dre6acmk5xdyh" path="res://Characters/Idle/idle_sprite_sheet.png" id="2_lwckr"]
 [ext_resource type="Texture2D" uid="uid://dlm5ntiro1phm" path="res://Characters/Jumlp-All/Jump-All-Sheet.png" id="4_6m7h1"]
 [ext_resource type="Texture2D" uid="uid://nlybobr2ata1" path="res://Characters/Jump-End/Jump-End-Sheet.png" id="5_squwd"]

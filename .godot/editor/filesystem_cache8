@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1709617188
+::res://::1710289522
 icon.svg::CompressedTexture2D::754348935821895696::1708172603::1708172614::1::::<><>::
 ::res://ART/::1709617188
 ::res://ART/Legacy-Fantasy - High Forest 2.3/::1709616640
@@ -51,9 +51,9 @@ Tiles.png::CompressedTexture2D::9059970841121796160::1708172678::1709610467::1::
 Tree-Assets.png::CompressedTexture2D::951628729432504892::1708172678::1709610467::1::::<><>::
 ::res://Background/::1709610467
 Background.png::CompressedTexture2D::4675449900561527262::1708172678::1709610467::1::::<><>::
-::res://Characters/::1709617148
+::res://Characters/::1710240179
 player.gd::GDScript::-1::1709613092::0::1::::<>CharacterBody2D<>::
-player.tscn::PackedScene::642085310085966193::1709616900::0::1::::<><>::res://Character/player.gd<>uid://dre6acmk5xdyh::::res://Characters/Idle/idle_sprite_sheet.png<>uid://dlm5ntiro1phm::::res://Characters/Jumlp-All/Jump-All-Sheet.png<>uid://nlybobr2ata1::::res://Characters/Jump-End/Jump-End-Sheet.png<>uid://byoiqy4snkf4o::::res://Characters/Jump-Start/Jump-Start-Sheet.png<>uid://yu12cfad11i3::::res://Characters/Run/running sprite sheet.PNG
+player.tscn::PackedScene::642085310085966193::1710240179::0::1::::<><>::res://Characters/player.gd<>uid://dre6acmk5xdyh::::res://Characters/Idle/idle_sprite_sheet.png<>uid://dlm5ntiro1phm::::res://Characters/Jumlp-All/Jump-All-Sheet.png<>uid://nlybobr2ata1::::res://Characters/Jump-End/Jump-End-Sheet.png<>uid://byoiqy4snkf4o::::res://Characters/Jump-Start/Jump-Start-Sheet.png<>uid://yu12cfad11i3::::res://Characters/Run/running sprite sheet.PNG
 ::res://Characters/Attack-01/::1709611107
 Attack-01-Sheet.png::CompressedTexture2D::2130891690573675963::1708172678::1709611107::1::::<><>::
 ::res://Characters/Dead/::1709611107
@@ -70,19 +70,20 @@ Jump-End-Sheet.png::CompressedTexture2D::936622853889590262::1708172678::1709611
 Jump-Start-Sheet.png::CompressedTexture2D::4100369834402666524::1708172678::1709611107::1::::<><>::
 ::res://Characters/Run/::1709611107
 running sprite sheet.PNG::CompressedTexture2D::1727446773417116628::1709515038::1709611107::1::::<><>::
-::res://Enemies/::1709617188
-enemy_slime.tscn::PackedScene::8685993971472073063::1709617156::0::1::::<><>::
+::res://Enemies/::1710240179
+enemy_slime.gd::GDScript::-1::1709618163::0::1::::<>CharacterBody2D<>::
+enemy_slime.tscn::PackedScene::8685993971472073063::1710240179::0::1::::<><>::res://Enemies/enemy_slime.gd<>uid://bttvmeqe7hha8::::res://Enemies/slime.png
 slime.png::CompressedTexture2D::3760528611552865525::1669967699::1709617188::1::::<><>::
-::res://Levels/::1709617015
-base_level.tscn::PackedScene::1404962825927599650::1709616900::0::1::::<><>::uid://b7u28he8sn53g::::res://Background/Background.png<>uid://d2cynp4lihd73::::res://Assets/Tiles.png<>uid://jfbb0iht2n34::::res://Characters/player.tscn<>res://Characters/player.gd<>uid://dji4s2dmmypeh::::res://UI/game_screen.tscn
-::res://Levels/test_levels/::1709617034
-test_level.tscn::PackedScene::8644370261378207366::1709617034::0::1::::<><>::uid://uatsdsobdsdm::::res://Levels/base_level.tscn
+::res://Levels/::1709618164
+base_level.tscn::PackedScene::1404962825927599650::1709618164::0::1::::<><>::uid://b7u28he8sn53g::::res://Background/Background.png<>uid://d2cynp4lihd73::::res://Assets/Tiles.png<>uid://jfbb0iht2n34::::res://Characters/player.tscn<>res://Characters/player.gd<>uid://dji4s2dmmypeh::::res://UI/game_screen.tscn<>uid://dv0tb0y4hcg20::::res://Enemies/enemy_slime.tscn
+::res://Levels/test_levels/::1709617716
+test_level.tscn::PackedScene::8644370261378207366::1709617716::0::1::::<><>::uid://uatsdsobdsdm::::res://Levels/base_level.tscn<>uid://dv0tb0y4hcg20::::res://Enemies/enemy_slime.tscn
 ::res://Scripts/::1709610797
 health_manager.gd::GDScript::-1::1709610797::0::1::::<>Node<>::
-::res://UI/::1709616900
-game_screen.tscn::PackedScene::7809271026261677451::1709616900::0::1::::<><>::uid://bt3rkc2ams3wr::::res://UI/health_bar/health_bar.tscn
-::res://UI/health_bar/::1709616900
+::res://UI/::1710240179
+game_screen.tscn::PackedScene::7809271026261677451::1710240179::0::1::::<><>::uid://bt3rkc2ams3wr::::res://UI/health_bar/health_bar.tscn
+::res://UI/health_bar/::1710240179
 health_bar.gd::GDScript::-1::1709610797::0::1::::<>Node2D<>::
-health_bar.tscn::PackedScene::3778861483518665085::1709616900::0::1::::<><>::uid://c8158dlix2j4::::res://UI/health_bar/heart_1.png<>res://UI/health_bar/health_bar.gd<>uid://be4odq7riy73b::::res://UI/health_bar/heart_0.png
+health_bar.tscn::PackedScene::3778861483518665085::1710240179::0::1::::<><>::uid://c8158dlix2j4::::res://UI/health_bar/heart_1.png<>res://UI/health_bar/health_bar.gd<>uid://be4odq7riy73b::::res://UI/health_bar/heart_0.png
 heart_0.png::CompressedTexture2D::2727899298984827033::1709607453::1709608534::1::::<><>::
 heart_1.png::CompressedTexture2D::210136107205496211::1709607453::1709608534::1::::<><>::
