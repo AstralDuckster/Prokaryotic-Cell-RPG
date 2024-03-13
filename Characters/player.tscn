@@ -4,9 +4,9 @@
 [ext_resource type="Texture2D" uid="uid://dre6acmk5xdyh" path="res://Characters/Idle/idle_sprite_sheet.png" id="2_lwckr"]
 [ext_resource type="Texture2D" uid="uid://dlm5ntiro1phm" path="res://Characters/Jumlp-All/Jump-All-Sheet.png" id="4_6m7h1"]
 [ext_resource type="Texture2D" uid="uid://nlybobr2ata1" path="res://Characters/Jump-End/Jump-End-Sheet.png" id="5_squwd"]
-[ext_resource type="Texture2D" uid="uid://yu12cfad11i3" path="res://Characters/run/running sprite sheet.PNG" id="6_05tvg"]
+[ext_resource type="Texture2D" uid="uid://yu12cfad11i3" path="res://Characters/Run/running sprite sheet.PNG" id="6_05tvg"]
 [ext_resource type="Texture2D" uid="uid://byoiqy4snkf4o" path="res://Characters/Jump-Start/Jump-Start-Sheet.png" id="6_562a6"]
-[ext_resource type="Texture2D" uid="uid://xj1kkfu331hj" path="res://characters/Run-Shoot/player-run-shoot.png" id="7_pe83s"]
+[ext_resource type="Texture2D" uid="uid://xj1kkfu331hj" path="res://Characters/Run-Shoot/player-run-shoot.png" id="7_pe83s"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_q23il"]
 atlas = ExtResource("4_6m7h1")
@@ -476,10 +476,11 @@ radius = 13.0
 height = 46.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_y3uoe"]
-radius = 13.0
-height = 48.0
+radius = 14.0
+height = 52.0
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" groups=["Player"]]
+collision_layer = 2
 script = ExtResource("1_n1yer")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

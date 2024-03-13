@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1710312286
+::res://::1710319857
 icon.svg::CompressedTexture2D::754348935821895696::1710226678::1710226678::1::::<><>::
 ::res://ART/::1710226688
 ::res://ART/Legacy-Fantasy - High Forest 2.3/::1710226690
@@ -60,9 +60,9 @@ ParallaxMap3.png::CompressedTexture2D::2851730063002269433::1710267372::17102673
 ParallaxMap4.png::CompressedTexture2D::912643824902794046::1710267374::1710267376::1::::<><>::
 ParallaxMap5.png::CompressedTexture2D::8008855133138539832::1710275638::1710275638::1::::<><>::
 ParallaxMapForeGround.png::CompressedTexture2D::2615577350860102418::1710267380::1710267382::1::::<><>::
-::res://Characters/::1710312736
-player.gd::GDScript::-1::1710312732::0::1::::<>CharacterBody2D<>::
-player.tscn::PackedScene::642085310085966193::1710312736::0::1::::<><>::res://Characters/player.gd<>uid://dre6acmk5xdyh::::res://Characters/Idle/idle_sprite_sheet.png<>uid://dlm5ntiro1phm::::res://Characters/Jumlp-All/Jump-All-Sheet.png<>uid://nlybobr2ata1::::res://Characters/Jump-End/Jump-End-Sheet.png<>uid://yu12cfad11i3::::res://Characters/run/running sprite sheet.PNG<>uid://byoiqy4snkf4o::::res://Characters/Jump-Start/Jump-Start-Sheet.png<>uid://xj1kkfu331hj::::res://characters/Run-Shoot/player-run-shoot.png
+::res://Characters/::1710319797
+player.gd::GDScript::-1::1710319586::0::1::::<>CharacterBody2D<>::
+player.tscn::PackedScene::642085310085966193::1710319797::0::1::::<><>::res://Characters/player.gd<>uid://dre6acmk5xdyh::::res://Characters/Idle/idle_sprite_sheet.png<>uid://dlm5ntiro1phm::::res://Characters/Jumlp-All/Jump-All-Sheet.png<>uid://nlybobr2ata1::::res://Characters/Jump-End/Jump-End-Sheet.png<>uid://yu12cfad11i3::::res://Characters/Run/running sprite sheet.PNG<>uid://byoiqy4snkf4o::::res://Characters/Jump-Start/Jump-Start-Sheet.png<>uid://xj1kkfu331hj::::res://Characters/Run-Shoot/player-run-shoot.png
 ::res://Characters/Attack-01/::1710312777
 Attack-01-Sheet.png::CompressedTexture2D::2130891690573675963::1710226692::1710312777::1::::<><>::
 ::res://Characters/Dead/::1710312777
@@ -81,42 +81,22 @@ Jump-Start-Sheet.png::CompressedTexture2D::4100369834402666524::1710226692::1710
 running sprite sheet.PNG::CompressedTexture2D::1727446773417116628::1710226692::1710312777::1::::<><>::
 ::res://Characters/Run-Shoot/::1710312777
 player-run-shoot.png::CompressedTexture2D::1634519837117040063::1499488340::1710312777::1::::<><>::
-::res://characters/::1710312736
-player.gd::GDScript::-1::1710312732::0::1::::<>CharacterBody2D<>::
-player.tscn::PackedScene::-1::1710312412::0::1::::<><>::
-::res://characters/Attack-01/::1710312777
-Attack-01-Sheet.png::CompressedTexture2D::2130891690573675963::1710226692::1710312777::1::::<><>::
-::res://characters/Dead/::1710312777
-Dead-Sheet.png::CompressedTexture2D::7524588215377993265::1710226692::1710312777::1::::<><>::
-::res://characters/Enemies/::1709617148
-::res://characters/Idle/::1710312777
-idle_sprite_sheet.png::CompressedTexture2D::8362612254797559067::1710226692::1710312777::1::::<><>::
-::res://characters/Jumlp-All/::1710312777
-Jump-All-Sheet.png::CompressedTexture2D::7957957600344372742::1710226692::1710312777::1::::<><>::
-::res://characters/Jump/::1710291966
-::res://characters/Jump-End/::1710312777
-Jump-End-Sheet.png::CompressedTexture2D::936622853889590262::1710226692::1710312777::1::::<><>::
-::res://characters/Jump-Start/::1710312777
-Jump-Start-Sheet.png::CompressedTexture2D::4100369834402666524::1710226692::1710312777::1::::<><>::
-::res://characters/Run/::1710312777
-running sprite sheet.PNG::CompressedTexture2D::1727446773417116628::1710226692::1710312777::1::::<><>::
-::res://characters/Run-Shoot/::1710312777
-player-run-shoot.png::CompressedTexture2D::1634519837117040063::1499488340::1710312777::1::::<><>::
-::res://Enemies/::1710291966
-enemy_slime.gd::GDScript::-1::1710226692::0::1::::<>CharacterBody2D<>::
-enemy_slime.tscn::PackedScene::8685993971472073063::1710226692::0::1::::<><>::res://Enemies/enemy_slime.gd<>uid://bttvmeqe7hha8::::res://Enemies/slime.png
+::res://Enemies/::1710319797
+enemy_slime.gd::GDScript::-1::1710318175::0::1::::<>CharacterBody2D<>::
+enemy_slime.tscn::PackedScene::8685993971472073063::1710319797::0::1::::<><>::res://Enemies/enemy_slime.gd<>uid://bttvmeqe7hha8::::res://Enemies/slime.png
 slime.png::CompressedTexture2D::3760528611552865525::1710226692::1710226692::1::::<><>::
-::res://fx/::1710310689
+::res://fx/::1710319797
+bullet.tscn::PackedScene::5210197906376981786::1710319797::0::1::::<><>::uid://d3pqt7ut6du4h::::res://fx/shot.png
 shot.png::CompressedTexture2D::9156522453771697433::1499487564::1710310689::1::::<><>::
 ::res://HUD/::1710289618
 Base-01.png::CompressedTexture2D::2338104455004281644::1710289618::1710289618::1::::<><>::
-::res://Levels/::1710312735
+::res://Levels/::1710319839
 AnimationPlayer.gd::GDScript::-1::1710293543::0::1::::<>AnimationPlayer<>::
-base_level.tscn::PackedScene::1404962825927599650::1710312735::0::1::::<><>::uid://d2cynp4lihd73::::res://Assets/Tiles.png<>uid://dmdsw6ck22egu::::res://Background/ParallaxMap5.png<>uid://bgvntvt36h2e4::::res://Background/ParallaxMap3.png<>uid://fujfshtwq2kg::::res://Background/ParallaxMap2.png<>uid://bmonbssc8indt::::res://Assets/Nucleoids.png<>uid://jfbb0iht2n34::::res://Characters/player.tscn<>uid://nadd0xn7rkx7::::res://Background/ParallaxMap4.png<>uid://bpng8lcelk51y::::res://Assets/virus.png<>uid://c1f08hde8sjtw::::res://Assets/Nucleoids1.png<>uid://dji4s2dmmypeh::::res://UI/game_screen.tscn<>uid://xami4lrxeutt::::res://Background/ParallaxMap1.png<>uid://bdjagaobwvm3c::::res://Background/ParallaxMapForeGround.png<>uid://dv0tb0y4hcg20::::res://Enemies/enemy_slime.tscn
+base_level.tscn::PackedScene::1404962825927599650::1710319839::0::1::::<><>::uid://d2cynp4lihd73::::res://Assets/Tiles.png<>uid://dmdsw6ck22egu::::res://Background/ParallaxMap5.png<>uid://bgvntvt36h2e4::::res://Background/ParallaxMap3.png<>uid://fujfshtwq2kg::::res://Background/ParallaxMap2.png<>uid://bmonbssc8indt::::res://Assets/Nucleoids.png<>uid://jfbb0iht2n34::::res://Characters/player.tscn<>uid://nadd0xn7rkx7::::res://Background/ParallaxMap4.png<>uid://bpng8lcelk51y::::res://Assets/virus.png<>uid://c1f08hde8sjtw::::res://Assets/Nucleoids1.png<>uid://dji4s2dmmypeh::::res://UI/game_screen.tscn<>uid://xami4lrxeutt::::res://Background/ParallaxMap1.png<>uid://bdjagaobwvm3c::::res://Background/ParallaxMapForeGround.png<>uid://dv0tb0y4hcg20::::res://Enemies/enemy_slime.tscn
 ParallaxBackground.gd::GDScript::-1::1710262124::0::1::::<>RefCounted<>::
 test_level.tscn::PackedScene::1404962825927599650::1710289618::0::1::::<><>::uid://d2cynp4lihd73::::res://ART/Legacy-Fantasy - High Forest 2.3/Assets/Tiles.png<>uid://gfq8dq8y8dag::::res://Characters/player.tscn
-::res://Levels/test_levels/::1710291966
-test_level.tscn::PackedScene::8644370261378207366::1710245284::0::1::::<><>::uid://uatsdsobdsdm::::res://Levels/base_level.tscn<>uid://dv0tb0y4hcg20::::res://Enemies/enemy_slime.tscn
+::res://Levels/test_levels/::1710319797
+test_level.tscn::PackedScene::8644370261378207366::1710319797::0::1::::<><>::uid://uatsdsobdsdm::::res://Levels/test_level.tscn<>uid://dv0tb0y4hcg20::::res://Enemies/enemy_slime.tscn
 ::res://Mob/::1710289618
 ::res://Mob/Boar/::1710289618
 ::res://Mob/Boar/Hit-Vanish/::1710289618

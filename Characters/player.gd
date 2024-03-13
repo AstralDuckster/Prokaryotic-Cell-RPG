@@ -96,8 +96,10 @@ func player_animations():
 	elif current_state == State.Shoot:
 		$AnimatedSprite2D.animation = "run_shoot"
 
-
+			
 func _on_hurtbox_body_entered(body : Node2D):
 	if body.is_in_group("Enemy"):
 		print("Enemy entered", body.damage_amount)
-		HealthManager.decrease_health(1)
+		HealthManager.decrease_health(body.damage_amount)
+
+

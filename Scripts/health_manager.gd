@@ -9,9 +9,9 @@ func _ready():
 	current_health = max_health
 	
 func decrease_health(health_amount : int):
-	current_health -+ health_amount
+	current_health -= health_amount
 	
-	if current_health < 0:
+	if current_health <= 0:
 		current_health = 0
 	
 	print("decrease_health called")

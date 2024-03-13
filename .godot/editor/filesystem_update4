@@ -1,7 +1,8 @@
-res://Characters/player.tscn
 res://Levels/base_level.tscn
-res://Characters/player.gd
+res://Characters/player.tscn
 res://fx/bullet.tscn
-res://Enemies/enemy_slime.tscn
-res://Enemies/enemy_slime.gd
 res://Levels/test_levels/test_level.tscn
+res://Enemies/enemy_slime.tscn
+res://Scripts/health_manager.gd
+res://Enemies/enemy_slime.gd
+res://Characters/player.gd

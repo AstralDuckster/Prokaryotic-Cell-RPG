@@ -99,12 +99,14 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_pfr2f"]
-radius = 20.0
+radius = 17.0294
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_ohniu"]
-radius = 20.0
+[sub_resource type="CircleShape2D" id="CircleShape2D_davhf"]
+radius = 20.025
 
-[node name="EnemySlime" type="CharacterBody2D"]
+[node name="EnemySlime" type="CharacterBody2D" groups=["Enemy"]]
+collision_layer = 4
+collision_mask = 3
 script = ExtResource("1_dyskj")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -116,17 +118,17 @@ autoplay = "idle"
 frame_progress = 0.650441
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -18)
+light_mask = 2
+position = Vector2(0, -20)
 shape = SubResource("CircleShape2D_pfr2f")
-debug_color = Color(0.894118, 0, 0.784314, 0.419608)
 
 [node name="Hurtbox" type="Area2D" parent="."]
 collision_layer = 4
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
-position = Vector2(0, -18)
-shape = SubResource("CircleShape2D_ohniu")
-debug_color = Color(0.74902, 0.141176, 0, 0.419608)
+position = Vector2(0, -20)
+shape = SubResource("CircleShape2D_davhf")
+debug_color = Color(1, 0, 0.105882, 0.419608)
 
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_hurtbox_area_entered"]
