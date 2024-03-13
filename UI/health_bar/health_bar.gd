@@ -9,7 +9,7 @@ extends Node2D
 
 
 func _ready():
-	pass
+	HealthManager.on_health_change.connect(on_player_health_change)
 	
 func on_player_health_change(player_current_health : int):
 	if player_current_health == 3:
