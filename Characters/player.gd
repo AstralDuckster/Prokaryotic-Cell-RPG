@@ -1,11 +1,11 @@
 extends CharacterBody2D
 
 const SPEED = 300.0
-const JUMP = -200.0
+const JUMP = -500.0
 const GRAVITY = 700
-const JUMP_VELOCITY = 170
-const DOUBLE_JUMP = -200
-const DOUBLE_JUMP_VELOCITY = 140
+const JUMP_VELOCITY = 200
+const DOUBLE_JUMP = -400
+const DOUBLE_JUMP_VELOCITY = 170
 
 enum State { Idle, Run, Jump }
 

@@ -1,4 +1,1 @@
-res://UI/health_bar/health_bar.tscn
-res://UI/game_screen.tscn
-res://Enemies/enemy_slime.tscn
-res://Characters/player.tscn
+res://Levels/base_level.tscn
