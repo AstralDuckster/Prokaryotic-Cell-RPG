@@ -74,6 +74,11 @@ func player_jump(delta):
 			current_state = State.DoubleJump
 			can_double_jump = false
 			
+	#One way fall
+	if Input.is_action_just_pressed("down") and is_on_floor():
+		position.y += 2
+		current_state = State.DoubleJump
+			
 func player_shooting(delta):
 	if Input.is_action_just_pressed("shoot"):
 		var direction = Input.get_axis("left", "right")
