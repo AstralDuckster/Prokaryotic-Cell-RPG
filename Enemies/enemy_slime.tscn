@@ -1,7 +1,8 @@
-[gd_scene load_steps=17 format=3 uid="uid://dv0tb0y4hcg20"]
+[gd_scene load_steps=18 format=3 uid="uid://dv0tb0y4hcg20"]
 
 [ext_resource type="Script" path="res://Enemies/enemy_slime.gd" id="1_dyskj"]
 [ext_resource type="Texture2D" uid="uid://bttvmeqe7hha8" path="res://Enemies/slime.png" id="1_x3hrc"]
+[ext_resource type="Texture2D" uid="uid://bpng8lcelk51y" path="res://Assets/virus.png" id="2_dicrc"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_83625"]
 atlas = ExtResource("1_x3hrc")
@@ -49,7 +50,10 @@ region = Rect2(192, 66, 32, 22)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_s0mmh"]
 animations = [{
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_dicrc")
+}],
 "loop": true,
 "name": &"default",
 "speed": 5.0
@@ -105,21 +109,20 @@ radius = 17.0294
 radius = 20.025
 
 [node name="EnemySlime" type="CharacterBody2D" groups=["Enemy"]]
+position = Vector2(-0.0526316, -1.10526)
 collision_layer = 4
 collision_mask = 3
 script = ExtResource("1_dyskj")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -30)
-scale = Vector2(2.25, 2.53846)
+scale = Vector2(0.8, 0.8)
 sprite_frames = SubResource("SpriteFrames_s0mmh")
-animation = &"idle"
-autoplay = "idle"
-frame_progress = 0.650441
+autoplay = "default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 light_mask = 2
-position = Vector2(0, -20)
+position = Vector2(-1, -25)
 shape = SubResource("CircleShape2D_pfr2f")
 
 [node name="Hurtbox" type="Area2D" parent="."]
@@ -127,7 +130,7 @@ collision_layer = 4
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
-position = Vector2(0, -20)
+position = Vector2(-1, -27)
 shape = SubResource("CircleShape2D_davhf")
 debug_color = Color(1, 0, 0.105882, 0.419608)
 

@@ -23,6 +23,7 @@ HealthManager="*res://Scripts/health_manager.gd"
 
 window/size/viewport_width=548
 window/size/viewport_height=300
+window/size/mode=3
 window/stretch/aspect="expand"
 window/stretch/scale=1.6
 
