@@ -1807,7 +1807,7 @@ remote_path = NodePath("../../Camera2D")
 layer = 4
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(-1678.75, -187.5)
+position = Vector2(-1678.75, -188.75)
 scale = Vector2(2, 2)
 process_callback = 0
 limit_left = 100
@@ -1817,8 +1817,8 @@ limit_bottom = 420
 position_smoothing_enabled = true
 drag_horizontal_enabled = true
 drag_vertical_enabled = true
-drag_horizontal_offset = 0.06
-drag_vertical_offset = 0.06
+drag_horizontal_offset = 0.12
+drag_vertical_offset = 0.05
 editor_draw_limits = true
 
 [node name="EnemySlime" parent="." instance=ExtResource("6_p3xrf")]
