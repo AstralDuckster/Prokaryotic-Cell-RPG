@@ -1,3 +1,6 @@
+DirectionalLight2D
+PointLight2D
+ShapeCast2D
 AnimationPlayer
 CollisionShape2D
 StaticBody2D
@@ -9,6 +12,3 @@ ParallaxBackground
 AnimatedSprite2D
 Marker2D
 CanvasLayer
-RemoteTransform2D
-Camera2D
-TileMap

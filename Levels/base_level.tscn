@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://uatsdsobdsdm"]
+[gd_scene load_steps=34 format=3 uid="uid://uatsdsobdsdm"]
 
 [ext_resource type="Texture2D" uid="uid://dmdsw6ck22egu" path="res://Background/ParallaxMap5.png" id="1_amqxn"]
 [ext_resource type="Texture2D" uid="uid://fujfshtwq2kg" path="res://Background/ParallaxMap2.png" id="1_b020i"]
@@ -59,10 +59,6 @@ _data = {
 "NucleiodsWorm": SubResource("Animation_226xo")
 }
 
-[sub_resource type="Animation" id="Animation_6y775"]
-resource_name = "new_animation"
-length = 10.0
-
 [sub_resource type="Animation" id="Animation_feny7"]
 resource_name = "Virus1BG"
 length = 15.0
@@ -91,6 +87,10 @@ tracks/1/keys = {
 "update": 0,
 "values": [0.0, 1.0095, 3.73442, 5.57794, 6.96164, 4.07648, 5.58562, 7.54086, 8.88287, 9.57064, 10.3822]
 }
+
+[sub_resource type="Animation" id="Animation_6y775"]
+resource_name = "new_animation"
+length = 10.0
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_aq0ge"]
 _data = {
@@ -1625,6 +1625,17 @@ size = Vector2(384.062, 1764.69)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rt6r2"]
 size = Vector2(221.25, 1616.25)
 
+[sub_resource type="Gradient" id="Gradient_b4cbu"]
+offsets = PackedFloat32Array(0, 0.667845)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_7dqce"]
+gradient = SubResource("Gradient_b4cbu")
+width = 1000
+height = 1000
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
 [node name="BaseLevel" type="Node2D"]
 position = Vector2(1523, -393)
 scale = Vector2(0.8, 0.8)
@@ -1686,7 +1697,6 @@ motion_scale = Vector2(0.85, 1)
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="Parallax Map/ParallaxLayer4"]
 position = Vector2(-540, 46)
-scale = Vector2(1, 1)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Parallax Map/ParallaxLayer4/CharacterBody2D"]
 libraries = {
@@ -1828,13 +1838,26 @@ position = Vector2(-781.25, -142.5)
 motion_mode = 1
 
 [node name="BorderCollision" type="StaticBody2D" parent="."]
-scale = Vector2(1, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BorderCollision"]
 position = Vector2(-1971.25, -39.8438)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_hwqcl")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="BorderCollision"]
 position = Vector2(4833.75, -351.25)
 shape = SubResource("RectangleShape2D_rt6r2")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+z_index = 5
+position = Vector2(-611.25, -410)
+scale = Vector2(2.11011, 1)
+color = Color(0.960784, 0.34902, 0.301961, 1)
+energy = 1.5
+shadow_enabled = true
+texture = SubResource("GradientTexture2D_7dqce")
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
+position = Vector2(-1903.75, 491.25)
+scale = Vector2(1.25, 1.25)
+energy = 0.2
+blend_mode = 1
