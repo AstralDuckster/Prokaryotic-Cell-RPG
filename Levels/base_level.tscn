@@ -1773,7 +1773,7 @@ texture = ExtResource("5_3hxx7")
 
 [node name="Sprite2D" type="Sprite2D" parent="Parallax Map/ParallaxLayer"]
 position = Vector2(2757, -741.749)
-scale = Vector2(1.5245, 1.24312)
+scale = Vector2(1.5245, 1.52312)
 texture = ExtResource("1_irr4f")
 
 [node name="Foreground" type="ParallaxBackground" parent="."]
@@ -1784,8 +1784,8 @@ position = Vector2(662, -486)
 motion_scale = Vector2(0.9, 0.9)
 
 [node name="Sprite2D" type="Sprite2D" parent="Foreground/ParallaxLayer"]
-position = Vector2(2094.5, -126.5)
-scale = Vector2(1.56097, 1.38981)
+position = Vector2(2102, -154.47)
+scale = Vector2(1.56097, 1.90714)
 texture = ExtResource("2_4xxbh")
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -1807,8 +1807,10 @@ remote_path = NodePath("../../Camera2D")
 layer = 4
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(-1678.75, -188.75)
+position = Vector2(-1678.75, -187.5)
 scale = Vector2(2, 2)
+offset = Vector2(0, -75)
+ignore_rotation = false
 process_callback = 0
 limit_left = 100
 limit_top = -2000
@@ -1818,7 +1820,7 @@ position_smoothing_enabled = true
 drag_horizontal_enabled = true
 drag_vertical_enabled = true
 drag_horizontal_offset = 0.12
-drag_vertical_offset = 0.05
+drag_vertical_offset = -0.06
 editor_draw_limits = true
 
 [node name="EnemySlime" parent="." instance=ExtResource("6_p3xrf")]
