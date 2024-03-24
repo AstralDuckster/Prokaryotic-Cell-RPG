@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://coiolfukcquna"
-path="res://.godot/imported/Interior-01.png-f143f7a6146bdaf5076a4f8074d46b88.ctex"
+uid="uid://cvura2olavrg"
+path="res://.godot/imported/Stage1_Ground.png-1133e0550c58e09e6de14826d677f921.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Interior-01.png"
-dest_files=["res://.godot/imported/Interior-01.png-f143f7a6146bdaf5076a4f8074d46b88.ctex"]
+source_file="res://Assets/Stage1_Ground.png"
+dest_files=["res://.godot/imported/Stage1_Ground.png-1133e0550c58e09e6de14826d677f921.ctex"]
 
 [params]
 

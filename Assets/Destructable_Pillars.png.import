@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ns8glgak6v7q"
-path="res://.godot/imported/Tree-Assets.png-1591b7917614ac0f717ceeee95888678.ctex"
+uid="uid://2jbsotc67fnc"
+path="res://.godot/imported/Destructable_Pillars.png-fc828425ea08be28a875b42e79dc66d4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Tree-Assets.png"
-dest_files=["res://.godot/imported/Tree-Assets.png-1591b7917614ac0f717ceeee95888678.ctex"]
+source_file="res://Assets/Destructable_Pillars.png"
+dest_files=["res://.godot/imported/Destructable_Pillars.png-fc828425ea08be28a875b42e79dc66d4.ctex"]
 
 [params]
 

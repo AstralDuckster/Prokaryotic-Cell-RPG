@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cmsogvr0n0fqt"
-path="res://.godot/imported/Hive.png-6f0fa253988def50d591f4c7773facf5.ctex"
+uid="uid://qe0aqnakkoqg"
+path="res://.godot/imported/Elevated Ground.png-fdb667c2453f0d3054462bd7c0e8f7fb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Hive.png"
-dest_files=["res://.godot/imported/Hive.png-6f0fa253988def50d591f4c7773facf5.ctex"]
+source_file="res://Assets/Elevated Ground.png"
+dest_files=["res://.godot/imported/Elevated Ground.png-fdb667c2453f0d3054462bd7c0e8f7fb.ctex"]
 
 [params]
 

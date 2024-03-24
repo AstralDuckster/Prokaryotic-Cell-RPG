@@ -3,12 +3,12 @@ extends CharacterBody2D
 var bullet = preload("res://fx/bullet.tscn")
 @onready var muzzle : Marker2D = $Muzzle
 
-const SPEED = 500.0
+const SPEED = 400.0
 const JUMP = -500.0
 const GRAVITY = 700
-const JUMP_VELOCITY = 200
+const JUMP_VELOCITY = 300
 const DOUBLE_JUMP = -400
-const DOUBLE_JUMP_VELOCITY = 70
+const DOUBLE_JUMP_VELOCITY = 300
 const AIR_SPEED = 50
 
 enum State { Idle, Run, Jump, DoubleJump, Shoot }
