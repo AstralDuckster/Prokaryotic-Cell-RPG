@@ -1,2 +1,5 @@
 res://Levels/base_level.tscn
-res://Characters/player.tscn
+res://Enemies/enemy_needle.tscn
+res://Assets/moving_platform.tscn
+res://Background/breakable_pillar.tscn
+res://Background/foreground.tscn

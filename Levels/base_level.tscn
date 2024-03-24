@@ -1,224 +1,15 @@
-[gd_scene load_steps=38 format=3 uid="uid://uatsdsobdsdm"]
+[gd_scene load_steps=13 format=3 uid="uid://uatsdsobdsdm"]
 
-[ext_resource type="Texture2D" uid="uid://dmdsw6ck22egu" path="res://Background/ParallaxMap5.png" id="1_amqxn"]
-[ext_resource type="Texture2D" uid="uid://fujfshtwq2kg" path="res://Background/ParallaxMap2.png" id="1_b020i"]
-[ext_resource type="Texture2D" uid="uid://cw7w5htwseelh" path="res://Background/ParallaxMap6.png" id="1_eor6i"]
-[ext_resource type="Texture2D" uid="uid://xami4lrxeutt" path="res://Background/ParallaxMap1.png" id="1_irr4f"]
-[ext_resource type="Texture2D" uid="uid://bmonbssc8indt" path="res://Assets/Nucleoids.png" id="2_2k53v"]
-[ext_resource type="Texture2D" uid="uid://bdjagaobwvm3c" path="res://Background/ParallaxMapForeGround.png" id="2_4xxbh"]
+[ext_resource type="PackedScene" uid="uid://djvfxrcs2qr14" path="res://Background/parallax_map.tscn" id="1_t0b2n"]
+[ext_resource type="PackedScene" uid="uid://de1dx8fqu7xxp" path="res://Background/foreground.tscn" id="2_ciq78"]
 [ext_resource type="PackedScene" uid="uid://jfbb0iht2n34" path="res://Characters/player.tscn" id="2_fyndp"]
-[ext_resource type="Texture2D" uid="uid://nadd0xn7rkx7" path="res://Background/ParallaxMap4.png" id="2_wx1vn"]
 [ext_resource type="PackedScene" uid="uid://dji4s2dmmypeh" path="res://UI/game_screen.tscn" id="3_j0wry"]
-[ext_resource type="Texture2D" uid="uid://bgvntvt36h2e4" path="res://Background/ParallaxMap3.png" id="3_tse7y"]
-[ext_resource type="Texture2D" uid="uid://c1f08hde8sjtw" path="res://Assets/Nucleoids1.png" id="4_5v4kn"]
-[ext_resource type="Texture2D" uid="uid://bpng8lcelk51y" path="res://Assets/virus.png" id="5_3hxx7"]
+[ext_resource type="PackedScene" uid="uid://q3cll4wq2bqi" path="res://Background/elevated_ground.tscn" id="3_mqg4c"]
+[ext_resource type="PackedScene" uid="uid://dqegty8d5heqv" path="res://Background/ground.tscn" id="4_y17wq"]
+[ext_resource type="PackedScene" uid="uid://cx4ddrd7xjhc0" path="res://Background/breakable_pillar.tscn" id="5_42f6g"]
 [ext_resource type="PackedScene" uid="uid://dv0tb0y4hcg20" path="res://Enemies/enemy_slime.tscn" id="6_p3xrf"]
-[ext_resource type="Texture2D" uid="uid://qe0aqnakkoqg" path="res://Assets/Elevated Ground.png" id="12_baevl"]
-[ext_resource type="Texture2D" uid="uid://2jbsotc67fnc" path="res://Assets/Destructable_Pillars.png" id="13_se0nx"]
-[ext_resource type="Texture2D" uid="uid://cvura2olavrg" path="res://Assets/Stage1_Ground.png" id="14_r1prf"]
-
-[sub_resource type="Animation" id="Animation_26wea"]
-resource_name = "NucleiodsCore"
-length = 3.0
-loop_mode = 2
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 3),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(1196, -676), Vector2(1197, -721)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_gs24w"]
-_data = {
-"NucleiodsCore": SubResource("Animation_26wea")
-}
-
-[sub_resource type="Animation" id="Animation_226xo"]
-resource_name = "NucleiodsWorm"
-length = 3.0
-loop_mode = 2
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 3),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(0, 10), Vector2(0, -39)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_kk1ti"]
-_data = {
-"NucleiodsWorm": SubResource("Animation_226xo")
-}
-
-[sub_resource type="Animation" id="Animation_feny7"]
-resource_name = "Virus1BG"
-length = 15.0
-loop_mode = 2
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:position")
-tracks/0/interp = 2
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 3, 6, 9.1, 12.6, 14.9),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
-"update": 0,
-"values": [Vector2(57.9999, -781), Vector2(1150, -751), Vector2(2384, -703), Vector2(3861, -655), Vector2(5247, -810), Vector2(5482, -794)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite2D:rotation")
-tracks/1/interp = 2
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 1.3, 2.4, 3.6, 4.7, 6.2, 7.7, 9.6, 11, 12.7, 14.2),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 0,
-"values": [0.0, 1.0095, 3.73442, 5.57794, 6.96164, 4.07648, 5.58562, 7.54086, 8.88287, 9.57064, 10.3822]
-}
-
-[sub_resource type="Animation" id="Animation_6y775"]
-resource_name = "new_animation"
-length = 10.0
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_aq0ge"]
-_data = {
-"Virus1BG": SubResource("Animation_feny7"),
-"new_animation": SubResource("Animation_6y775")
-}
-
-[sub_resource type="Animation" id="Animation_7s4q8"]
-resource_name = "Virus2"
-length = 15.0
-loop_mode = 2
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:position")
-tracks/0/interp = 2
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 2.2, 4.3, 6.2, 9.2, 10, 11.3, 12.7, 14.9),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 0,
-"values": [Vector2(5215, 140), Vector2(4638, -18), Vector2(3809, 56), Vector2(3434, -13), Vector2(2842, 27), Vector2(2398, -42), Vector2(1557, 38), Vector2(581, -41), Vector2(-233, 60)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite2D:rotation")
-tracks/1/interp = 2
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 1.4, 3, 4.3, 5.4, 7, 9.2, 10.5, 12.1, 13.9, 14.9),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 0,
-"values": [0.0, 2.13809, 3.1451, 5.37432, 6.88728, 8.48388, 10.1491, 12.3136, 13.7262, 15.1124, 16.8241]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_rkbb8"]
-_data = {
-"Virus2": SubResource("Animation_7s4q8")
-}
-
-[sub_resource type="Animation" id="Animation_ksrqw"]
-resource_name = "Virus4"
-length = 15.0
-loop_mode = 2
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:position")
-tracks/0/interp = 2
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 15),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(252, -595), Vector2(5508, -557)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite2D:rotation")
-tracks/1/interp = 2
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 2.5, 4.7, 6.5, 8.4, 10.5, 11.8, 13.4, 15),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 0,
-"values": [0.0, 1.51655, 4.0594, 5.17312, 6.70259, 8.56383, 10.5775, 12.4138, 14.1139]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_chbva"]
-_data = {
-"Virus4": SubResource("Animation_ksrqw")
-}
-
-[sub_resource type="Animation" id="Animation_me7tm"]
-resource_name = "virus5"
-length = 15.0
-loop_mode = 2
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:position")
-tracks/0/interp = 2
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 15),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(185.6, -12.8), Vector2(-4286.4, 169.6)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite2D:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 1.1, 2.2, 3.5, 5, 6.3, 7.5, 8.9, 9.9, 10.5, 11.8, 13.2, 14.6),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 0,
-"values": [0.0, 1.14389, -1.61915, 0.721555, 2.54393, 3.8987, 5.16187, 5.80198, 6.21296, 6.81455, 8.20218, 10.4615, 11.1105]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_7shd4"]
-_data = {
-"virus5": SubResource("Animation_me7tm")
-}
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ub4ap"]
-size = Vector2(381.579, 28.1083)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_urk1p"]
-size = Vector2(2482.94, 237.497)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_r3prl"]
-size = Vector2(214.726, 635.03)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ksuhd"]
-size = Vector2(398.881, 69.6494)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_bs37c"]
-size = Vector2(328.557, 43.7301)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_rlqfn"]
-size = Vector2(276.468, 27.6682)
+[ext_resource type="PackedScene" uid="uid://baflhuawycse8" path="res://Assets/moving_platform.tscn" id="7_cdcdo"]
+[ext_resource type="PackedScene" uid="uid://dp05k5w8cp1sx" path="res://Enemies/enemy_needle.tscn" id="9_h004n"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hwqcl"]
 size = Vector2(384.062, 1764.69)
@@ -230,229 +21,26 @@ size = Vector2(221.25, 1616.25)
 position = Vector2(1523, -393)
 scale = Vector2(0.8, 0.8)
 
-[node name="Parallax Map" type="ParallaxBackground" parent="."]
+[node name="Parallax Map" parent="." instance=ExtResource("1_t0b2n")]
 
-[node name="ParallaxLayer6" type="ParallaxLayer" parent="Parallax Map"]
+[node name="Foreground" parent="." instance=ExtResource("2_ciq78")]
 
-[node name="Sprite2D6" type="Sprite2D" parent="Parallax Map/ParallaxLayer6"]
-position = Vector2(1830, -790)
-scale = Vector2(1.549, 1)
-texture = ExtResource("1_eor6i")
+[node name="Elevation" parent="." instance=ExtResource("3_mqg4c")]
 
-[node name="ParallaxLayer5" type="ParallaxLayer" parent="Parallax Map"]
-position = Vector2(-701, 0)
-motion_scale = Vector2(1.1, 1)
+[node name="Ground" parent="." instance=ExtResource("4_y17wq")]
 
-[node name="Nucleiods" type="CharacterBody2D" parent="Parallax Map/ParallaxLayer5"]
-position = Vector2(540, -46)
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Parallax Map/ParallaxLayer5/Nucleiods"]
-libraries = {
-"": SubResource("AnimationLibrary_gs24w")
-}
-autoplay = "NucleiodsCore"
-
-[node name="Sprite2D" type="Sprite2D" parent="Parallax Map/ParallaxLayer5/Nucleiods"]
-position = Vector2(1196, -676)
-texture = ExtResource("2_2k53v")
-
-[node name="Sprite2D5" type="Sprite2D" parent="Parallax Map/ParallaxLayer5"]
-position = Vector2(2709, -738)
-scale = Vector2(1.51368, 1)
-texture = ExtResource("1_amqxn")
-
-[node name="Sprite2D5" type="Sprite2D" parent="Parallax Map/ParallaxLayer5/Sprite2D5"]
-position = Vector2(4208.95, 7)
-rotation = 0.000662464
-scale = Vector2(1.51368, 1)
-texture = ExtResource("1_amqxn")
-flip_h = true
-
-[node name="NucleiodsWorm" type="CharacterBody2D" parent="Parallax Map/ParallaxLayer5"]
-position = Vector2(1736, -732)
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Parallax Map/ParallaxLayer5/NucleiodsWorm"]
-libraries = {
-"": SubResource("AnimationLibrary_kk1ti")
-}
-autoplay = "NucleiodsWorm"
-
-[node name="Sprite2D" type="Sprite2D" parent="Parallax Map/ParallaxLayer5/NucleiodsWorm"]
-position = Vector2(0, 10)
-texture = ExtResource("4_5v4kn")
-
-[node name="ParallaxLayer4" type="ParallaxLayer" parent="Parallax Map"]
-position = Vector2(540, -46)
-motion_scale = Vector2(0.85, 1)
-
-[node name="CharacterBody2D" type="CharacterBody2D" parent="Parallax Map/ParallaxLayer4"]
-position = Vector2(-540, 46)
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Parallax Map/ParallaxLayer4/CharacterBody2D"]
-libraries = {
-"": SubResource("AnimationLibrary_aq0ge")
-}
-autoplay = "Virus1BG"
-speed_scale = 0.887
-
-[node name="Sprite2D" type="Sprite2D" parent="Parallax Map/ParallaxLayer4/CharacterBody2D"]
-position = Vector2(1016.81, -755.258)
-rotation = 4.2543
-scale = Vector2(0.75, 0.75)
-texture = ExtResource("5_3hxx7")
-
-[node name="Sprite2D4" type="Sprite2D" parent="Parallax Map/ParallaxLayer4"]
-position = Vector2(2526, -709)
-scale = Vector2(1.46895, 1)
-texture = ExtResource("2_wx1vn")
-
-[node name="ParallaxLayer3" type="ParallaxLayer" parent="Parallax Map"]
-motion_scale = Vector2(0.9, 1)
-
-[node name="CharacterBody2D" type="CharacterBody2D" parent="Parallax Map/ParallaxLayer3"]
-position = Vector2(278, -713)
-scale = Vector2(0.85, 0.85)
-
-[node name="Sprite2D" type="Sprite2D" parent="Parallax Map/ParallaxLayer3/CharacterBody2D"]
-position = Vector2(5212.96, 139.124)
-rotation = 0.023817
-texture = ExtResource("5_3hxx7")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Parallax Map/ParallaxLayer3/CharacterBody2D"]
-libraries = {
-"": SubResource("AnimationLibrary_rkbb8")
-}
-autoplay = "Virus2"
-speed_scale = 0.97
-
-[node name="Sprite2D3" type="Sprite2D" parent="Parallax Map/ParallaxLayer3"]
-position = Vector2(2757, -814)
-scale = Vector2(1.5245, 1.11433)
-texture = ExtResource("3_tse7y")
-
-[node name="ParallaxLayer2" type="ParallaxLayer" parent="Parallax Map"]
-motion_scale = Vector2(0.95, 1)
-
-[node name="CharacterBody2D" type="CharacterBody2D" parent="Parallax Map/ParallaxLayer2"]
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Parallax Map/ParallaxLayer2/CharacterBody2D"]
-libraries = {
-"": SubResource("AnimationLibrary_chbva")
-}
-autoplay = "Virus4"
-speed_scale = 0.662
-
-[node name="Sprite2D" type="Sprite2D" parent="Parallax Map/ParallaxLayer2/CharacterBody2D"]
-position = Vector2(252.698, -594.995)
-rotation = 0.00363407
-texture = ExtResource("5_3hxx7")
-
-[node name="Sprite2D2" type="Sprite2D" parent="Parallax Map/ParallaxLayer2"]
-position = Vector2(2835, -698)
-scale = Vector2(1.55356, 1.00826)
-texture = ExtResource("1_b020i")
-
-[node name="ParallaxLayer" type="ParallaxLayer" parent="Parallax Map"]
-motion_scale = Vector2(0.9, 1)
-
-[node name="CharacterBody2D" type="CharacterBody2D" parent="Parallax Map/ParallaxLayer"]
-position = Vector2(5380, -821)
-scale = Vector2(1.25, 1.25)
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Parallax Map/ParallaxLayer/CharacterBody2D"]
-libraries = {
-"": SubResource("AnimationLibrary_7shd4")
-}
-autoplay = "virus5"
-speed_scale = 0.887
-
-[node name="Sprite2D" type="Sprite2D" parent="Parallax Map/ParallaxLayer/CharacterBody2D"]
-position = Vector2(185.6, -12.8)
-texture = ExtResource("5_3hxx7")
-
-[node name="Sprite2D" type="Sprite2D" parent="Parallax Map/ParallaxLayer"]
-position = Vector2(2753, -799)
-scale = Vector2(1.5245, 1.75207)
-texture = ExtResource("1_irr4f")
-
-[node name="Foreground" type="ParallaxBackground" parent="."]
-layer = 3
+[node name="Pillar" parent="." instance=ExtResource("5_42f6g")]
 visible = false
 
-[node name="ParallaxLayer" type="ParallaxLayer" parent="Foreground"]
-position = Vector2(662, -486)
-motion_scale = Vector2(0.9, 0.9)
+[node name="Neeedle" parent="." instance=ExtResource("9_h004n")]
+scale = Vector2(1, 1)
 
-[node name="Sprite2D" type="Sprite2D" parent="Foreground/ParallaxLayer"]
-position = Vector2(2102, -178.5)
-scale = Vector2(1.56097, 2.23829)
-texture = ExtResource("2_4xxbh")
-
-[node name="Elevation" type="Sprite2D" parent="."]
-position = Vector2(1600, -176.25)
-scale = Vector2(1.93269, 1.55647)
-texture = ExtResource("12_baevl")
-
-[node name="StaticBody2D3" type="StaticBody2D" parent="Elevation"]
-position = Vector2(-8.08484, -16.8651)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Elevation/StaticBody2D3"]
-position = Vector2(-1564.2, -85.5298)
-shape = SubResource("RectangleShape2D_ub4ap")
-one_way_collision = true
-
-[node name="Ground" type="Sprite2D" parent="."]
-position = Vector2(1584.37, -202.5)
-scale = Vector2(1.93269, 1.55647)
-texture = ExtResource("14_r1prf")
-
-[node name="StaticBody2D2" type="StaticBody2D" parent="Ground"]
-visible = false
-position = Vector2(-0.000244141, 0)
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Ground/StaticBody2D2"]
-position = Vector2(2680.52, 259.4)
-shape = SubResource("RectangleShape2D_urk1p")
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Ground"]
-visible = false
-position = Vector2(-819.776, 130.102)
-scale = Vector2(0.517413, 0.642478)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground/StaticBody2D"]
-position = Vector2(601.25, 200)
-scale = Vector2(1.93269, 1.55647)
-shape = SubResource("RectangleShape2D_urk1p")
-
-[node name="Pillar" type="CharacterBody2D" parent="."]
-position = Vector2(1584.37, -202.5)
-scale = Vector2(1.93269, 1.55647)
-
-[node name="Sprite2D" type="Sprite2D" parent="Pillar"]
-position = Vector2(-143.905, -157.407)
-texture = ExtResource("13_se0nx")
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Pillar"]
-visible = false
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Pillar/StaticBody2D"]
-position = Vector2(-196.94, -110.536)
-shape = SubResource("RectangleShape2D_r3prl")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Pillar/StaticBody2D"]
-position = Vector2(-204.054, 150.982)
-shape = SubResource("RectangleShape2D_ksuhd")
-
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Pillar/StaticBody2D"]
-position = Vector2(-202.114, 106.993)
-shape = SubResource("RectangleShape2D_bs37c")
-
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="Pillar/StaticBody2D"]
-position = Vector2(-205.174, 78.0819)
-shape = SubResource("RectangleShape2D_rlqfn")
+[node name="Moving_Platform" parent="." instance=ExtResource("7_cdcdo")]
+position = Vector2(3201.25, -138.75)
+scale = Vector2(1.1, 1.1)
 
 [node name="Player" parent="." instance=ExtResource("2_fyndp")]
-position = Vector2(-1678.75, -187.5)
+position = Vector2(-1677.5, -472.5)
 scale = Vector2(2, 2)
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player"]
@@ -462,9 +50,9 @@ remote_path = NodePath("../../Camera2D")
 layer = 4
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(-1678.75, -187.5)
+position = Vector2(-1677.5, -472.5)
 scale = Vector2(2, 2)
-offset = Vector2(0, -75)
+offset = Vector2(0, -33)
 ignore_rotation = false
 process_callback = 0
 limit_left = 100
@@ -484,7 +72,6 @@ position = Vector2(-781.25, -142.5)
 motion_mode = 1
 
 [node name="BorderCollision" type="StaticBody2D" parent="."]
-visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BorderCollision"]
 position = Vector2(-1971.25, -39.8438)
@@ -493,6 +80,3 @@ shape = SubResource("RectangleShape2D_hwqcl")
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="BorderCollision"]
 position = Vector2(4833.75, -351.25)
 shape = SubResource("RectangleShape2D_rt6r2")
-
-[node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
-visible = false
