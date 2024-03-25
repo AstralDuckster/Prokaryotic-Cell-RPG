@@ -1,0 +1,56 @@
+[gd_scene load_steps=6 format=3 uid="uid://dp05k5w8cp1sx"]
+
+[ext_resource type="Texture2D" uid="uid://dwphv7j2vql0q" path="res://Enemies/Needle.png" id="1_kb2jc"]
+[ext_resource type="Texture2D" uid="uid://df4ttf0mssadb" path="res://Enemies/NeedleMound.png" id="2_qbgau"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wjtsa"]
+size = Vector2(21, 628)
+
+[sub_resource type="Animation" id="Animation_tmlns"]
+resource_name = "needle_dig"
+length = 3.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("..:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-2, 47), Vector2(0, -614)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1y55h"]
+_data = {
+"needle_dig": SubResource("Animation_tmlns")
+}
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(-2, 47)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+position = Vector2(0, 344)
+texture = ExtResource("1_kb2jc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(0, 354)
+shape = SubResource("RectangleShape2D_wjtsa")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CharacterBody2D"]
+root_node = NodePath("../Sprite2D")
+libraries = {
+"": SubResource("AnimationLibrary_1y55h")
+}
+autoplay = "needle_dig"
+speed_scale = 1.201
+
+[node name="CharacterBody2D2" type="CharacterBody2D" parent="."]
+
+[node name="Sprite2D2" type="Sprite2D" parent="CharacterBody2D2"]
+texture = ExtResource("2_qbgau")

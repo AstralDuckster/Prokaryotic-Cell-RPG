@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://cx4ddrd7xjhc0"]
+
+[ext_resource type="Texture2D" uid="uid://2jbsotc67fnc" path="res://Assets/Destructable_Pillars.png" id="1_dk3ua"]
+
+[node name="Pillar" type="CharacterBody2D"]
+position = Vector2(1584.37, -202.5)
+scale = Vector2(1.93269, 1.55647)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-143.905, -157.407)
+texture = ExtResource("1_dk3ua")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]

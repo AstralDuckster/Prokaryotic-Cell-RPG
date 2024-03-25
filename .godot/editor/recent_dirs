@@ -1,3 +1,6 @@
+res://Assets
+res://Enemies
+res://Background
 res://Characters/Jump
 res://fx
 res://characters/Run-Shoot
@@ -8,9 +11,7 @@ res://Characters/Jump-Start
 res://Characters/Jump-End
 res://Characters/Idle
 res://Characters
-res://Enemies
 res://Levels
 res://Characters/Run
-res://Assets
 res://UI
 res://Scripts

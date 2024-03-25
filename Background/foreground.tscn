@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://de1dx8fqu7xxp"]
+
+[ext_resource type="Texture2D" uid="uid://bdjagaobwvm3c" path="res://Background/ParallaxMapForeGround.png" id="1_mroc5"]
+
+[node name="Foreground" type="ParallaxBackground"]
+layer = 3
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+position = Vector2(662, -486)
+motion_scale = Vector2(0.9, 0.9)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer"]
+position = Vector2(2102, -174.5)
+scale = Vector2(1.56097, 2.55785)
+texture = ExtResource("1_mroc5")

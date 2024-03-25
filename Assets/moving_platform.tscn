@@ -1,0 +1,48 @@
+[gd_scene load_steps=5 format=3 uid="uid://baflhuawycse8"]
+
+[ext_resource type="Texture2D" uid="uid://dp8f2iv5545ii" path="res://Assets/MovingPlatform.png" id="1_grypg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7ygpo"]
+size = Vector2(367, 77)
+
+[sub_resource type="Animation" id="Animation_8x6pt"]
+resource_name = "moving_platform"
+length = 3.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("..:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(926, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_j28r2"]
+_data = {
+"moving_platform": SubResource("Animation_8x6pt")
+}
+
+[node name="Moving_Platform" type="Node2D"]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(707.621, 0)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(-1.5, 12.5)
+shape = SubResource("RectangleShape2D_7ygpo")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CharacterBody2D"]
+root_node = NodePath("../Sprite2D")
+libraries = {
+"": SubResource("AnimationLibrary_j28r2")
+}
+autoplay = "moving_platform"
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+texture = ExtResource("1_grypg")

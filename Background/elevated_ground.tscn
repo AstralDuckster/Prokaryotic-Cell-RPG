@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://q3cll4wq2bqi"]
+
+[ext_resource type="Texture2D" uid="uid://qe0aqnakkoqg" path="res://Assets/Elevated Ground.png" id="1_mfmkq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ub4ap"]
+size = Vector2(381.579, 28.1083)
+
+[node name="Elevation" type="Sprite2D"]
+position = Vector2(1600, -176.25)
+scale = Vector2(1.93269, 1.55647)
+texture = ExtResource("1_mfmkq")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+position = Vector2(-8.08484, -16.8651)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+position = Vector2(-1564.2, -85.5298)
+shape = SubResource("RectangleShape2D_ub4ap")
+one_way_collision = true
