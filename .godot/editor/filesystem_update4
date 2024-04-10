@@ -1,5 +1,7 @@
 res://Levels/base_level.tscn
-res://Enemies/enemy_needle.tscn
+res://UI/health_bar/health_bar.gd
+res://Characters/player.gd
 res://Assets/moving_platform.tscn
-res://Background/breakable_pillar.tscn
 res://Background/foreground.tscn
+res://UI/game_screen.tscn
+res://Characters/player.tscn

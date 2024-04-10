@@ -1,7 +1,9 @@
+res://Characters/Jump
+res://UI/health_bar
+res://Scripts
 res://Assets
 res://Enemies
 res://Background
-res://Characters/Jump
 res://fx
 res://characters/Run-Shoot
 res://Characters/run-shoot
@@ -14,4 +16,3 @@ res://Characters
 res://Levels
 res://Characters/Run
 res://UI
-res://Scripts

@@ -1,28 +1,16 @@
-extends Node2D
+extends ProgressBar
 
-@export var heart0 : Texture2D
-@export var heart1 : Texture2D
-
-@onready var heart_1 = $Heart1
-@onready var heart_2 = $Heart2
-@onready var heart_3 = $Heart3
-
+@export var player: Player
 
 func _ready():
-	HealthManager.on_health_change.connect(on_player_health_change)
-	
-func on_player_health_change(player_current_health : int):
-	if player_current_health == 3:
-		heart_3.texture = heart1
-	elif player_current_health < 3:
-		heart_3.texture = heart0
-		
-	if player_current_health == 2:
-		heart_2.texture = heart1
-	elif player_current_health < 2:
-		heart_2.texture = heart0
-		
-	if player_current_health == 1:
-		heart_1.texture = heart1
-	elif player_current_health < 1:
-		heart_1.texture = heart0
+	player.healthChanged.connect(update)
+	update() 
+
+func update():
+	if player.maxHealth > 0:
+		value = player.currentHealth * 100 / player.maxHealth
+		print("Player Health: player.currentHealth")
+	else:
+		value = 0
+		print("Player Health: player.currentHealth")
+
