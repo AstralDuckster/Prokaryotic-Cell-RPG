@@ -1,4 +1,4 @@
-extends ProgressBar
+extends TextureProgressBar
 
 @export var player: Player
 
@@ -9,8 +9,8 @@ func _ready():
 func update():
 	if player.maxHealth > 0:
 		value = player.currentHealth * 100 / player.maxHealth
-		print("Player Health: player.currentHealth")
+		print("Player Health: ", player.currentHealth)
 	else:
 		value = 0
-		print("Player Health: player.currentHealth")
+		print("Player Health: ", player.currentHealth)
 

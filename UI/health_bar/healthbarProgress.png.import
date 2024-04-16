@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://5mhqe5gqpxmp"
-path="res://.godot/imported/Attack-01-Sheet.png-e83163849bd0125f4f5a7fcd399c447e.ctex"
+uid="uid://6l2w4im6ayjt"
+path="res://.godot/imported/healthbarProgress.png-05cfc58aad5071423618bd7f5921d1eb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Characters/Attack-01/Attack-01-Sheet.png"
-dest_files=["res://.godot/imported/Attack-01-Sheet.png-e83163849bd0125f4f5a7fcd399c447e.ctex"]
+source_file="res://UI/health_bar/healthbarProgress.png"
+dest_files=["res://.godot/imported/healthbarProgress.png-05cfc58aad5071423618bd7f5921d1eb.ctex"]
 
 [params]
 

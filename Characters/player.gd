@@ -3,6 +3,8 @@ extends CharacterBody2D
 class_name Player
 
 signal healthChanged
+signal facing_direction_changed(facing_right: bool)
+signal knockback_to_enemy
 
 var bullet = preload("res://fx/bullet.tscn")
 @onready var muzzle : Marker2D = $Muzzle
@@ -10,37 +12,46 @@ var bullet = preload("res://fx/bullet.tscn")
 @export var SPEED = 400.0
 const GRAVITY = 700
 @export var JUMP_HEIGHT = -500
-@export var JUMP_VELOCITY = 400
+@export var JUMP_VELOCITY = 300
 @export var DOUBLE_JUMP = -400
-@export var DOUBLE_JUMP_VELOCITY = 300
+@export var DOUBLE_JUMP_VELOCITY = 150
+@export var ATTACK_VELOCITY = 200.0
 const AIR_SPEED = 50
 const MAX_JUMP_TIME = 0.5
 
 var can_double_jump = false
+var attack_ip = false
 
-@export var maxHealth = 100
+@export var maxHealth = 30
 @onready var currentHealth: int = maxHealth
+
+@onready var deal_attack_timer : Timer = $deal_attack_timer
 @onready var hurtTimer = $hurtTimer
 @export var knockbackPower: int = 500
+var knockback_dir = Vector2()
+var knockback_wait = -1
+@export var dir = 1
 
 var isHurt: bool = false
 var current_state
 var muzzle_position
 
-enum State { Idle, Run, Jump, DoubleJump, Shoot, Hurt }
+enum State { Idle, Run, Jump, DoubleJump, Shoot, Attack1, Hurt }
 
 func _ready():
 	current_state = State.Idle
 	muzzle_position = muzzle.position
-	
+		
 func _physics_process(delta):
+	move_and_slide()
+	
 	player_falling(delta)
 	player_idle(delta)
 	player_run(delta)
 	player_jump(delta)
 	player_shooting(delta)
+	player_melee(delta)
 	
-	move_and_slide()
 	
 	player_animations()
 	
@@ -64,20 +75,26 @@ func player_run(delta):
 	
 	if direction:
 		velocity.x = SPEED * direction
+	
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	if direction != 0:
 		current_state = State.Run
 		$AnimatedSprite2D.flip_h = velocity.x < 0
-
+	
+	if Input.is_action_pressed("right"):
+		dir = 1
+	if Input.is_action_pressed("left"):
+		dir = -1
+		
 func player_jump(delta):
 	var direction = Input.get_axis("left", "right")
 	if Input.is_action_just_released("jump") and velocity.y < 0:
 		velocity.y *= 0.5
 		velocity.x = direction * JUMP_VELOCITY
-		can_double_jump = true
 		
+	#Allows for small jump dependent on jump hold time
 	if Input.is_action_just_pressed("jump"):
 		if is_on_floor():
 			velocity.y = JUMP_HEIGHT
@@ -104,40 +121,79 @@ func player_shooting(delta):
 			bullet_instance.global_position = muzzle.global_position
 			get_parent().add_child(bullet_instance)
 			current_state = State.Shoot
-		
-func hurtbyVirus1(area):
-	currentHealth -= 10  # Assuming damage amount is 10
-	if currentHealth < 0:
-		currentHealth = maxHealth
 
-	current_state = State.Hurt
-	isHurt = true
-  # Emit signal after updating health
-	healthChanged.emit()
-	print("Player health:", currentHealth) #Print health after update
+func player_melee(delta):
+	var direction = Input.get_axis("left", "right")
+	emit_signal("facing_direction_changed", !$AnimatedSprite2D.flip_h)
 	
-	knockback(area.get_parent().velocity)
-	hurtTimer.start()
-	await hurtTimer.timeout
-	isHurt = false
 	
-func knockback(enemyVelocity: Vector2):
-	var knockbackDirection = (enemyVelocity - velocity).normalized() * knockbackPower
-	velocity = knockbackDirection
-	move_and_slide()
-	
-func player_animations():
-	if current_state == State.Idle:
-		$AnimatedSprite2D.animation = "idle"
-	elif current_state == State.Run and $AnimatedSprite2D.animation != "run_shoot":
-		$AnimatedSprite2D.animation = "run"
-	elif current_state == State.Jump:
-		$AnimatedSprite2D.animation = "tall_jump"
-	elif current_state == State.DoubleJump:
-		$AnimatedSprite2D.animation = "double_jump"
-	elif current_state == State.Shoot:
-		$AnimatedSprite2D.animation = "run_shoot"	
-	elif current_state == State.Hurt:
-		pass
+	if Input.is_action_just_pressed("attack"): #attack is "M"
+		velocity.x = direction * (SPEED - 200)
+		attack_ip = true
+		
+		for area in $Weapon.get_overlapping_areas():
+			var parent = area.get_parent()
+			print(parent.name)
+			if knockback_wait <= 0:
+				emit_signal("knockback_to_enemy")
+				
+		knockback_wait -= 1
 			
+		$deal_attack_timer.start()
+		if !$deal_attack_timer.is_stopped():
+			current_state = State.Attack1
+	if $deal_attack_timer.is_stopped():
+			attack_ip = false
+
+	
+func _on_hurtbox_body_entered(body : Node2D):
+	var virus1_damage = 5
+	if body.is_in_group("Enemy"):
+		print("Virus_1 entered ", body.damage_amount)
+		currentHealth -= virus1_damage
+		if currentHealth < 0:
+			currentHealth = maxHealth
+			
+		healthChanged.emit()
+		current_state = State.Hurt
+		player_knockback()
+		
+		print_debug(currentHealth)
+
+func player_knockback():
+	var knockbackDirection = -velocity.normalized() * knockbackPower
+	velocity = knockbackDirection * get_process_delta_time()
+	print_debug(velocity)
+	print_debug(position)
+	move_and_slide()
+	print_debug(position)
+	print_debug(" ")
+
+func handleCollision():
+	for i in get_slide_collision_count():
+		var collision = get_slide_collision(i)
+		var collider = collision.get_collider()
+		print_debug(collider.name)
+	
+		
+func player_animations():
+	if attack_ip == false:
+		if current_state == State.Idle:
+			$AnimatedSprite2D.animation = "idle"
+		elif current_state == State.Run and $AnimatedSprite2D.animation != "run_shoot":
+			$AnimatedSprite2D.animation = "run"
+		elif current_state == State.Jump:
+			$AnimatedSprite2D.animation = "tall_jump"
+		elif current_state == State.DoubleJump:
+			$AnimatedSprite2D.animation = "double_jump"
+		elif current_state == State.Shoot:
+			$AnimatedSprite2D.animation = "run_shoot"	
+		elif current_state == State.Hurt:
+			pass
+	elif current_state == State.Attack1:
+		$AnimatedSprite2D.play("attack1")
+	
+
+
+
 

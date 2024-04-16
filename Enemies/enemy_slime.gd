@@ -26,6 +26,7 @@ func enemy_idle(delta : float):
 		
 func _on_hurtbox_area_entered(area):
 	print("Hurtbox area entered")
+	
 	if area.is_in_group("Player"):
 		if area.has_method("take_damage"):
 			area.take_damage(damage_amount)

@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://b70pjn5cijl4n"]
+
+[ext_resource type="PackedScene" uid="uid://cy45kpre4yoq8" path="res://UI/heart_gui.tscn" id="1_iedtj"]
+[ext_resource type="Script" path="res://UI/hearts_container.gd" id="1_xvsdx"]
+
+[node name="heartsContainer" type="HBoxContainer"]
+layout_direction = 3
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_xvsdx")
+
+[node name="heartsGUI" parent="." instance=ExtResource("1_iedtj")]
+layout_mode = 2
+
+[node name="heartsGUI2" parent="." instance=ExtResource("1_iedtj")]
+layout_mode = 2
+
+[node name="heartsGUI3" parent="." instance=ExtResource("1_iedtj")]
+layout_mode = 2
