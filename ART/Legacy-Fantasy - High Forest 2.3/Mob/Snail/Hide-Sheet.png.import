@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b0s08kupfbiqn"
-path="res://.godot/imported/Hide-Sheet.png-73383c5daa7c9ed95fe4fca53b3cdc03.ctex"
+uid="uid://cdphlqiol5fs0"
+path="res://.godot/imported/Hide-Sheet.png-004d73a884134d86a9ad22b8db8eec2b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ART/Legacy-Fantasy - High Forest 2.3/Mob/Snail/Hide-Sheet.png"
-dest_files=["res://.godot/imported/Hide-Sheet.png-73383c5daa7c9ed95fe4fca53b3cdc03.ctex"]
+source_file="res://Art/Legacy-Fantasy - High Forest 2.3/Mob/Snail/Hide-Sheet.png"
+dest_files=["res://.godot/imported/Hide-Sheet.png-004d73a884134d86a9ad22b8db8eec2b.ctex"]
 
 [params]
 
