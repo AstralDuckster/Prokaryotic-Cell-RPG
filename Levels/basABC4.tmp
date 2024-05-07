@@ -1,0 +1,124 @@
+[gd_scene load_steps=18 format=3 uid="uid://uatsdsobdsdm"]
+
+[ext_resource type="PackedScene" uid="uid://djvfxrcs2qr14" path="res://Background/parallax_map.tscn" id="1_t0b2n"]
+[ext_resource type="Script" path="res://Levels/base_level.gd" id="1_uwduk"]
+[ext_resource type="PackedScene" uid="uid://de1dx8fqu7xxp" path="res://Background/foreground.tscn" id="2_ciq78"]
+[ext_resource type="PackedScene" uid="uid://jfbb0iht2n34" path="res://Characters/player.tscn" id="2_fyndp"]
+[ext_resource type="PackedScene" uid="uid://q3cll4wq2bqi" path="res://Background/elevated_ground.tscn" id="3_mqg4c"]
+[ext_resource type="PackedScene" uid="uid://dqegty8d5heqv" path="res://Background/ground.tscn" id="4_y17wq"]
+[ext_resource type="PackedScene" uid="uid://cx4ddrd7xjhc0" path="res://Background/breakable_pillar.tscn" id="5_42f6g"]
+[ext_resource type="PackedScene" uid="uid://dv0tb0y4hcg20" path="res://Enemies/enemy_slime.tscn" id="6_p3xrf"]
+[ext_resource type="PackedScene" uid="uid://baflhuawycse8" path="res://Assets/moving_platform.tscn" id="7_cdcdo"]
+[ext_resource type="PackedScene" uid="uid://dp05k5w8cp1sx" path="res://Enemies/enemy_needle.tscn" id="9_h004n"]
+[ext_resource type="PackedScene" uid="uid://b70pjn5cijl4n" path="res://UI/hearts_container.tscn" id="9_ya61y"]
+[ext_resource type="Texture2D" uid="uid://ghmb7fkpwg82" path="res://UI/health_bar/healthbarUnder.png" id="10_ddmei"]
+[ext_resource type="Script" path="res://UI/health_bar/health_bar.gd" id="10_f7sd1"]
+[ext_resource type="Texture2D" uid="uid://6l2w4im6ayjt" path="res://UI/health_bar/healthbarProgress.png" id="11_mw32i"]
+[ext_resource type="PackedScene" uid="uid://cqkrhyonckpiu" path="res://Enemies/Virus1/virus_1.tscn" id="13_saadn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hwqcl"]
+size = Vector2(384.062, 1764.69)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rt6r2"]
+size = Vector2(221.25, 1616.25)
+
+[node name="BaseLevel" type="Node2D"]
+position = Vector2(1523, -393)
+scale = Vector2(0.8, 0.8)
+script = ExtResource("1_uwduk")
+
+[node name="Parallax Map" parent="." instance=ExtResource("1_t0b2n")]
+
+[node name="Foreground" parent="." instance=ExtResource("2_ciq78")]
+
+[node name="Elevation" parent="." instance=ExtResource("3_mqg4c")]
+
+[node name="Ground" parent="." instance=ExtResource("4_y17wq")]
+
+[node name="Pillar" parent="." instance=ExtResource("5_42f6g")]
+visible = false
+
+[node name="Neeedle" parent="." instance=ExtResource("9_h004n")]
+
+[node name="Moving_Platform" parent="." instance=ExtResource("7_cdcdo")]
+position = Vector2(3201.25, -138.75)
+scale = Vector2(1.1, 1.1)
+
+[node name="Player" parent="." instance=ExtResource("2_fyndp")]
+position = Vector2(1877.5, -110)
+scale = Vector2(2, 2)
+SPEED = null
+JUMP_HEIGHT = null
+JUMP_VELOCITY = null
+DOUBLE_JUMP = null
+DOUBLE_JUMP_VELOCITY = null
+ATTACK_VELOCITY = null
+maxHealth = null
+dir = null
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player"]
+remote_path = NodePath("../../Camera2D")
+
+[node name="KeepAsHidden" type="CanvasLayer" parent="."]
+
+[node name="heartsContainer" parent="KeepAsHidden" instance=ExtResource("9_ya61y")]
+visible = false
+offset_right = 56.0
+
+[node name="HealthBar" type="CanvasLayer" parent="."]
+
+[node name="ProgressBar" type="ProgressBar" parent="HealthBar"]
+offset_right = 41.0
+offset_bottom = 27.0
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="HealthBar" node_paths=PackedStringArray("player")]
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 67.0
+offset_bottom = 13.0
+scale = Vector2(3, 3)
+step = 0.01
+value = 100.0
+texture_under = ExtResource("10_ddmei")
+texture_progress = ExtResource("11_mw32i")
+script = ExtResource("10_f7sd1")
+player = NodePath("../../Player")
+metadata/_edit_use_anchors_ = true
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(1877.5, -110)
+scale = Vector2(2, 2)
+offset = Vector2(0, -33)
+ignore_rotation = false
+process_callback = 0
+limit_left = 100
+limit_top = -2000
+limit_right = 5300
+limit_bottom = 420
+position_smoothing_enabled = true
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
+drag_horizontal_offset = 0.12
+drag_vertical_offset = -0.06
+editor_draw_limits = true
+
+[node name="EnemySlime" parent="." instance=ExtResource("6_p3xrf")]
+position = Vector2(-781.25, -142.5)
+motion_mode = 1
+
+[node name="BorderCollision" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BorderCollision"]
+position = Vector2(-1931.25, 18.75)
+shape = SubResource("RectangleShape2D_hwqcl")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="BorderCollision"]
+position = Vector2(4833.75, -351.25)
+shape = SubResource("RectangleShape2D_rt6r2")
+
+[node name="Virus1" parent="." node_paths=PackedStringArray("player") groups=["Hit"] instance=ExtResource("13_saadn")]
+position = Vector2(2196.25, -75)
+player = NodePath("../Player")
+
+[connection signal="knockback_to_enemy" from="Player" to="Virus1" method="_on_player_knockback_to_enemy"]

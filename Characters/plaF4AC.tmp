@@ -920,6 +920,7 @@ facing_left_position = Vector2(-43, 16)
 facing_right_position = Vector2(43, 16)
 
 [node name="deal_attack_timer" type="Timer" parent="."]
+process_callback = 0
 wait_time = 1.1
 one_shot = true
 
@@ -931,4 +932,3 @@ libraries = {
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="body_entered" from="Hurtbox" to="." method="_on_hurtbox_body_entered"]
 [connection signal="body_entered" from="Weapon" to="." method="_on_area_2d_body_entered"]
-[connection signal="body_entered" from="Weapon" to="Weapon" method="_on_body_entered"]

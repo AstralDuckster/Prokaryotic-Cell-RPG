@@ -1,8 +1,48 @@
-[gd_scene load_steps=15 format=3 uid="uid://cqkrhyonckpiu"]
+[gd_scene load_steps=25 format=3 uid="uid://cqkrhyonckpiu"]
 
 [ext_resource type="Script" path="res://Enemies/Virus1/virus_1.gd" id="1_eyodk"]
 [ext_resource type="Texture2D" uid="uid://b4k3lighpjag5" path="res://Enemies/Virus1/bacteria1idle.png" id="1_w56q2"]
-[ext_resource type="Script" path="res://Enemies/Virus1/Damageable.gd" id="3_j0jot"]
+[ext_resource type="Texture2D" uid="uid://c7pujrqo702ec" path="res://Enemies/Virus1/bacteria1 attack.png" id="2_kabyd"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a8tus"]
+atlas = ExtResource("2_kabyd")
+region = Rect2(0, 0, 128, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vxgk5"]
+atlas = ExtResource("2_kabyd")
+region = Rect2(128, 0, 128, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_myt4r"]
+atlas = ExtResource("2_kabyd")
+region = Rect2(256, 0, 128, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uhtka"]
+atlas = ExtResource("2_kabyd")
+region = Rect2(384, 0, 128, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_en8i5"]
+atlas = ExtResource("2_kabyd")
+region = Rect2(512, 0, 128, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eeqwa"]
+atlas = ExtResource("2_kabyd")
+region = Rect2(640, 0, 128, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u6cgb"]
+atlas = ExtResource("2_kabyd")
+region = Rect2(768, 0, 128, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vmkpj"]
+atlas = ExtResource("2_kabyd")
+region = Rect2(896, 0, 128, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y4gf4"]
+atlas = ExtResource("2_kabyd")
+region = Rect2(1024, 0, 128, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a0wye"]
+atlas = ExtResource("2_kabyd")
+region = Rect2(1152, 0, 128, 90)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bkvpu"]
 atlas = ExtResource("1_w56q2")
@@ -38,10 +78,40 @@ region = Rect2(448, 0, 64, 64)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_6n68t"]
 animations = [{
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a8tus")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vxgk5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_myt4r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uhtka")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_en8i5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eeqwa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u6cgb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vmkpj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y4gf4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a0wye")
+}],
 "loop": true,
 "name": &"attack",
-"speed": 5.0
+"speed": 10.0
 }, {
 "frames": [],
 "loop": true,
@@ -79,10 +149,10 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_i04g7"]
-radius = 20.0998
+radius = 38.0132
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_748na"]
-radius = 19.0
+radius = 34.0588
 
 [node name="Virus1" type="CharacterBody2D" groups=["Enemy"]]
 light_mask = 4
@@ -92,14 +162,14 @@ collision_mask = 3
 script = ExtResource("1_eyodk")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(0, -46)
+position = Vector2(0, -18)
+scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_6n68t")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.601114
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["Virus_1"]]
-position = Vector2(0, -47)
+position = Vector2(-1, -20)
 shape = SubResource("CircleShape2D_i04g7")
 
 [node name="Hurtbox" type="Area2D" parent="." groups=["Enemy"]]
@@ -107,11 +177,8 @@ shape = SubResource("CircleShape2D_i04g7")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
 light_mask = 4
 visibility_layer = 2
-position = Vector2(0, -47)
+position = Vector2(-1, -19)
 shape = SubResource("CircleShape2D_748na")
 debug_color = Color(1, 0, 0.0901961, 0.419608)
-
-[node name="Damageable" type="Node" parent="."]
-script = ExtResource("3_j0jot")
 
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_hurtbox_area_entered"]

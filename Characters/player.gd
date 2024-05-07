@@ -27,7 +27,7 @@ var attack_ip = false
 
 @onready var deal_attack_timer : Timer = $deal_attack_timer
 @onready var hurtTimer = $hurtTimer
-@export var knockbackPower: int = 500
+@export var knockbackPower: float = 500
 var knockback_dir = Vector2()
 var knockback_wait = -1
 @export var dir = 1
@@ -50,7 +50,7 @@ func _physics_process(delta):
 	player_run(delta)
 	player_jump(delta)
 	player_shooting(delta)
-	player_melee(delta)
+	player_attack(delta)
 	
 	
 	player_animations()
@@ -82,7 +82,8 @@ func player_run(delta):
 	if direction != 0:
 		current_state = State.Run
 		$AnimatedSprite2D.flip_h = velocity.x < 0
-	
+		$AnimatedSprite2D/fx.flip_h = velocity.x < 0
+		
 	if Input.is_action_pressed("right"):
 		dir = 1
 	if Input.is_action_pressed("left"):
@@ -121,15 +122,15 @@ func player_shooting(delta):
 			bullet_instance.global_position = muzzle.global_position
 			get_parent().add_child(bullet_instance)
 			current_state = State.Shoot
-
-func player_melee(delta):
+func player_attack(delta):
 	var direction = Input.get_axis("left", "right")
 	emit_signal("facing_direction_changed", !$AnimatedSprite2D.flip_h)
 	
-	
-	if Input.is_action_just_pressed("attack"): #attack is "M"
+	if Input.is_action_just_pressed("attack") and attack_ip == false: #attack is "M"
 		velocity.x = direction * (SPEED - 200)
 		attack_ip = true
+		deal_attack_timer.start()
+		current_state = State.Attack1
 		
 		for area in $Weapon.get_overlapping_areas():
 			var parent = area.get_parent()
@@ -137,13 +138,9 @@ func player_melee(delta):
 			if knockback_wait <= 0:
 				emit_signal("knockback_to_enemy")
 				
-		knockback_wait -= 1
-			
-		$deal_attack_timer.start()
-		if !$deal_attack_timer.is_stopped():
-			current_state = State.Attack1
-	if $deal_attack_timer.is_stopped():
-			attack_ip = false
+
+	if deal_attack_timer.is_stopped():
+		attack_ip = false
 
 	
 func _on_hurtbox_body_entered(body : Node2D):
@@ -153,7 +150,7 @@ func _on_hurtbox_body_entered(body : Node2D):
 		currentHealth -= virus1_damage
 		if currentHealth < 0:
 			currentHealth = maxHealth
-			
+		
 		healthChanged.emit()
 		current_state = State.Hurt
 		player_knockback()
@@ -161,13 +158,10 @@ func _on_hurtbox_body_entered(body : Node2D):
 		print_debug(currentHealth)
 
 func player_knockback():
-	var knockbackDirection = -velocity.normalized() * knockbackPower
-	velocity = knockbackDirection * get_process_delta_time()
-	print_debug(velocity)
-	print_debug(position)
+	velocity.y -= knockbackPower * 0.2
+	velocity.x -= knockbackPower * 1
 	move_and_slide()
-	print_debug(position)
-	print_debug(" ")
+
 
 func handleCollision():
 	for i in get_slide_collision_count():
@@ -191,8 +185,7 @@ func player_animations():
 		elif current_state == State.Hurt:
 			pass
 	elif current_state == State.Attack1:
-		$AnimatedSprite2D.play("attack1")
-	
+		$AnimationPlayer.play("attack1")
 
 
 

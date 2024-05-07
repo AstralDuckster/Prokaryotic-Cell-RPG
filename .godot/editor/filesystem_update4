@@ -1,4 +1,5 @@
 res://Characters/player.tscn
+res://Characters/MeleeArea.gd
 res://UI/health_bar/health_bar.gd
 res://Characters/player.gd
 res://Levels/base_level.tscn
@@ -7,6 +8,7 @@ res://Background/foreground.tscn
 res://Enemies/Virus1/virus_1.tscn
 res://UI/hearts_container.tscn
 res://UI/heart_gui.tscn
-res://Enemies/Virus1/virus_1.gd
-res://Characters/MeleeArea.gd
 res://Characters/FacingCollisionShape2D.gd
+res://Enemies/Virus1/virus_1.gd
+res://Enemies/Virus1/Damageable.gd
+res://Enemies/Virus1/Node.gd
