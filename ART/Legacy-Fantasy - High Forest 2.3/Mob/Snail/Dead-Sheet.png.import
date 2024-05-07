@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bj22s7aqpf3ue"
-path="res://.godot/imported/Dead-Sheet.png-898527f1affebd09b760f65b168ba76e.ctex"
+uid="uid://cxij3cdd4xf4t"
+path="res://.godot/imported/Dead-Sheet.png-a9846fe84bae04b0a388271ff67e8170.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ART/Legacy-Fantasy - High Forest 2.3/Mob/Snail/Dead-Sheet.png"
-dest_files=["res://.godot/imported/Dead-Sheet.png-898527f1affebd09b760f65b168ba76e.ctex"]
+source_file="res://Art/Legacy-Fantasy - High Forest 2.3/Mob/Snail/Dead-Sheet.png"
+dest_files=["res://.godot/imported/Dead-Sheet.png-a9846fe84bae04b0a388271ff67e8170.ctex"]
 
 [params]
 

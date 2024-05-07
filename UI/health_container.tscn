@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://b8vynge2m3eyq"]
+
+[node name="BoxContainer" type="BoxContainer"]
+offset_right = 40.0
+offset_bottom = 40.0

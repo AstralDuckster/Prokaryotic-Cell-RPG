@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://hcydr80v4h63"]
+
+[ext_resource type="Texture2D" uid="uid://cs4p0xvuo1v5e" path="res://Heart_corazón.svg.png" id="1_a0j8o"]
+[ext_resource type="Script" path="res://UI/hp_bar.gd" id="1_tcg8r"]
+
+[node name="HP_BAR" type="Node2D"]
+position = Vector2(321, 319)
+script = ExtResource("1_tcg8r")
+heart1 = ExtResource("1_a0j8o")
+
+[node name="Heart" type="Sprite2D" parent="."]
+position = Vector2(-267, -270)
+scale = Vector2(0.109375, 0.109375)
+texture = ExtResource("1_a0j8o")
+
+[node name="Heart2" type="Sprite2D" parent="."]
+position = Vector2(-200, -270)
+scale = Vector2(0.109375, 0.109375)
+texture = ExtResource("1_a0j8o")
+
+[node name="Heart3" type="Sprite2D" parent="."]
+position = Vector2(-130, -270)
+scale = Vector2(0.109375, 0.109375)
+texture = ExtResource("1_a0j8o")
