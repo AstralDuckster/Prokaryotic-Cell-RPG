@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://vce40nnw61cn"
-path="res://.godot/imported/Platform_raised_half_rigth.png-df51538a91d328818f5adedd63e2fc5b.ctex"
+path="res://.godot/imported/Platform_raised_half_rigth.png-1a3e71a636887082948482eed92e419c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Assets/Platform_raised_half_rigth.png"
-dest_files=["res://.godot/imported/Platform_raised_half_rigth.png-df51538a91d328818f5adedd63e2fc5b.ctex"]
+source_file="res://ART/Assets/Platform_raised_half_rigth.png"
+dest_files=["res://.godot/imported/Platform_raised_half_rigth.png-1a3e71a636887082948482eed92e419c.ctex"]
 
 [params]
 

@@ -4,7 +4,7 @@ const GRAVITY = 100000
 const SPEED = 1
 
 enum State { Idle }
-var current_state : State
+var current_state 
 var direction : Vector2 = Vector2.LEFT
 var damage_amount = 1
 

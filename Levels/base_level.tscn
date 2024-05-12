@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://uatsdsobdsdm"]
+[gd_scene load_steps=17 format=3 uid="uid://uatsdsobdsdm"]
 
 [ext_resource type="PackedScene" uid="uid://djvfxrcs2qr14" path="res://Background/parallax_map.tscn" id="1_t0b2n"]
 [ext_resource type="Script" path="res://Levels/base_level.gd" id="1_uwduk"]
@@ -7,7 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://q3cll4wq2bqi" path="res://Background/elevated_ground.tscn" id="3_mqg4c"]
 [ext_resource type="PackedScene" uid="uid://dqegty8d5heqv" path="res://Background/ground.tscn" id="4_y17wq"]
 [ext_resource type="PackedScene" uid="uid://cx4ddrd7xjhc0" path="res://Background/breakable_pillar.tscn" id="5_42f6g"]
-[ext_resource type="PackedScene" uid="uid://dv0tb0y4hcg20" path="res://Enemies/enemy_slime.tscn" id="6_p3xrf"]
 [ext_resource type="PackedScene" uid="uid://baflhuawycse8" path="res://Assets/moving_platform.tscn" id="7_cdcdo"]
 [ext_resource type="PackedScene" uid="uid://dp05k5w8cp1sx" path="res://Enemies/enemy_needle.tscn" id="9_h004n"]
 [ext_resource type="PackedScene" uid="uid://b70pjn5cijl4n" path="res://UI/hearts_container.tscn" id="9_ya61y"]
@@ -92,11 +91,6 @@ drag_vertical_enabled = true
 drag_horizontal_offset = 0.12
 drag_vertical_offset = -0.06
 editor_draw_limits = true
-
-[node name="EnemySlime" parent="." instance=ExtResource("6_p3xrf")]
-visible = false
-position = Vector2(-781.25, -142.5)
-motion_mode = 1
 
 [node name="BorderCollision" type="StaticBody2D" parent="."]
 

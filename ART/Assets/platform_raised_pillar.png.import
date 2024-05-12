@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://duqhlmoypngdr"
-path="res://.godot/imported/platform_raised_pillar.png-7fcfbc1b50dcc9cfc11e04e5a0ddc00c.ctex"
+path="res://.godot/imported/platform_raised_pillar.png-a57d15456a56f6fb371d98f2fe1338b4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Assets/platform_raised_pillar.png"
-dest_files=["res://.godot/imported/platform_raised_pillar.png-7fcfbc1b50dcc9cfc11e04e5a0ddc00c.ctex"]
+source_file="res://ART/Assets/platform_raised_pillar.png"
+dest_files=["res://.godot/imported/platform_raised_pillar.png-a57d15456a56f6fb371d98f2fe1338b4.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c5aayfhi2gy2m"
-path="res://.godot/imported/Golden-Tree.png-740463b632ac4cd256784fffc0834b3c.ctex"
+path="res://.godot/imported/Golden-Tree.png-a50a53fb119929ddbf0ad4d38449901a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Legacy-Fantasy - High Forest 2.3/Trees/Golden-Tree.png"
-dest_files=["res://.godot/imported/Golden-Tree.png-740463b632ac4cd256784fffc0834b3c.ctex"]
+source_file="res://ART/Legacy-Fantasy - High Forest 2.3/Trees/Golden-Tree.png"
+dest_files=["res://.godot/imported/Golden-Tree.png-a50a53fb119929ddbf0ad4d38449901a.ctex"]
 
 [params]
 

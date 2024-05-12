@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cqrqnlx2jpsop"
-path="res://.godot/imported/Background.png-9cd9f328be53c3d646575f8f3f3c8791.ctex"
+path="res://.godot/imported/Background.png-bf0eea80c10078b4b022aab578bd4130.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Legacy-Fantasy - High Forest 2.3/Background/Background.png"
-dest_files=["res://.godot/imported/Background.png-9cd9f328be53c3d646575f8f3f3c8791.ctex"]
+source_file="res://ART/Legacy-Fantasy - High Forest 2.3/Background/Background.png"
+dest_files=["res://.godot/imported/Background.png-bf0eea80c10078b4b022aab578bd4130.ctex"]
 
 [params]
 

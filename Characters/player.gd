@@ -122,6 +122,7 @@ func player_shooting(delta):
 			bullet_instance.global_position = muzzle.global_position
 			get_parent().add_child(bullet_instance)
 			current_state = State.Shoot
+			
 func player_attack(delta):
 	var direction = Input.get_axis("left", "right")
 	emit_signal("facing_direction_changed", !$AnimatedSprite2D.flip_h)
@@ -135,14 +136,13 @@ func player_attack(delta):
 		for area in $Weapon.get_overlapping_areas():
 			var parent = area.get_parent()
 			print(parent.name)
-			if knockback_wait <= 0:
-				emit_signal("knockback_to_enemy")
+			await get_tree().create_timer(0.4).timeout 
+			emit_signal("knockback_to_enemy")
 				
-
-	if deal_attack_timer.is_stopped():
-		attack_ip = false
-
+func _on_deal_attack_timer_timeout():
+	attack_ip = false
 	
+					
 func _on_hurtbox_body_entered(body : Node2D):
 	var virus1_damage = 5
 	if body.is_in_group("Enemy"):
@@ -186,7 +186,4 @@ func player_animations():
 			pass
 	elif current_state == State.Attack1:
 		$AnimationPlayer.play("attack1")
-
-
-
 

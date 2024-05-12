@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b30sysxcu1y5x"
-path="res://.godot/imported/small_sting.png-5233a34b337f99bc13810881798b5b54.ctex"
+path="res://.godot/imported/small_sting.png-19c5d2a11527ab6a0cd0698b649fee5a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Fx/Player_FX/small_sting.png"
-dest_files=["res://.godot/imported/small_sting.png-5233a34b337f99bc13810881798b5b54.ctex"]
+source_file="res://ART/Fx/Player_FX/small_sting.png"
+dest_files=["res://.godot/imported/small_sting.png-19c5d2a11527ab6a0cd0698b649fee5a.ctex"]
 
 [params]
 

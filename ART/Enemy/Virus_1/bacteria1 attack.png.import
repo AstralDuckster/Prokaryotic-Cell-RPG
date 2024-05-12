@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ds46oosf6j3ig"
-path="res://.godot/imported/bacteria1 attack.png-b9b8f732148fc9e027c278f37e51d15b.ctex"
+path="res://.godot/imported/bacteria1 attack.png-9e8dd1a1ed688b6064256a67b5878dae.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Enemy/Virus_1/bacteria1 attack.png"
-dest_files=["res://.godot/imported/bacteria1 attack.png-b9b8f732148fc9e027c278f37e51d15b.ctex"]
+source_file="res://ART/Enemy/Virus_1/bacteria1 attack.png"
+dest_files=["res://.godot/imported/bacteria1 attack.png-9e8dd1a1ed688b6064256a67b5878dae.ctex"]
 
 [params]
 
