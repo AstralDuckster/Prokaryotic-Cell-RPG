@@ -1,5 +1,10 @@
 extends CharacterBody2D
 
+class_name Virus_1
+
+signal healthChanged
+
+@export var wander_direction : Node2D
 @export var player: Player
 
 @export var starting_move_direction : Vector2 = Vector2.LEFT
@@ -9,7 +14,8 @@ extends CharacterBody2D
 
 enum State { Idle }
 var current_state
-var damage_amount = 1
+@export var maxHealth = 30
+@onready var currentHealth: int = maxHealth
 
 var is_movement_enabled: bool = true
 
@@ -19,6 +25,7 @@ var knockback
 
 func _ready():
 	current_state = State.Idle
+	healthChanged.emit()
 	
 func _physics_process(delta):
 	enemy_gravity(delta)
@@ -38,10 +45,23 @@ func enemy_idle(delta):
 	if knockback == true:
 		velocity.x = direction * -300
 		knockback = false
-	
-
+		
 func _on_player_knockback_to_enemy():
 	var player_dir = get_parent().get_node("Player").dir
 	knockback_dir = player_dir
 	direction = knockback_dir * -1
 	knockback = true
+
+func _on_player_decrease_enemy_health():
+	var sword_damage = 10
+	print("Virus_1 entered ")
+	currentHealth -= sword_damage
+	if currentHealth == 0:
+		$death_timer.start()
+		$AnimationPlayer.play("attack")	
+		
+	healthChanged.emit()
+	print_debug(currentHealth)
+	
+func _on_death_timer_timeout():
+	queue_free()

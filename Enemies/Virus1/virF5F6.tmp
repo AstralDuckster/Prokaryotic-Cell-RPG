@@ -1,0 +1,134 @@
+[gd_scene load_steps=18 format=3 uid="uid://cqkrhyonckpiu"]
+
+[ext_resource type="Script" path="res://Enemies/Virus1/virus_1.gd" id="1_eyodk"]
+[ext_resource type="Texture2D" uid="uid://b4k3lighpjag5" path="res://Enemies/Virus1/bacteria1idle.png" id="1_w56q2"]
+[ext_resource type="Script" path="res://Enemies/Virus1/Damageable.gd" id="3_j0jot"]
+[ext_resource type="Texture2D" uid="uid://ghmb7fkpwg82" path="res://UI/health_bar/healthbarUnder.png" id="4_3yhju"]
+[ext_resource type="Texture2D" uid="uid://6l2w4im6ayjt" path="res://UI/health_bar/healthbarProgress.png" id="5_owhvk"]
+[ext_resource type="Script" path="res://Enemies/Virus1/Virus1_HealthBar.gd" id="6_qvvmk"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bkvpu"]
+atlas = ExtResource("1_w56q2")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1xp5c"]
+atlas = ExtResource("1_w56q2")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6lawb"]
+atlas = ExtResource("1_w56q2")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o8t5p"]
+atlas = ExtResource("1_w56q2")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yepjx"]
+atlas = ExtResource("1_w56q2")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1473v"]
+atlas = ExtResource("1_w56q2")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kqs2r"]
+atlas = ExtResource("1_w56q2")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i0nya"]
+atlas = ExtResource("1_w56q2")
+region = Rect2(448, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6n68t"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"attack",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bkvpu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1xp5c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6lawb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o8t5p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yepjx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1473v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kqs2r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i0nya")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_i04g7"]
+radius = 20.0998
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_748na"]
+radius = 19.0
+
+[node name="Virus1" type="CharacterBody2D" groups=["Enemy"]]
+light_mask = 4
+visibility_layer = 3
+collision_layer = 4
+collision_mask = 3
+script = ExtResource("1_eyodk")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -46)
+sprite_frames = SubResource("SpriteFrames_6n68t")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.601114
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["Virus_1"]]
+position = Vector2(0, -47)
+shape = SubResource("CircleShape2D_i04g7")
+
+[node name="Hurtbox" type="Area2D" parent="." groups=["Enemy"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
+light_mask = 4
+visibility_layer = 2
+position = Vector2(0, -47)
+shape = SubResource("CircleShape2D_748na")
+debug_color = Color(1, 0, 0.0901961, 0.419608)
+
+[node name="Damageable" type="Node" parent="."]
+script = ExtResource("3_j0jot")
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="." node_paths=PackedStringArray("virus1")]
+offset_left = -23.0
+offset_top = -86.0
+offset_right = 23.0
+offset_bottom = -76.0
+step = 0.01
+value = 100.0
+nine_patch_stretch = true
+texture_under = ExtResource("4_3yhju")
+texture_progress = ExtResource("5_owhvk")
+script = ExtResource("6_qvvmk")
+virus1 = NodePath("..")
+
+[connection signal="area_entered" from="Hurtbox" to="." method="_on_hurtbox_area_entered"]
+[connection signal="body_entered" from="Hurtbox" to="." method="_on_hurtbox_body_entered"]

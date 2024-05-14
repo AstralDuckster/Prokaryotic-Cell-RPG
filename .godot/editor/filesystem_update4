@@ -1,11 +1,12 @@
-res://Characters/player.tscn
+res://Levels/base_level.tscn
 res://Characters/MeleeArea.gd
 res://UI/health_bar/health_bar.gd
-res://Enemies/Virus1/virus_1.gd
-res://Levels/base_level.tscn
+res://Characters/player.gd
 res://Assets/moving_platform.tscn
 res://Background/foreground.tscn
+res://Characters/player.tscn
 res://Enemies/Virus1/virus_1.tscn
 res://UI/hearts_container.tscn
 res://UI/heart_gui.tscn
-res://Characters/player.gd
+res://Enemies/Virus1/Wander.gd
+res://Enemies/Virus1/virus_1.gd

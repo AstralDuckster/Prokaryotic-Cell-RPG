@@ -1,4 +1,4 @@
-[gd_scene load_steps=116 format=3 uid="uid://jfbb0iht2n34"]
+[gd_scene load_steps=129 format=3 uid="uid://jfbb0iht2n34"]
 
 [ext_resource type="Script" path="res://Characters/player.gd" id="1_n1yer"]
 [ext_resource type="Texture2D" uid="uid://spiuefb8asmj" path="res://Characters/Attack-01/set 1 only sprite set.PNG" id="2_fextk"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://b30sysxcu1y5x" path="res://fx/Player_FX/small_sting.png" id="9_alxiy"]
 [ext_resource type="Script" path="res://Characters/FacingCollisionShape2D.gd" id="9_g6ys2"]
 [ext_resource type="Script" path="res://Characters/MeleeArea.gd" id="9_tj0dq"]
+[ext_resource type="Texture2D" uid="uid://cgpn54tkf3jqy" path="res://Characters/Faint/faint sprite set.png" id="10_7yri6"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_30j75"]
 atlas = ExtResource("2_fextk")
@@ -107,6 +108,50 @@ region = Rect2(896, 0, 64, 64)
 [sub_resource type="AtlasTexture" id="AtlasTexture_b6he8"]
 atlas = ExtResource("2_nw6gm")
 region = Rect2(960, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nthmt"]
+atlas = ExtResource("10_7yri6")
+region = Rect2(0, 0, 80, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ylkn6"]
+atlas = ExtResource("10_7yri6")
+region = Rect2(80, 0, 80, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iaf5s"]
+atlas = ExtResource("10_7yri6")
+region = Rect2(160, 0, 80, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_860uo"]
+atlas = ExtResource("10_7yri6")
+region = Rect2(240, 0, 80, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pk876"]
+atlas = ExtResource("10_7yri6")
+region = Rect2(320, 0, 80, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_buigd"]
+atlas = ExtResource("10_7yri6")
+region = Rect2(400, 0, 80, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_epj85"]
+atlas = ExtResource("10_7yri6")
+region = Rect2(480, 0, 80, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pyajr"]
+atlas = ExtResource("10_7yri6")
+region = Rect2(560, 0, 80, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wyqbe"]
+atlas = ExtResource("10_7yri6")
+region = Rect2(640, 0, 80, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mlwd5"]
+atlas = ExtResource("10_7yri6")
+region = Rect2(720, 0, 80, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m4b7g"]
+atlas = ExtResource("10_7yri6")
+region = Rect2(800, 0, 80, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mirkh"]
 atlas = ExtResource("2_lwckr")
@@ -458,6 +503,44 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_nthmt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ylkn6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iaf5s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_860uo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pk876")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_buigd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_epj85")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pyajr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wyqbe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mlwd5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m4b7g")
+}],
+"loop": true,
+"name": &"faint",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_mirkh")
 }, {
 "duration": 1.0,
@@ -726,6 +809,11 @@ region = Rect2(440, 0, 88, 45)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_jrumh"]
 animations = [{
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_cjit5")
@@ -864,10 +952,38 @@ tracks/4/keys = {
 "values": [0, 1, 2, 3, 4, 5]
 }
 
+[sub_resource type="Animation" id="Animation_p467j"]
+resource_name = "faint"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 9, 10]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"faint"]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_or7ri"]
 _data = {
 "RESET": SubResource("Animation_jr2pq"),
-"attack1": SubResource("Animation_ln263")
+"attack1": SubResource("Animation_ln263"),
+"faint": SubResource("Animation_p467j")
 }
 
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
@@ -875,20 +991,21 @@ collision_layer = 2
 script = ExtResource("1_n1yer")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(1, 5)
+position = Vector2(2.38419e-07, 3)
 scale = Vector2(0.93125, 1.01744)
 sprite_frames = SubResource("SpriteFrames_wn4u2")
 animation = &"attack1"
 autoplay = "idle"
-frame = 1
 
 [node name="fx" type="AnimatedSprite2D" parent="AnimatedSprite2D"]
+visible = false
 modulate = Color(0, 0.576471, 0, 0.576471)
 self_modulate = Color(0.576471, 0.576471, 0.576471, 0.576471)
 position = Vector2(8, 9)
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_jrumh")
 animation = &"small_sting"
+autoplay = "default"
 frame = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -896,6 +1013,7 @@ position = Vector2(2, 11)
 shape = SubResource("CapsuleShape2D_7kwhj")
 
 [node name="Hurtbox" type="Area2D" parent="."]
+visible = false
 collision_layer = 2
 collision_mask = 6
 
@@ -917,7 +1035,7 @@ position = Vector2(48, 15)
 shape = SubResource("RectangleShape2D_owi11")
 debug_color = Color(0.756863, 0.00392157, 0.94902, 0.419608)
 script = ExtResource("9_g6ys2")
-facing_left_position = Vector2(-43, 16)
+facing_left_position = Vector2(-39, 16)
 facing_right_position = Vector2(43, 16)
 
 [node name="deal_attack_timer" type="Timer" parent="."]

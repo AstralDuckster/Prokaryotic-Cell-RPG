@@ -5,9 +5,7 @@ class_name Player
 signal healthChanged
 signal facing_direction_changed(facing_right: bool)
 signal knockback_to_enemy
-
-var bullet = preload("res://fx/bullet.tscn")
-@onready var muzzle : Marker2D = $Muzzle
+signal decrease_enemy_health
 
 @export var SPEED = 400.0
 const GRAVITY = 700
@@ -34,22 +32,18 @@ var knockback_wait = -1
 
 var isHurt: bool = false
 var current_state
-var muzzle_position
 
-enum State { Idle, Run, Jump, DoubleJump, Shoot, Attack1, Hurt }
+enum State { Idle, Run, Jump, DoubleJump, Shoot, Attack1, Dead }
 
 func _ready():
 	current_state = State.Idle
-	muzzle_position = muzzle.position
 		
 func _physics_process(delta):
 	move_and_slide()
-	
 	player_falling(delta)
 	player_idle(delta)
 	player_run(delta)
 	player_jump(delta)
-	player_shooting(delta)
 	player_attack(delta)
 	
 	
@@ -112,16 +106,6 @@ func player_jump(delta):
 	if Input.is_action_just_pressed("down") and is_on_floor():
 		position.y += 2
 		current_state = State.DoubleJump
-		
-func player_shooting(delta):
-	if Input.is_action_just_pressed("shoot"):
-		var direction = Input.get_axis("left", "right")
-		# Press "Enter" key to shoot
-		if direction != 0:
-			var bullet_instance = bullet.instantiate() as Node2D
-			bullet_instance.global_position = muzzle.global_position
-			get_parent().add_child(bullet_instance)
-			current_state = State.Shoot
 			
 func player_attack(delta):
 	var direction = Input.get_axis("left", "right")
@@ -138,21 +122,20 @@ func player_attack(delta):
 			print(parent.name)
 			await get_tree().create_timer(0.4).timeout 
 			emit_signal("knockback_to_enemy")
-				
+			emit_signal("decrease_enemy_health")
+			
 func _on_deal_attack_timer_timeout():
 	attack_ip = false
 	
-					
 func _on_hurtbox_body_entered(body : Node2D):
 	var virus1_damage = 5
 	if body.is_in_group("Enemy"):
-		print("Virus_1 entered ", body.damage_amount)
+		print("Virus_1 entered ")
 		currentHealth -= virus1_damage
 		if currentHealth < 0:
-			currentHealth = maxHealth
+			pass
 		
 		healthChanged.emit()
-		current_state = State.Hurt
 		player_knockback()
 		
 		print_debug(currentHealth)
@@ -182,8 +165,8 @@ func player_animations():
 			$AnimatedSprite2D.animation = "double_jump"
 		elif current_state == State.Shoot:
 			$AnimatedSprite2D.animation = "run_shoot"	
-		elif current_state == State.Hurt:
-			pass
+		elif current_state == State.Dead:
+			$AnimationPlayer.play("faint")
 	elif current_state == State.Attack1:
 		$AnimationPlayer.play("attack1")
 
