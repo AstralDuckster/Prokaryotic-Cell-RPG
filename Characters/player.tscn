@@ -996,6 +996,7 @@ scale = Vector2(0.93125, 1.01744)
 sprite_frames = SubResource("SpriteFrames_wn4u2")
 animation = &"attack1"
 autoplay = "idle"
+frame = 1
 
 [node name="fx" type="AnimatedSprite2D" parent="AnimatedSprite2D"]
 visible = false
