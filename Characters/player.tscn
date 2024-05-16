@@ -1,9 +1,10 @@
-[gd_scene load_steps=129 format=3 uid="uid://jfbb0iht2n34"]
+[gd_scene load_steps=140 format=3 uid="uid://jfbb0iht2n34"]
 
 [ext_resource type="Script" path="res://Characters/player.gd" id="1_n1yer"]
 [ext_resource type="Texture2D" uid="uid://spiuefb8asmj" path="res://Characters/Attack-01/set 1 only sprite set.PNG" id="2_fextk"]
 [ext_resource type="Texture2D" uid="uid://dre6acmk5xdyh" path="res://Characters/Idle/idle_sprite_sheet.png" id="2_lwckr"]
 [ext_resource type="Texture2D" uid="uid://b4qqv50x8seri" path="res://Characters/Jump/Jump-all Sprite Set.PNG" id="2_nw6gm"]
+[ext_resource type="Texture2D" uid="uid://bcoqb2g4k4580" path="res://Characters/Attack-02/attack_2.PNG" id="3_2w18o"]
 [ext_resource type="Texture2D" uid="uid://nlybobr2ata1" path="res://Characters/Jump-End/Jump-End-Sheet.png" id="5_squwd"]
 [ext_resource type="Texture2D" uid="uid://yu12cfad11i3" path="res://Characters/Run/running sprite sheet.PNG" id="6_05tvg"]
 [ext_resource type="Texture2D" uid="uid://byoiqy4snkf4o" path="res://Characters/Jump-Start/Jump-Start-Sheet.png" id="6_562a6"]
@@ -56,6 +57,46 @@ region = Rect2(576, 0, 64, 64)
 [sub_resource type="AtlasTexture" id="AtlasTexture_qsrvc"]
 atlas = ExtResource("2_fextk")
 region = Rect2(640, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1kxfn"]
+atlas = ExtResource("3_2w18o")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ha0km"]
+atlas = ExtResource("3_2w18o")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vppry"]
+atlas = ExtResource("3_2w18o")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tyho1"]
+atlas = ExtResource("3_2w18o")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b15x5"]
+atlas = ExtResource("3_2w18o")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o1pgg"]
+atlas = ExtResource("3_2w18o")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6vhv4"]
+atlas = ExtResource("3_2w18o")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uemc3"]
+atlas = ExtResource("3_2w18o")
+region = Rect2(448, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_smdmb"]
+atlas = ExtResource("3_2w18o")
+region = Rect2(512, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lawgg"]
+atlas = ExtResource("3_2w18o")
+region = Rect2(576, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jbt3y"]
 atlas = ExtResource("2_nw6gm")
@@ -456,6 +497,41 @@ animations = [{
 "loop": true,
 "name": &"attack1",
 "speed": 11.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1kxfn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ha0km")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vppry")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tyho1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b15x5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o1pgg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6vhv4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uemc3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_smdmb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lawgg")
+}],
+"loop": true,
+"name": &"attack2",
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -987,8 +1063,16 @@ _data = {
 }
 
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
-collision_layer = 2
 script = ExtResource("1_n1yer")
+SPEED = null
+JUMP_HEIGHT = null
+JUMP_VELOCITY = null
+DOUBLE_JUMP = null
+DOUBLE_JUMP_VELOCITY = null
+ATTACK_VELOCITY = null
+maxHealth = null
+knockbackPower = null
+dir = null
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(2.38419e-07, 3)
@@ -996,7 +1080,6 @@ scale = Vector2(0.93125, 1.01744)
 sprite_frames = SubResource("SpriteFrames_wn4u2")
 animation = &"attack1"
 autoplay = "idle"
-frame = 1
 
 [node name="fx" type="AnimatedSprite2D" parent="AnimatedSprite2D"]
 visible = false

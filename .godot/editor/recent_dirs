@@ -1,3 +1,5 @@
+res://Scripts
+res://Characters/Attack-02
 res://Characters/Faint
 res://Enemies/Virus1
 res://fx/Player_FX
@@ -5,7 +7,6 @@ res://Characters/Attack-01
 res://UI
 res://UI/health_bar
 res://Characters/Jump
-res://Scripts
 res://Assets
 res://Enemies
 res://Background
@@ -19,4 +20,3 @@ res://Characters/Jump-End
 res://Characters/Idle
 res://Characters
 res://Levels
-res://Characters/Run

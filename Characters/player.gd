@@ -124,6 +124,8 @@ func player_attack(delta):
 			emit_signal("knockback_to_enemy")
 			emit_signal("decrease_enemy_health")
 			
+
+			
 func _on_deal_attack_timer_timeout():
 	attack_ip = false
 	
@@ -170,3 +172,4 @@ func player_animations():
 	elif current_state == State.Attack1:
 		$AnimationPlayer.play("attack1")
 
+	

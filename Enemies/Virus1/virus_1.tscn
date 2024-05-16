@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://cqkrhyonckpiu"]
+[gd_scene load_steps=33 format=3 uid="uid://cqkrhyonckpiu"]
 
 [ext_resource type="Script" path="res://Enemies/Virus1/virus_1.gd" id="1_eyodk"]
 [ext_resource type="Texture2D" uid="uid://b4k3lighpjag5" path="res://Enemies/Virus1/bacteria1idle.png" id="1_w56q2"]
@@ -218,13 +218,15 @@ _data = {
 "attack": SubResource("Animation_5in3m")
 }
 
-[node name="Virus1" type="CharacterBody2D" node_paths=PackedStringArray("wander_direction") groups=["Enemy"]]
+[sub_resource type="CircleShape2D" id="CircleShape2D_0lipk"]
+radius = 104.005
+
+[node name="Virus1" type="CharacterBody2D" groups=["Enemy"]]
 light_mask = 4
 visibility_layer = 3
 collision_layer = 4
 collision_mask = 3
 script = ExtResource("1_eyodk")
-wander_direction = NodePath("")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(1, -45)
@@ -268,6 +270,16 @@ libraries = {
 
 [node name="death_timer" type="Timer" parent="."]
 
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -48)
+shape = SubResource("CircleShape2D_0lipk")
+
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_hurtbox_area_entered"]
-[connection signal="body_entered" from="Hurtbox" to="." method="_on_hurtbox_body_entered"]
 [connection signal="timeout" from="death_timer" to="." method="_on_death_timer_timeout"]
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

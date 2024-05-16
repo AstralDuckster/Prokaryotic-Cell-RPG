@@ -4,13 +4,13 @@ class_name Virus_1
 
 signal healthChanged
 
-@export var wander_direction : Node2D
 @export var player: Player
 
 @export var starting_move_direction : Vector2 = Vector2.LEFT
 @export var gravity = 0
 @export var friction := 10
 @export var speed : float = 30.0
+@export var damage_amount  = 10
 
 enum State { Idle }
 var current_state
@@ -22,6 +22,7 @@ var is_movement_enabled: bool = true
 var direction 
 var knockback_dir
 var knockback
+
 
 func _ready():
 	current_state = State.Idle
@@ -65,3 +66,8 @@ func _on_player_decrease_enemy_health():
 	
 func _on_death_timer_timeout():
 	queue_free()
+
+func _on_area_2d_area_entered(area):
+	print("Hurtbox area entered")
+	if area.is_in_group("Player"):
+		pass

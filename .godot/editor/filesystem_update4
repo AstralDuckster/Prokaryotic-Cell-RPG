@@ -1,3 +1,10 @@
-res://Characters/player.tscn
+res://Levels/base_level.tscn
 res://Characters/MeleeArea.gd
 res://UI/health_bar/health_bar.gd
+res://Characters/player.gd
+res://Enemies/Virus1/virus_1.tscn
+res://Characters/player.tscn
+res://Scripts/transition.tscn
+res://Scripts/transition.gd
+res://Levels/CheckButton.gd
+res://Scripts/transitioner.tscn

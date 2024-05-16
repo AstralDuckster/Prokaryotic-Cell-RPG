@@ -6,14 +6,14 @@
 [ext_resource type="PackedScene" uid="uid://jfbb0iht2n34" path="res://Characters/player.tscn" id="2_fyndp"]
 [ext_resource type="PackedScene" uid="uid://q3cll4wq2bqi" path="res://Background/elevated_ground.tscn" id="3_mqg4c"]
 [ext_resource type="PackedScene" uid="uid://dqegty8d5heqv" path="res://Background/ground.tscn" id="4_y17wq"]
-[ext_resource type="PackedScene" uid="uid://cx4ddrd7xjhc0" path="res://Background/breakable_pillar.tscn" id="5_42f6g"]
 [ext_resource type="PackedScene" uid="uid://baflhuawycse8" path="res://Assets/moving_platform.tscn" id="7_cdcdo"]
-[ext_resource type="PackedScene" uid="uid://dp05k5w8cp1sx" path="res://Enemies/enemy_needle.tscn" id="9_h004n"]
 [ext_resource type="PackedScene" uid="uid://b70pjn5cijl4n" path="res://UI/hearts_container.tscn" id="9_ya61y"]
 [ext_resource type="Texture2D" uid="uid://ghmb7fkpwg82" path="res://UI/health_bar/healthbarUnder.png" id="10_ddmei"]
 [ext_resource type="Script" path="res://UI/health_bar/health_bar.gd" id="10_f7sd1"]
 [ext_resource type="Texture2D" uid="uid://6l2w4im6ayjt" path="res://UI/health_bar/healthbarProgress.png" id="11_mw32i"]
 [ext_resource type="PackedScene" uid="uid://cqkrhyonckpiu" path="res://Enemies/Virus1/virus_1.tscn" id="13_saadn"]
+[ext_resource type="PackedScene" uid="uid://c12eruh4gxl3n" path="res://Scripts/transitioner.tscn" id="15_v657u"]
+[ext_resource type="Script" path="res://Levels/CheckButton.gd" id="16_adusq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hwqcl"]
 size = Vector2(384.062, 1764.69)
@@ -29,15 +29,12 @@ script = ExtResource("1_uwduk")
 [node name="Parallax Map" parent="." instance=ExtResource("1_t0b2n")]
 
 [node name="Foreground" parent="." instance=ExtResource("2_ciq78")]
-
-[node name="Elevation" parent="." instance=ExtResource("3_mqg4c")]
-
-[node name="Ground" parent="." instance=ExtResource("4_y17wq")]
-
-[node name="Pillar" parent="." instance=ExtResource("5_42f6g")]
 visible = false
 
-[node name="Neeedle" parent="." instance=ExtResource("9_h004n")]
+[node name="Elevation" parent="." instance=ExtResource("3_mqg4c")]
+position = Vector2(1600, -152.5)
+
+[node name="Ground" parent="." instance=ExtResource("4_y17wq")]
 
 [node name="Moving_Platform" parent="." instance=ExtResource("7_cdcdo")]
 position = Vector2(3201.25, -138.75)
@@ -46,6 +43,15 @@ scale = Vector2(1.1, 1.1)
 [node name="Player" parent="." instance=ExtResource("2_fyndp")]
 position = Vector2(-1677.5, -472.5)
 scale = Vector2(2, 2)
+SPEED = 400.0
+JUMP_HEIGHT = -500
+JUMP_VELOCITY = 300
+DOUBLE_JUMP = -400
+DOUBLE_JUMP_VELOCITY = 150
+ATTACK_VELOCITY = 200.0
+maxHealth = 30
+knockbackPower = 500.0
+dir = 1
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player"]
 remote_path = NodePath("../../Camera2D")
@@ -105,5 +111,23 @@ shape = SubResource("RectangleShape2D_rt6r2")
 [node name="Virus1" parent="." groups=["Hit"] instance=ExtResource("13_saadn")]
 position = Vector2(-1336.25, -372.5)
 
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Transition" parent="CanvasLayer" instance=ExtResource("15_v657u")]
+offset_left = 568.0
+offset_top = 337.0
+offset_right = 568.0
+offset_bottom = 337.0
+
+[node name="TransitionButton" type="CheckButton" parent="CanvasLayer" node_paths=PackedStringArray("transitioner")]
+offset_left = 223.0
+offset_top = 9.0
+offset_right = 267.0
+offset_bottom = 33.0
+focus_mode = 0
+script = ExtResource("16_adusq")
+transitioner = NodePath("../Transition")
+
 [connection signal="decrease_enemy_health" from="Player" to="Virus1" method="_on_player_decrease_enemy_health"]
 [connection signal="knockback_to_enemy" from="Player" to="Virus1" method="_on_player_knockback_to_enemy"]
+[connection signal="toggled" from="CanvasLayer/TransitionButton" to="CanvasLayer/TransitionButton" method="_on_toggled"]
