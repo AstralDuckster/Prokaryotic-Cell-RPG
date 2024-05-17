@@ -282,7 +282,11 @@ libraries = {
 
 [node name="death_timer" type="Timer" parent="."]
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="puff_timer" type="Timer" parent="."]
+wait_time = 1.5
+autostart = true
+
+[node name="Area2D" type="Area2D" parent="." groups=["Enemy_puff"]]
 collision_layer = 2
 collision_mask = 2
 
@@ -292,6 +296,7 @@ shape = SubResource("CircleShape2D_0lipk")
 
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_hurtbox_area_entered"]
 [connection signal="timeout" from="death_timer" to="." method="_on_death_timer_timeout"]
+[connection signal="timeout" from="puff_timer" to="." method="_on_puff_timer_timeout"]
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

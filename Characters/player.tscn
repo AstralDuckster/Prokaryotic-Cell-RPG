@@ -1126,9 +1126,14 @@ libraries = {
 [node name="attack_delay" type="Timer" parent="."]
 wait_time = 0.2
 
+[node name="puff_timer" type="Timer" parent="."]
+wait_time = 1.5
+
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="area_entered" from="Hurtbox" to="." method="_on_hurtbox_area_entered"]
 [connection signal="body_entered" from="Hurtbox" to="." method="_on_hurtbox_body_entered"]
 [connection signal="body_entered" from="Weapon" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Weapon" to="Weapon" method="_on_body_entered"]
 [connection signal="timeout" from="deal_attack_timer" to="." method="_on_deal_attack_timer_timeout"]
 [connection signal="timeout" from="attack_delay" to="." method="_on_attack_delay_timeout"]
+[connection signal="timeout" from="puff_timer" to="." method="_on_puff_timer_timeout"]

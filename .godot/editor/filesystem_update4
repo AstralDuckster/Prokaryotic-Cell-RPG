@@ -11,3 +11,5 @@ res://Characters/player.tscn
 res://Enemies/Virus1/virus_1.gd
 res://Enemies/Virus1/virus_1.tscn
 res://Background/elevations_3.tscn
+res://Characters/player.gd
+res://wander.gd

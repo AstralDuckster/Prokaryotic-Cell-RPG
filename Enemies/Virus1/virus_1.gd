@@ -22,6 +22,7 @@ var is_movement_enabled: bool = true
 var direction 
 var knockback_dir
 var knockback
+var can_puff = false
 
 
 func _ready():
@@ -69,12 +70,19 @@ func _on_player_decrease_enemy_health():
 func _on_death_timer_timeout():
 	queue_free()
 
+func _on_puff_timer_timeout():
+	can_puff = true
+	
 func _on_area_2d_area_entered(area):
 	if area.is_in_group("Player"):
 		print("Hurtbox area entered")
 		$AnimationPlayer.play("attack")
+		damage_amount -= HealthManager.max_health
 		
 func _on_area_2d_area_exited(area):
 	if area.is_in_group("Player"):
 		print("Player exited hurtbox area")
 		$AnimatedSprite2D.play("idle") 
+
+
+

@@ -1,3 +1,4 @@
+Timer
 AnimationPlayer
 ColorRect
 Node
@@ -11,4 +12,3 @@ Marker2D
 Player
 CheckButton
 CanvasLayer
-TextureRect

@@ -19,6 +19,7 @@ const MAX_JUMP_TIME = 0.5
 
 var can_double_jump = false
 var attack_ip = false
+var can_be_puffed = false
 
 @export var maxHealth = 30
 @onready var currentHealth: int = maxHealth
@@ -139,7 +140,19 @@ func _on_hurtbox_body_entered(body : Node2D):
 		player_knockback()
 		
 		print_debug(currentHealth)
-
+		
+func _on_puff_timer_timeout():
+	can_be_puffed = true
+	
+func _on_hurtbox_area_entered(area):
+	var puff_damage = 5
+	if area.is_in_group("Enemy_puff") and can_be_puffed == false:
+		print("damage detected")
+		
+		currentHealth -= puff_damage
+		healthChanged.emit()
+		
+	
 func player_knockback():
 	velocity.y -= knockbackPower * 0.2
 	velocity.x -= knockbackPower * 1
@@ -171,3 +184,12 @@ func player_animations():
 		$AnimationPlayer.play("attack1")
 
 	
+
+
+
+
+
+
+
+
+
