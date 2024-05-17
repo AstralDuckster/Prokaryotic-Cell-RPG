@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://bxiaeq65eg700"]
+
+[ext_resource type="Texture2D" uid="uid://crw0qkihc7gtv" path="res://Assets/new_asset/platform_raised_pillar.png" id="1_blcc7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_muyh3"]
+size = Vector2(729.263, 119.737)
+
+[node name="Pillar" type="Sprite2D"]
+position = Vector2(3345, -332.5)
+scale = Vector2(2.375, 2.375)
+texture = ExtResource("1_blcc7")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+position = Vector2(-327.579, -265.474)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+position = Vector2(324.632, 47.9211)
+shape = SubResource("RectangleShape2D_muyh3")
+one_way_collision = true

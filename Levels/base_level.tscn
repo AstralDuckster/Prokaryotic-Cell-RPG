@@ -1,57 +1,51 @@
-[gd_scene load_steps=17 format=3 uid="uid://uatsdsobdsdm"]
+[gd_scene load_steps=14 format=3 uid="uid://uatsdsobdsdm"]
 
-[ext_resource type="PackedScene" uid="uid://djvfxrcs2qr14" path="res://Background/parallax_map.tscn" id="1_t0b2n"]
 [ext_resource type="Script" path="res://Levels/base_level.gd" id="1_uwduk"]
-[ext_resource type="PackedScene" uid="uid://de1dx8fqu7xxp" path="res://Background/foreground.tscn" id="2_ciq78"]
 [ext_resource type="PackedScene" uid="uid://jfbb0iht2n34" path="res://Characters/player.tscn" id="2_fyndp"]
-[ext_resource type="PackedScene" uid="uid://q3cll4wq2bqi" path="res://Background/elevated_ground.tscn" id="3_mqg4c"]
-[ext_resource type="PackedScene" uid="uid://dqegty8d5heqv" path="res://Background/ground.tscn" id="4_y17wq"]
-[ext_resource type="PackedScene" uid="uid://baflhuawycse8" path="res://Assets/moving_platform.tscn" id="7_cdcdo"]
+[ext_resource type="PackedScene" uid="uid://dba3i15d2svj" path="res://Background/map_1.tscn" id="2_mh6g1"]
 [ext_resource type="PackedScene" uid="uid://b70pjn5cijl4n" path="res://UI/hearts_container.tscn" id="9_ya61y"]
 [ext_resource type="Texture2D" uid="uid://ghmb7fkpwg82" path="res://UI/health_bar/healthbarUnder.png" id="10_ddmei"]
 [ext_resource type="Script" path="res://UI/health_bar/health_bar.gd" id="10_f7sd1"]
 [ext_resource type="Texture2D" uid="uid://6l2w4im6ayjt" path="res://UI/health_bar/healthbarProgress.png" id="11_mw32i"]
 [ext_resource type="PackedScene" uid="uid://cqkrhyonckpiu" path="res://Enemies/Virus1/virus_1.tscn" id="13_saadn"]
+[ext_resource type="PackedScene" uid="uid://c77dop60ohldt" path="res://Character/Enemies/virus_roll/virus_roll.tscn" id="15_tkhjy"]
 [ext_resource type="PackedScene" uid="uid://c12eruh4gxl3n" path="res://Scripts/transitioner.tscn" id="15_v657u"]
 [ext_resource type="Script" path="res://Levels/CheckButton.gd" id="16_adusq"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_hwqcl"]
-size = Vector2(384.062, 1764.69)
+[sub_resource type="Animation" id="Animation_6pyex"]
+resource_name = "movement"
+length = 5.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.3, 3.2, 5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(543.75, -803.75), Vector2(441.25, -796.25), Vector2(152.5, -827.5), Vector2(-72.4999, -802.5)]
+}
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_rt6r2"]
-size = Vector2(221.25, 1616.25)
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7kx4i"]
+_data = {
+"movement": SubResource("Animation_6pyex")
+}
 
 [node name="BaseLevel" type="Node2D"]
 position = Vector2(1523, -393)
 scale = Vector2(0.8, 0.8)
 script = ExtResource("1_uwduk")
 
-[node name="Parallax Map" parent="." instance=ExtResource("1_t0b2n")]
-
-[node name="Foreground" parent="." instance=ExtResource("2_ciq78")]
-visible = false
-
-[node name="Elevation" parent="." instance=ExtResource("3_mqg4c")]
-position = Vector2(1600, -152.5)
-
-[node name="Ground" parent="." instance=ExtResource("4_y17wq")]
-
-[node name="Moving_Platform" parent="." instance=ExtResource("7_cdcdo")]
-position = Vector2(3201.25, -138.75)
-scale = Vector2(1.1, 1.1)
+[node name="Map1" parent="." instance=ExtResource("2_mh6g1")]
+position = Vector2(-66.25, -405)
+scale = Vector2(1, 1)
 
 [node name="Player" parent="." instance=ExtResource("2_fyndp")]
-position = Vector2(-1677.5, -472.5)
+position = Vector2(-13.75, -926.25)
 scale = Vector2(2, 2)
-SPEED = 400.0
-JUMP_HEIGHT = -500
-JUMP_VELOCITY = 300
-DOUBLE_JUMP = -400
-DOUBLE_JUMP_VELOCITY = 150
-ATTACK_VELOCITY = 200.0
-maxHealth = 30
-knockbackPower = 500.0
-dir = 1
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player"]
 remote_path = NodePath("../../Camera2D")
@@ -82,15 +76,15 @@ script = ExtResource("10_f7sd1")
 player = NodePath("../../Player")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(-1677.5, -472.5)
+position = Vector2(-13.75, -926.25)
 scale = Vector2(2, 2)
 offset = Vector2(0, -33)
 ignore_rotation = false
 process_callback = 0
 limit_left = 100
 limit_top = -2000
-limit_right = 5300
-limit_bottom = 420
+limit_right = 7825
+limit_bottom = -450
 position_smoothing_enabled = true
 drag_horizontal_enabled = true
 drag_vertical_enabled = true
@@ -98,26 +92,26 @@ drag_horizontal_offset = 0.12
 drag_vertical_offset = -0.06
 editor_draw_limits = true
 
-[node name="BorderCollision" type="StaticBody2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="BorderCollision"]
-position = Vector2(-1931.25, 18.75)
-shape = SubResource("RectangleShape2D_hwqcl")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="BorderCollision"]
-position = Vector2(4833.75, -351.25)
-shape = SubResource("RectangleShape2D_rt6r2")
-
 [node name="Virus1" parent="." groups=["Hit"] instance=ExtResource("13_saadn")]
-position = Vector2(-1336.25, -372.5)
+position = Vector2(505.483, -799.002)
+scale = Vector2(1.5, 1.5)
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="Virus1"]
+libraries = {
+"": SubResource("AnimationLibrary_7kx4i")
+}
+autoplay = "movement"
+
+[node name="Node2D" parent="." instance=ExtResource("15_tkhjy")]
+scale = Vector2(2, 2)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Transition" parent="CanvasLayer" instance=ExtResource("15_v657u")]
-offset_left = 568.0
-offset_top = 337.0
-offset_right = 568.0
-offset_bottom = 337.0
+offset_left = 546.0
+offset_top = 274.0
+offset_right = 546.0
+offset_bottom = 274.0
 
 [node name="TransitionButton" type="CheckButton" parent="CanvasLayer" node_paths=PackedStringArray("transitioner")]
 offset_left = 223.0

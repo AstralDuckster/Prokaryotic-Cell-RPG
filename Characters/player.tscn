@@ -923,7 +923,7 @@ radius = 11.0
 height = 44.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_owi11"]
-size = Vector2(54.5, 39.5)
+size = Vector2(120.25, 69)
 
 [sub_resource type="Animation" id="Animation_jr2pq"]
 length = 0.001
@@ -1064,15 +1064,6 @@ _data = {
 
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
 script = ExtResource("1_n1yer")
-SPEED = null
-JUMP_HEIGHT = null
-JUMP_VELOCITY = null
-DOUBLE_JUMP = null
-DOUBLE_JUMP_VELOCITY = null
-ATTACK_VELOCITY = null
-maxHealth = null
-knockbackPower = null
-dir = null
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(2.38419e-07, 3)
@@ -1080,6 +1071,7 @@ scale = Vector2(0.93125, 1.01744)
 sprite_frames = SubResource("SpriteFrames_wn4u2")
 animation = &"attack1"
 autoplay = "idle"
+frame = 1
 
 [node name="fx" type="AnimatedSprite2D" parent="AnimatedSprite2D"]
 visible = false
@@ -1115,7 +1107,7 @@ player = NodePath("..")
 facing_shape = NodePath("CollisionShape2D")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Weapon"]
-position = Vector2(48, 15)
+position = Vector2(80.875, 2.5)
 shape = SubResource("RectangleShape2D_owi11")
 debug_color = Color(0.756863, 0.00392157, 0.94902, 0.419608)
 script = ExtResource("9_g6ys2")

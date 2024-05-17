@@ -7,7 +7,7 @@ signal healthChanged
 @export var player: Player
 
 @export var starting_move_direction : Vector2 = Vector2.LEFT
-@export var gravity = 0
+@export var gravity = 100
 @export var friction := 10
 @export var speed : float = 30.0
 @export var damage_amount  = 10
@@ -57,6 +57,8 @@ func _on_player_decrease_enemy_health():
 	var sword_damage = 10
 	print("Virus_1 entered ")
 	currentHealth -= sword_damage
+	$AnimationPlayer.play("attacked")
+	
 	if currentHealth == 0:
 		$death_timer.start()
 		$AnimationPlayer.play("attack")	

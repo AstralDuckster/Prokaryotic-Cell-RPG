@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=3 uid="uid://ca3reji4if17s"]
+
+[ext_resource type="PackedScene" uid="uid://djvfxrcs2qr14" path="res://Background/parallax_map.tscn" id="1_i1tuh"]
+[ext_resource type="PackedScene" uid="uid://dqegty8d5heqv" path="res://Background/ground.tscn" id="2_5w43b"]
+[ext_resource type="PackedScene" uid="uid://jfbb0iht2n34" path="res://Characters/player.tscn" id="3_jtct2"]
+[ext_resource type="PackedScene" uid="uid://dw4ehd5c4fhrt" path="res://Background/elevations_2.tscn" id="4_6t34a"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Parallax Map" parent="." instance=ExtResource("1_i1tuh")]
+
+[node name="Elevations2" parent="." instance=ExtResource("4_6t34a")]
+position = Vector2(483, -330)
+scale = Vector2(1.362, 1.5)
+
+[node name="Ground" parent="." instance=ExtResource("2_5w43b")]
+position = Vector2(3472, -564)
+
+[node name="Player" parent="." instance=ExtResource("3_jtct2")]
+position = Vector2(189, -860)
+scale = Vector2(2, 2)
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player"]
+remote_path = NodePath("../../Camera2D")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(189, -860)
+scale = Vector2(2, 2)
+offset = Vector2(0, -33)
+ignore_rotation = false
+process_callback = 0
+limit_left = 100
+limit_top = -2000
+limit_right = 5300
+limit_bottom = 420
+position_smoothing_enabled = true
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
+drag_horizontal_offset = 0.12
+drag_vertical_offset = -0.06
+editor_draw_limits = true

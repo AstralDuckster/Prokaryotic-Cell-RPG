@@ -27,10 +27,10 @@ _data = {
 "moving_platform": SubResource("Animation_8x6pt")
 }
 
-[node name="Moving_Platform" type="Node2D"]
+[node name="Moving_Platform_right" type="Node2D"]
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-position = Vector2(707.621, 0)
+position = Vector2(277.8, 0)
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]

@@ -1,3 +1,6 @@
+res://Background
+res://Levels
+res://Character/Enemies/virus_roll
 res://Scripts
 res://Characters/Attack-02
 res://Characters/Faint
@@ -9,7 +12,6 @@ res://UI/health_bar
 res://Characters/Jump
 res://Assets
 res://Enemies
-res://Background
 res://fx
 res://characters/Run-Shoot
 res://Characters/run-shoot
@@ -18,5 +20,3 @@ res://Characters/run
 res://Characters/Jump-Start
 res://Characters/Jump-End
 res://Characters/Idle
-res://Characters
-res://Levels

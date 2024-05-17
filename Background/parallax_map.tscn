@@ -197,6 +197,14 @@ _data = {
 
 [node name="Parallax Map" type="ParallaxBackground"]
 
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+offset_left = -574.0
+offset_top = -2462.0
+offset_right = 6247.0
+offset_bottom = 1050.0
+color = Color(0.0745098, 0.105882, 0.121569, 1)
+
 [node name="ParallaxLayer6" type="ParallaxLayer" parent="."]
 
 [node name="Sprite2D6" type="Sprite2D" parent="ParallaxLayer6"]
@@ -208,8 +216,13 @@ texture = ExtResource("1_jw0gk")
 position = Vector2(-701, 0)
 motion_scale = Vector2(1.1, 1)
 
+[node name="Sprite2D5" type="Sprite2D" parent="ParallaxLayer5"]
+position = Vector2(5147, -718)
+scale = Vector2(2.33362, 1.64738)
+texture = ExtResource("3_qj508")
+
 [node name="Nucleiods" type="CharacterBody2D" parent="ParallaxLayer5"]
-position = Vector2(540, -46)
+position = Vector2(2422, -12)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="ParallaxLayer5/Nucleiods"]
 libraries = {
@@ -221,20 +234,8 @@ autoplay = "NucleiodsCore"
 position = Vector2(1196, -676)
 texture = ExtResource("2_8mtqp")
 
-[node name="Sprite2D5" type="Sprite2D" parent="ParallaxLayer5"]
-position = Vector2(2709, -738)
-scale = Vector2(1.51368, 1)
-texture = ExtResource("3_qj508")
-
-[node name="Sprite2D5" type="Sprite2D" parent="ParallaxLayer5/Sprite2D5"]
-position = Vector2(4208.95, 7)
-rotation = 0.000662464
-scale = Vector2(1.51368, 1)
-texture = ExtResource("3_qj508")
-flip_h = true
-
 [node name="NucleiodsWorm" type="CharacterBody2D" parent="ParallaxLayer5"]
-position = Vector2(1736, -732)
+position = Vector2(3618, -698)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="ParallaxLayer5/NucleiodsWorm"]
 libraries = {
@@ -245,6 +246,12 @@ autoplay = "NucleiodsWorm"
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer5/NucleiodsWorm"]
 position = Vector2(0, 10)
 texture = ExtResource("4_6jcx0")
+
+[node name="Sprite2D6" type="Sprite2D" parent="ParallaxLayer5"]
+position = Vector2(-1523, -728)
+scale = Vector2(2.33362, 1.64738)
+texture = ExtResource("3_qj508")
+flip_h = true
 
 [node name="ParallaxLayer4" type="ParallaxLayer" parent="."]
 position = Vector2(540, -46)
@@ -267,8 +274,8 @@ scale = Vector2(0.75, 0.75)
 texture = ExtResource("5_nqk5v")
 
 [node name="Sprite2D4" type="Sprite2D" parent="ParallaxLayer4"]
-position = Vector2(2526, -709)
-scale = Vector2(1.46895, 1)
+position = Vector2(3628, -720)
+scale = Vector2(2.09687, 1.88154)
 texture = ExtResource("6_jgfla")
 
 [node name="ParallaxLayer3" type="ParallaxLayer" parent="."]
@@ -291,8 +298,8 @@ autoplay = "Virus2"
 speed_scale = 0.97
 
 [node name="Sprite2D3" type="Sprite2D" parent="ParallaxLayer3"]
-position = Vector2(2757, -814)
-scale = Vector2(1.5245, 1.11433)
+position = Vector2(3960.25, -813.5)
+scale = Vector2(2.21011, 1.9573)
 texture = ExtResource("7_8p4qa")
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="."]
@@ -313,8 +320,8 @@ rotation = 0.00363407
 texture = ExtResource("5_nqk5v")
 
 [node name="Sprite2D2" type="Sprite2D" parent="ParallaxLayer2"]
-position = Vector2(2835, -698)
-scale = Vector2(1.55356, 1.00826)
+position = Vector2(3969, -773)
+scale = Vector2(2.19986, 2.58402)
 texture = ExtResource("8_orgv1")
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="."]
@@ -336,6 +343,6 @@ position = Vector2(185.6, -12.8)
 texture = ExtResource("5_nqk5v")
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer"]
-position = Vector2(2753, -799)
-scale = Vector2(1.5245, 1.75207)
+position = Vector2(3978, -885.5)
+scale = Vector2(2.22236, 3.02617)
 texture = ExtResource("9_waoid")

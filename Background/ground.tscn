@@ -11,7 +11,6 @@ scale = Vector2(1.93269, 1.55647)
 texture = ExtResource("1_vvi1s")
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="."]
-visible = false
 position = Vector2(-0.000244141, 0)
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D2"]
@@ -19,11 +18,10 @@ position = Vector2(2680.52, 259.4)
 shape = SubResource("RectangleShape2D_urk1p")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
-visible = false
 position = Vector2(-819.776, 130.102)
 scale = Vector2(0.517413, 0.642478)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(601.25, 200)
+position = Vector2(601.25, 191)
 scale = Vector2(1.93269, 1.55647)
 shape = SubResource("RectangleShape2D_urk1p")

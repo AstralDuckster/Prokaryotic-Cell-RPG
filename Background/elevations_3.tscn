@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://cp2bbnswmv3l2"]
+
+[ext_resource type="Texture2D" uid="uid://bn1entgc01mgl" path="res://Assets/new_asset/Platform_raised_half_rigth.png" id="1_jmkfp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oikcs"]
+size = Vector2(321.737, 15.5069)
+
+[node name="Elevations3" type="Sprite2D"]
+position = Vector2(1268.75, 188.75)
+scale = Vector2(2.375, 2.06516)
+texture = ExtResource("1_jmkfp")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+position = Vector2(-8.08484, -16.8651)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+position = Vector2(5.63751, -202.373)
+shape = SubResource("RectangleShape2D_oikcs")
+one_way_collision = true

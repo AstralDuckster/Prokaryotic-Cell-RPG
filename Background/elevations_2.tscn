@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://dw4ehd5c4fhrt"]
+
+[ext_resource type="Texture2D" uid="uid://syj6ocxy5naq" path="res://Assets/new_asset/Platform_raised.png" id="1_cgqmt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aujie"]
+size = Vector2(363.029, 25.8558)
+
+[node name="Elevations2" type="Sprite2D"]
+position = Vector2(670, -177.5)
+scale = Vector2(2.1541, 2.37255)
+texture = ExtResource("1_cgqmt")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+position = Vector2(-8.08484, -16.8651)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+position = Vector2(5.76367, -193.951)
+shape = SubResource("RectangleShape2D_aujie")
+one_way_collision = true

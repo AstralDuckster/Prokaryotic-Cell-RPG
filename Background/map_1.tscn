@@ -1,0 +1,67 @@
+[gd_scene load_steps=11 format=3 uid="uid://dba3i15d2svj"]
+
+[ext_resource type="PackedScene" uid="uid://djvfxrcs2qr14" path="res://Background/parallax_map.tscn" id="1_xes2c"]
+[ext_resource type="PackedScene" uid="uid://cp2bbnswmv3l2" path="res://Background/elevations_3.tscn" id="3_6xtt1"]
+[ext_resource type="PackedScene" uid="uid://bxiaeq65eg700" path="res://Background/pillar.tscn" id="4_5hkhv"]
+[ext_resource type="PackedScene" uid="uid://dw4ehd5c4fhrt" path="res://Background/elevations_2.tscn" id="5_8c2y4"]
+[ext_resource type="PackedScene" uid="uid://q3cll4wq2bqi" path="res://Background/elevated_ground.tscn" id="6_3l35y"]
+[ext_resource type="PackedScene" uid="uid://dqegty8d5heqv" path="res://Background/ground.tscn" id="7_yx631"]
+[ext_resource type="PackedScene" uid="uid://c1dljhtx200hs" path="res://Background/moving_platform_left.tscn" id="8_31d4r"]
+[ext_resource type="PackedScene" uid="uid://baflhuawycse8" path="res://Assets/moving_platform_right.tscn" id="9_8d24l"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ndeif"]
+size = Vector2(2114.03, 1768.34)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3uswf"]
+size = Vector2(221.25, 1616.25)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Parallax Map" parent="." instance=ExtResource("1_xes2c")]
+
+[node name="Elevations3" parent="." instance=ExtResource("3_6xtt1")]
+position = Vector2(1366, 176)
+
+[node name="Pillar" parent="." instance=ExtResource("4_5hkhv")]
+
+[node name="Elevations2" parent="." instance=ExtResource("5_8c2y4")]
+
+[node name="Elevations4" parent="." instance=ExtResource("5_8c2y4")]
+position = Vector2(318.75, 78.75)
+scale = Vector2(1.9, 2.093)
+
+[node name="Elevation" parent="." instance=ExtResource("6_3l35y")]
+position = Vector2(1600, -152.5)
+
+[node name="Ground" parent="." instance=ExtResource("7_yx631")]
+
+[node name="Ground2" parent="." instance=ExtResource("7_yx631")]
+position = Vector2(8366, -203)
+
+[node name="Moving_Platform_Left" parent="." instance=ExtResource("8_31d4r")]
+position = Vector2(2127.5, -888.75)
+scale = Vector2(0.5, 0.5)
+
+[node name="Moving_Platform2" parent="." instance=ExtResource("9_8d24l")]
+position = Vector2(1166.25, -798.75)
+scale = Vector2(0.5, 0.5)
+
+[node name="Moving_Platform" parent="." instance=ExtResource("9_8d24l")]
+position = Vector2(3201.25, -138.75)
+scale = Vector2(1.1, 1.1)
+
+[node name="BorderCollision" type="StaticBody2D" parent="."]
+scale = Vector2(1, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BorderCollision"]
+position = Vector2(-2774, -226)
+shape = SubResource("RectangleShape2D_ndeif")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="BorderCollision"]
+position = Vector2(7962.5, -417.5)
+shape = SubResource("RectangleShape2D_3uswf")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="BorderCollision"]
+position = Vector2(3724, 1573)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_ndeif")
