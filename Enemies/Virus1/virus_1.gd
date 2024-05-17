@@ -70,6 +70,11 @@ func _on_death_timer_timeout():
 	queue_free()
 
 func _on_area_2d_area_entered(area):
-	print("Hurtbox area entered")
 	if area.is_in_group("Player"):
-		pass
+		print("Hurtbox area entered")
+		$AnimationPlayer.play("attack")
+		
+func _on_area_2d_area_exited(area):
+	if area.is_in_group("Player"):
+		print("Player exited hurtbox area")
+		$AnimatedSprite2D.play("idle") 
