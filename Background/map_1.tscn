@@ -51,7 +51,6 @@ position = Vector2(3201.25, -138.75)
 scale = Vector2(1.1, 1.1)
 
 [node name="BorderCollision" type="StaticBody2D" parent="."]
-scale = Vector2(1, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="BorderCollision"]
 position = Vector2(-2774, -226)
@@ -63,5 +62,4 @@ shape = SubResource("RectangleShape2D_3uswf")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="BorderCollision"]
 position = Vector2(3724, 1573)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_ndeif")

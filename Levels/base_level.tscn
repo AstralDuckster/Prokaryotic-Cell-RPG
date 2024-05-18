@@ -41,7 +41,6 @@ script = ExtResource("1_uwduk")
 
 [node name="Map1" parent="." instance=ExtResource("2_mh6g1")]
 position = Vector2(-66.25, -405)
-scale = Vector2(1, 1)
 
 [node name="Player" parent="." instance=ExtResource("2_fyndp")]
 position = Vector2(-13.75, -926.25)

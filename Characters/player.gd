@@ -20,6 +20,7 @@ const MAX_JUMP_TIME = 0.5
 var can_double_jump = false
 var attack_ip = false
 var can_be_puffed = false
+var is_alive = true
 
 @export var maxHealth = 30
 @onready var currentHealth: int = maxHealth
@@ -53,13 +54,13 @@ func _physics_process(delta):
 	print("State: ",State.keys()[current_state])
 	
 func player_falling(delta):
-	if is_on_floor():
+	if is_on_floor() and is_alive:
 		current_state = State.Idle
 	else:
 		velocity.y += GRAVITY * delta
 		
 func player_idle(delta):
-	if is_on_floor():
+	if is_on_floor() and is_alive:
 		current_state = State.Idle
 
 func player_run(delta):
@@ -68,30 +69,30 @@ func player_run(delta):
 		
 	var direction = Input.get_axis("left", "right")
 	
-	if direction:
+	if direction and is_alive:
 		velocity.x = SPEED * direction
 	
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
-	if direction != 0:
+	if direction != 0 and is_alive:
 		current_state = State.Run
 		$AnimatedSprite2D.flip_h = velocity.x < 0
 		$AnimatedSprite2D/fx.flip_h = velocity.x < 0
 		
-	if Input.is_action_pressed("right"):
+	if Input.is_action_pressed("right") and is_alive:
 		dir = 1
-	if Input.is_action_pressed("left"):
+	if Input.is_action_pressed("left") and is_alive:
 		dir = -1
 		
 func player_jump(delta):
 	var direction = Input.get_axis("left", "right")
-	if Input.is_action_just_released("jump") and velocity.y < 0:
+	if Input.is_action_just_released("jump") and velocity.y < 0 and is_alive:
 		velocity.y *= 0.5
 		velocity.x = direction * JUMP_VELOCITY
 		
 	#Allows for small jump dependent on jump hold time
-	if Input.is_action_just_pressed("jump"):
+	if Input.is_action_just_pressed("jump") and is_alive:
 		if is_on_floor():
 			velocity.y = JUMP_HEIGHT
 			velocity.x = direction * JUMP_VELOCITY
@@ -104,7 +105,7 @@ func player_jump(delta):
 			can_double_jump = false
 
 	#One way fall
-	if Input.is_action_just_pressed("down") and is_on_floor():
+	if Input.is_action_just_pressed("down") and is_on_floor() and is_alive:
 		position.y += 2
 		current_state = State.DoubleJump
 			
@@ -112,7 +113,7 @@ func player_attack(delta):
 	var direction = Input.get_axis("left", "right")
 	emit_signal("facing_direction_changed", !$AnimatedSprite2D.flip_h)
 	
-	if Input.is_action_just_pressed("attack") and attack_ip == false: #attack is "M"
+	if Input.is_action_just_pressed("attack") and attack_ip == false and is_alive: #attack is "M"
 		velocity.x = direction * (SPEED - 200)
 		attack_ip = true
 		deal_attack_timer.start()
@@ -133,8 +134,9 @@ func _on_hurtbox_body_entered(body : Node2D):
 	if body.is_in_group("Enemy"):
 		print("Virus_1 entered ")
 		currentHealth -= virus1_damage
-		if currentHealth < 0:
-			pass
+		if currentHealth <= 0:
+			current_state = State.Dead
+			get_tree().call_group("Player", "die")
 		
 		healthChanged.emit()
 		player_knockback()
@@ -183,7 +185,12 @@ func player_animations():
 	elif current_state == State.Attack1:
 		$AnimationPlayer.play("attack1")
 
+func die():
+	is_alive = false
 	
+func reset_game():
+	maxHealth = 30
+	get_tree().reload_current_scene()
 
 
 
