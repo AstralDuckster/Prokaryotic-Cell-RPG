@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1716050238
+::res://::1716051577
 Heart_corazón.svg.png::CompressedTexture2D::6097064148884048324::1715962276::1715962276::1::::<><>::
 icon.svg::CompressedTexture2D::1701750855830309230::1715962276::1715962276::1::::<><>::
 signal_bus.gd::GDScript::-1::1715962276::0::1::::<>Node<>::
@@ -103,7 +103,7 @@ Parallax_layer2.png::CompressedTexture2D::7813195918033313524::1715962276::17159
 Parallax_layer3.png::CompressedTexture2D::945679397141666627::1715962276::1715962276::1::::<><>::
 Parallax_layer4.png::CompressedTexture2D::1333615281568641381::1715962276::1715962276::1::::<><>::
 Parallax_layer5.png::CompressedTexture2D::1104098946904426415::1715962276::1715962276::1::::<><>::
-::res://Assets/::1715962276
+::res://Assets/::1716100643
 Destructable_Pillars.png::CompressedTexture2D::1913771804108214080::1715962276::1715962276::1::::<><>::
 Elevated Ground.png::CompressedTexture2D::1132797794513751694::1715962276::1715962276::1::::<><>::
 MovingPlatform.png::CompressedTexture2D::8280571426965047512::1715962276::1715962276::1::::<><>::
@@ -111,6 +111,7 @@ moving_platform_right.tscn::PackedScene::2397424011439919169::1715962276::0::1::
 Nucleoids1.png::CompressedTexture2D::6609650419287789728::1715962276::1715962276::1::::<><>::
 Nucleoids.png::CompressedTexture2D::3258380175968277053::1715962276::1715962276::1::::<><>::
 Stage1_Ground.png::CompressedTexture2D::184974360823572300::1715962276::1715962276::1::::<><>::
+SuperPixel-m2L8j.ttf::FontFile::2205842052522636612::1716100643::1716100648::1::::<><>::
 virus.png::CompressedTexture2D::3466514063265154692::1715962276::1715962276::1::::<><>::
 ::res://Assets/new_asset/::1715962276
 Platform_base.png::CompressedTexture2D::2365840779988576118::1715962276::1715962276::1::::<><>::
@@ -118,15 +119,15 @@ Platform_raised.png::CompressedTexture2D::1313546803622759316::1715962276::17159
 Platform_raised_half_left.png::CompressedTexture2D::3083447473261160295::1715962276::1715962276::1::::<><>::
 Platform_raised_half_rigth.png::CompressedTexture2D::3352816563222700199::1715962276::1715962276::1::::<><>::
 platform_raised_pillar.png::CompressedTexture2D::6013015055257630387::1715962276::1715962276::1::::<><>::
-::res://Background/::1716050238
+::res://Background/::1716099158
 Background.png::CompressedTexture2D::4675449900561527262::1715962276::1715962276::1::::<><>::
 breakable_pillar.tscn::PackedScene::6447240133305091441::1715962276::0::1::::<><>::uid://2jbsotc67fnc::::res://Assets/Destructable_Pillars.png
 elevated_ground.tscn::PackedScene::1180965776618881924::1715962276::0::1::::<><>::uid://qe0aqnakkoqg::::res://Assets/Elevated Ground.png
 elevations_2.tscn::PackedScene::8763539138556161961::1715962276::0::1::::<><>::uid://syj6ocxy5naq::::res://Assets/new_asset/Platform_raised.png
-elevations_3.tscn::PackedScene::5881475435729478057::1716049819::0::1::::<><>::uid://bn1entgc01mgl::::res://Assets/new_asset/Platform_raised_half_rigth.png
+elevations_3.tscn::PackedScene::5881475435729478057::1716099158::0::1::::<><>::uid://bn1entgc01mgl::::res://Assets/new_asset/Platform_raised_half_rigth.png
 foreground.tscn::PackedScene::7493916213224654329::1715962276::0::1::::<><>::uid://bdjagaobwvm3c::::res://Background/ParallaxMapForeGround.png
 ground.tscn::PackedScene::8290940604060478077::1715962276::0::1::::<><>::uid://cvura2olavrg::::res://Assets/Stage1_Ground.png
-map_1.tscn::PackedScene::212681372617364451::1716049819::0::1::::<><>::uid://djvfxrcs2qr14::::res://Background/parallax_map.tscn<>uid://cp2bbnswmv3l2::::res://Background/elevations_3.tscn<>uid://bxiaeq65eg700::::res://Background/pillar.tscn<>uid://dw4ehd5c4fhrt::::res://Background/elevations_2.tscn<>uid://q3cll4wq2bqi::::res://Background/elevated_ground.tscn<>uid://dqegty8d5heqv::::res://Background/ground.tscn<>uid://c1dljhtx200hs::::res://Background/moving_platform_left.tscn<>uid://baflhuawycse8::::res://Assets/moving_platform_right.tscn
+map_1.tscn::PackedScene::212681372617364451::1716099158::0::1::::<><>::uid://djvfxrcs2qr14::::res://Background/parallax_map.tscn<>uid://cp2bbnswmv3l2::::res://Background/elevations_3.tscn<>uid://bxiaeq65eg700::::res://Background/pillar.tscn<>uid://dw4ehd5c4fhrt::::res://Background/elevations_2.tscn<>uid://q3cll4wq2bqi::::res://Background/elevated_ground.tscn<>uid://dqegty8d5heqv::::res://Background/ground.tscn<>uid://c1dljhtx200hs::::res://Background/moving_platform_left.tscn<>uid://baflhuawycse8::::res://Assets/moving_platform_right.tscn
 moving_platform_left.tscn::PackedScene::6604628792399641084::1715962276::0::1::::<><>::uid://dp8f2iv5545ii::::res://Assets/MovingPlatform.png
 ParallaxMap1.png::CompressedTexture2D::1615087834912503257::1715962276::1715962276::1::::<><>::
 ParallaxMap2.png::CompressedTexture2D::392788112303046470::1715962276::1715962276::1::::<><>::
@@ -162,11 +163,11 @@ player.tscn::PackedScene::2868701488508856280::1715962276::0::1::::<><>::res://C
 State.gd::GDScript::-1::1715962276::0::1::::State<>Node<>::
 StateDebugLabel.gd::GDScript::-1::1715962276::0::1::::<>Label<>::
 Sword.gd::GDScript::-1::1715962276::0::1::::<>Area2D<>::
-::res://Characters/::1716049820
+::res://Characters/::1716099158
 FacingCollisionShape2D.gd::GDScript::-1::1715962276::0::1::::FacingCollisionShape2D<>CollisionShape2D<>::
 MeleeArea.gd::GDScript::-1::1716047507::0::1::::<>Area2D<>::
-player.gd::GDScript::-1::1715969778::0::1::::Player<>CharacterBody2D<>::
-player.tscn::PackedScene::642085310085966193::1716049820::0::1::::<><>::res://Characters/player.gd<>uid://spiuefb8asmj::::res://Characters/Attack-01/set 1 only sprite set.PNG<>uid://dre6acmk5xdyh::::res://Characters/Idle/idle_sprite_sheet.png<>uid://b4qqv50x8seri::::res://Characters/Jump/Jump-all Sprite Set.PNG<>uid://bcoqb2g4k4580::::res://Characters/Attack-02/attack_2.PNG<>uid://nlybobr2ata1::::res://Characters/Jump-End/Jump-End-Sheet.png<>uid://yu12cfad11i3::::res://Characters/Run/running sprite sheet.PNG<>uid://byoiqy4snkf4o::::res://Characters/Jump-Start/Jump-Start-Sheet.png<>uid://xj1kkfu331hj::::res://Characters/Run-Shoot/player-run-shoot.png<>uid://b30sysxcu1y5x::::res://fx/Player_FX/small_sting.png<>res://Characters/FacingCollisionShape2D.gd<>res://Characters/MeleeArea.gd<>uid://cgpn54tkf3jqy::::res://Characters/Faint/faint sprite set.png
+player.gd::GDScript::-1::1716051503::0::1::::Player<>CharacterBody2D<>::
+player.tscn::PackedScene::642085310085966193::1716099158::0::1::::<><>::res://Characters/player.gd<>uid://spiuefb8asmj::::res://Characters/Attack-01/set 1 only sprite set.PNG<>uid://dre6acmk5xdyh::::res://Characters/Idle/idle_sprite_sheet.png<>uid://b4qqv50x8seri::::res://Characters/Jump/Jump-all Sprite Set.PNG<>uid://bcoqb2g4k4580::::res://Characters/Attack-02/attack_2.PNG<>uid://nlybobr2ata1::::res://Characters/Jump-End/Jump-End-Sheet.png<>uid://yu12cfad11i3::::res://Characters/Run/running sprite sheet.PNG<>uid://byoiqy4snkf4o::::res://Characters/Jump-Start/Jump-Start-Sheet.png<>uid://xj1kkfu331hj::::res://Characters/Run-Shoot/player-run-shoot.png<>uid://b30sysxcu1y5x::::res://fx/Player_FX/small_sting.png<>res://Characters/FacingCollisionShape2D.gd<>res://Characters/MeleeArea.gd<>uid://cgpn54tkf3jqy::::res://Characters/Faint/faint sprite set.png
 ::res://Characters/Attack-01/::1715962276
 all atk sprites (set).PNG::CompressedTexture2D::3950528156417226625::1715962276::1715962276::1::::<><>::
 first set only sheet.png::CompressedTexture2D::2469036650608212382::1715962276::1715962276::1::::<><>::
@@ -199,7 +200,7 @@ enemy_slime.tscn::PackedScene::8685993971472073063::1715962276::0::1::::<><>::re
 Needle.png::CompressedTexture2D::8734846493954186622::1715962276::1715962276::1::::<><>::
 NeedleMound.png::CompressedTexture2D::7571261078890802263::1715962276::1715962276::1::::<><>::
 slime.png::CompressedTexture2D::3760528611552865525::1715962276::1715962276::1::::<><>::
-::res://Enemies/Virus1/::1716049820
+::res://Enemies/Virus1/::1716099158
 bacteria1 attack.png::CompressedTexture2D::7051081360408304126::1715962276::1715962276::1::::<><>::
 bacteria1idle.png::CompressedTexture2D::4444261076061127426::1715962276::1715962276::1::::<><>::
 Damageable.gd::GDScript::-1::1715962276::0::1::::Damageable<>Node<>::
@@ -207,7 +208,7 @@ Node.gd::GDScript::-1::1715962276::0::1::::<>RefCounted<>::
 Virus1_attack.gd::GDScript::-1::1715962276::0::1::::<>Area2D<>::
 Virus1_HealthBar.gd::GDScript::-1::1715962276::0::1::::<>TextureProgressBar<>::
 virus_1.gd::GDScript::-1::1715963733::0::1::::Virus_1<>CharacterBody2D<>::
-virus_1.tscn::PackedScene::5917552615351091312::1716049820::0::1::::<><>::res://Enemies/Virus1/virus_1.gd<>uid://b4k3lighpjag5::::res://Enemies/Virus1/bacteria1idle.png<>res://Enemies/Virus1/Damageable.gd<>uid://ghmb7fkpwg82::::res://UI/health_bar/healthbarUnder.png<>uid://6l2w4im6ayjt::::res://UI/health_bar/healthbarProgress.png<>res://Enemies/Virus1/Virus1_HealthBar.gd<>uid://c7pujrqo702ec::::res://Enemies/Virus1/bacteria1 attack.png
+virus_1.tscn::PackedScene::5917552615351091312::1716099158::0::1::::<><>::res://Enemies/Virus1/virus_1.gd<>uid://b4k3lighpjag5::::res://Enemies/Virus1/bacteria1idle.png<>res://Enemies/Virus1/Damageable.gd<>uid://ghmb7fkpwg82::::res://UI/health_bar/healthbarUnder.png<>uid://6l2w4im6ayjt::::res://UI/health_bar/healthbarProgress.png<>res://Enemies/Virus1/Virus1_HealthBar.gd<>uid://c7pujrqo702ec::::res://Enemies/Virus1/bacteria1 attack.png
 Wander.gd::GDScript::-1::1715962276::0::1::::<>RefCounted<>::
 ::res://fx/::1715962276
 bullet.tscn::PackedScene::5210197906376981786::1715962276::0::1::::<><>::uid://d3pqt7ut6du4h::::res://fx/shot.png
@@ -217,10 +218,10 @@ small_slash_2.png::CompressedTexture2D::8545051565550332038::1715962276::1715962
 small_sting.png::CompressedTexture2D::4404454495402468483::1715962276::1715962276::1::::<><>::
 ::res://HUD/::1715962276
 Base-01.png::CompressedTexture2D::2338104455004281644::1715962276::1715962276::1::::<><>::
-::res://Levels/::1716049819
+::res://Levels/::1716099158
 AnimationPlayer.gd::GDScript::-1::1715962276::0::1::::<>AnimationPlayer<>::
 base_level.gd::GDScript::-1::1715962276::0::1::::<>Node2D<>::
-base_level.tscn::PackedScene::1404962825927599650::1716049819::0::1::::<><>::res://Levels/base_level.gd<>uid://jfbb0iht2n34::::res://Characters/player.tscn<>uid://dba3i15d2svj::::res://Background/map_1.tscn<>uid://b70pjn5cijl4n::::res://UI/hearts_container.tscn<>uid://ghmb7fkpwg82::::res://UI/health_bar/healthbarUnder.png<>res://UI/health_bar/health_bar.gd<>uid://6l2w4im6ayjt::::res://UI/health_bar/healthbarProgress.png<>uid://cqkrhyonckpiu::::res://Enemies/Virus1/virus_1.tscn<>uid://c77dop60ohldt::::res://Character/Enemies/virus_roll/virus_roll.tscn<>uid://c12eruh4gxl3n::::res://Scripts/transitioner.tscn<>res://Levels/CheckButton.gd
+base_level.tscn::PackedScene::1404962825927599650::1716099158::0::1::::<><>::res://Levels/base_level.gd<>uid://jfbb0iht2n34::::res://Characters/player.tscn<>uid://dba3i15d2svj::::res://Background/map_1.tscn<>uid://b70pjn5cijl4n::::res://UI/hearts_container.tscn<>uid://ghmb7fkpwg82::::res://UI/health_bar/healthbarUnder.png<>res://UI/health_bar/health_bar.gd<>uid://6l2w4im6ayjt::::res://UI/health_bar/healthbarProgress.png<>uid://cqkrhyonckpiu::::res://Enemies/Virus1/virus_1.tscn<>uid://c77dop60ohldt::::res://Character/Enemies/virus_roll/virus_roll.tscn<>uid://c12eruh4gxl3n::::res://Scripts/transitioner.tscn<>res://Levels/CheckButton.gd
 CheckButton.gd::GDScript::-1::1715962276::0::1::::<>CheckButton<>::
 level_1.tscn::PackedScene::4831683762949657602::1715962276::0::1::::<><>::uid://djvfxrcs2qr14::::res://Background/parallax_map.tscn<>uid://dqegty8d5heqv::::res://Background/ground.tscn<>uid://jfbb0iht2n34::::res://Characters/player.tscn<>uid://dw4ehd5c4fhrt::::res://Background/elevations_2.tscn
 ParallaxBackground.gd::GDScript::-1::1715962276::0::1::::<>RefCounted<>::
@@ -257,12 +258,12 @@ all.png::CompressedTexture2D::2277226393139120263::1715962276::1715962276::1::::
 Dead-Sheet.png::CompressedTexture2D::3075531660384435124::1715962276::1715962276::1::::<><>::
 Hide-Sheet.png::CompressedTexture2D::4179877987052861701::1715962276::1715962276::1::::<><>::
 walk-Sheet.png::CompressedTexture2D::8873876525918925834::1715962276::1715962276::1::::<><>::
-::res://Scripts/::1716049820
+::res://Scripts/::1716099158
 health_manager.gd::GDScript::-1::1715962276::0::1::::<>Node<>::
 signal_bus.gd::GDScript::-1::1715962276::0::1::::<>Node<>::
 transition.gd::GDScript::-1::1715962276::0::1::::Transitioner<>Control<>::
 transitioner.tscn::PackedScene::6653763790409303913::1715962276::0::1::::<><>::res://Scripts/transition.gd
-wander.tscn::PackedScene::7115643712033616231::1716049820::0::1::::<><>::res://wander.gd
+wander.tscn::PackedScene::7115643712033616231::1716099158::0::1::::<><>::res://wander.gd
 ::res://Trees/::1715962276
 Background.png::CompressedTexture2D::1451028517514064526::1715962276::1715962276::1::::<><>::
 Dark-Tree.png::CompressedTexture2D::20875159080426224::1715962276::1715962276::1::::<><>::
@@ -270,7 +271,7 @@ Golden-Tree.png::CompressedTexture2D::1753661733434083892::1715962276::171596227
 Green-Tree.png::CompressedTexture2D::7407506876880890868::1715962276::1715962276::1::::<><>::
 Red-Tree.png::CompressedTexture2D::6300193828204992584::1715962276::1715962276::1::::<><>::
 Yellow-Tree.png::CompressedTexture2D::5939447558542868095::1715962276::1715962276::1::::<><>::
-::res://UI/::1716050238
+::res://UI/::1716099158
 game_screen.tscn::PackedScene::7809271026261677451::1715962276::0::1::::<><>::uid://bt3rkc2ams3wr::::res://UI/health_bar/health_bar.tscn<>res://UI/health_bar/health_bar.gd
 health_changed_label.gd::GDScript::-1::1715962276::0::1::::<>Label<>::
 health_changed_label.tscn::PackedScene::1279945868522004912::1715962276::0::1::::<><>::res://UI/health_changed_label.gd
@@ -284,9 +285,11 @@ heart_gui.gd::GDScript::-1::1715962276::0::1::::<>Panel<>::
 heart_gui.tscn::PackedScene::6519080751622138441::1715962276::0::1::::<><>::res://UI/heart_gui.gd<>uid://5cweuaycxf42::::res://ART/Heart.png
 hp_bar.gd::GDScript::-1::1715962276::0::1::::<>Node2D<>::
 hp_bar.tscn::PackedScene::496914171223051886::1715962276::0::1::::<><>::uid://cs4p0xvuo1v5e::::res://Heart_corazón.svg.png<>res://UI/hp_bar.gd
-main_menu.gd::GDScript::-1::1716048925::0::1::::Mainmenu<>Control<>::
-main_menu.tscn::PackedScene::352071566427983976::1716050226::0::1::::<><>::res://UI/main_menu.gd
-Youdied.tscn::PackedScene::4810998772313408757::1716050725::0::1::::<><>::res://UI/main_menu.gd
+main_menu.gd::GDScript::-1::1716051024::0::1::::Mainmenu<>Control<>::
+main_menu.tscn::PackedScene::352071566427983976::1716099158::0::1::::<><>::res://UI/main_menu.gd
+Label.gd::GDScript::-1::1716050969::0::1::::<>Label<>::
+youdied.gd::GDScript::-1::1716051411::0::1::::<>Control<>::
+youdied.tscn::PackedScene::6600841565493565491::1716099158::0::1::::<><>::uid://fastj0u8tono::::res://UI/main_menu.tscn<>res://UI/youdied.gd<>res://UI/Label.gd
 ::res://UI/health_bar/::1716047508
 healthbarProgress.png::CompressedTexture2D::2200242490466532757::1715962276::1715962276::1::::<><>::
 healthbarUnder.png::CompressedTexture2D::436315784760213941::1715962276::1715962276::1::::<><>::

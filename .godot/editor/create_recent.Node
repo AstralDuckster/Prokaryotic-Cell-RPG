@@ -1,3 +1,4 @@
+ColorRect
 Button
 Label
 HBoxContainer
@@ -5,11 +6,9 @@ VBoxContainer
 MarginContainer
 Timer
 AnimationPlayer
-ColorRect
 Node
 AnimatedSprite2D
 CollisionShape2D
 CharacterBody2D
 Node2D
 Sprite2D
-StaticBody2D

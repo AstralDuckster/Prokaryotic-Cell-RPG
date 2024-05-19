@@ -1,6 +1,29 @@
-[gd_scene load_steps=3 format=3 uid="uid://fastj0u8tono"]
+[gd_scene load_steps=10 format=3 uid="uid://fastj0u8tono"]
 
+[ext_resource type="FontFile" uid="uid://6or5qfixty57" path="res://Assets/SuperPixel-m2L8j.ttf" id="1_4q6ef"]
 [ext_resource type="Script" path="res://UI/main_menu.gd" id="1_wdgxb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6481a"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kb2sb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ubyxg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_di14t"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gewhj"]
+
+[sub_resource type="Theme" id="Theme_bmyqq"]
+default_font = ExtResource("1_4q6ef")
+Button/colors/font_focus_color = Color(0.224304, 0.36099, 0.574219, 1)
+Button/colors/font_hover_color = Color(0.661926, 0.784199, 0.941406, 1)
+Button/colors/font_hover_pressed_color = Color(0.222665, 0.213089, 0.519531, 1)
+Button/colors/font_pressed_color = Color(0.132111, 0.163991, 0.289063, 1)
+Button/styles/disabled = SubResource("StyleBoxEmpty_6481a")
+Button/styles/focus = SubResource("StyleBoxEmpty_kb2sb")
+Button/styles/hover = SubResource("StyleBoxEmpty_ubyxg")
+Button/styles/normal = SubResource("StyleBoxEmpty_di14t")
+Button/styles/pressed = SubResource("StyleBoxEmpty_gewhj")
 
 [sub_resource type="GDScript" id="GDScript_0dqap"]
 script/source = "extends VBoxContainer
@@ -27,7 +50,15 @@ offset_right = 3.0
 offset_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = SubResource("Theme_bmyqq")
 script = ExtResource("1_wdgxb")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(28.7479, 16.0436)
+color = Color(0.0721292, 0.0306091, 0.132813, 1)
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
@@ -36,12 +67,17 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(0.996341, 0.998881)
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -4.0
+offset_top = 60.0
+offset_right = -4.0
+offset_bottom = 60.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -54,7 +90,7 @@ layout_mode = 2
 
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 60
+theme_override_font_sizes/font_size = 65
 text = "GAME VIRUS"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -73,11 +109,24 @@ script = SubResource("GDScript_0dqap")
 layout_mode = 2
 
 [node name="Start_Button" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
-custom_minimum_size = Vector2(500, 50)
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+focus_neighbor_top = NodePath("../Exit_Button")
+focus_neighbor_bottom = NodePath("../Exit_Button")
+focus_next = NodePath("../Exit_Button")
+focus_previous = NodePath("../Exit_Button")
+theme_override_font_sizes/font_size = 25
 text = "START"
 
 [node name="Exit_Button" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer"]
-custom_minimum_size = Vector2(500, 50)
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+size_flags_stretch_ratio = 0.0
+focus_neighbor_top = NodePath("../Start_Button")
+focus_neighbor_bottom = NodePath("../Start_Button")
+focus_next = NodePath("../Start_Button")
+focus_previous = NodePath("../Start_Button")
+theme_override_font_sizes/font_size = 25
 text = "EXIT"
