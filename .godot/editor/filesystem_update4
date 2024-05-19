@@ -8,3 +8,8 @@ res://Enemies/Virus1/virus_1.tscn
 res://Background/main_menu.tscn
 res://Background/main_menu.gd
 res://Scripts/wander.tscn
+res://UI/main_menu.gd
+res://UI/main_menu.tscn
+res://UI/youdied.gd
+res://UI/youdied.tscn
+res://Characters/player.gd

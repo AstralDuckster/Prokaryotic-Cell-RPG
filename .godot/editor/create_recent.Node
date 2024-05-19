@@ -1,3 +1,8 @@
+Button
+Label
+HBoxContainer
+VBoxContainer
+MarginContainer
 Timer
 AnimationPlayer
 ColorRect
@@ -8,7 +13,3 @@ CharacterBody2D
 Node2D
 Sprite2D
 StaticBody2D
-Marker2D
-Player
-CheckButton
-CanvasLayer

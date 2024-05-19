@@ -1,3 +1,4 @@
+res://UI
 res://Background
 res://Levels
 res://Character/Enemies/virus_roll
@@ -7,7 +8,6 @@ res://Characters/Faint
 res://Enemies/Virus1
 res://fx/Player_FX
 res://Characters/Attack-01
-res://UI
 res://UI/health_bar
 res://Characters/Jump
 res://Assets

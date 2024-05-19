@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1716050227
+::res://::1716050238
 Heart_corazón.svg.png::CompressedTexture2D::6097064148884048324::1715962276::1715962276::1::::<><>::
 icon.svg::CompressedTexture2D::1701750855830309230::1715962276::1715962276::1::::<><>::
 signal_bus.gd::GDScript::-1::1715962276::0::1::::<>Node<>::
@@ -118,7 +118,7 @@ Platform_raised.png::CompressedTexture2D::1313546803622759316::1715962276::17159
 Platform_raised_half_left.png::CompressedTexture2D::3083447473261160295::1715962276::1715962276::1::::<><>::
 Platform_raised_half_rigth.png::CompressedTexture2D::3352816563222700199::1715962276::1715962276::1::::<><>::
 platform_raised_pillar.png::CompressedTexture2D::6013015055257630387::1715962276::1715962276::1::::<><>::
-::res://Background/::1716050226
+::res://Background/::1716050238
 Background.png::CompressedTexture2D::4675449900561527262::1715962276::1715962276::1::::<><>::
 breakable_pillar.tscn::PackedScene::6447240133305091441::1715962276::0::1::::<><>::uid://2jbsotc67fnc::::res://Assets/Destructable_Pillars.png
 elevated_ground.tscn::PackedScene::1180965776618881924::1715962276::0::1::::<><>::uid://qe0aqnakkoqg::::res://Assets/Elevated Ground.png
@@ -126,7 +126,6 @@ elevations_2.tscn::PackedScene::8763539138556161961::1715962276::0::1::::<><>::u
 elevations_3.tscn::PackedScene::5881475435729478057::1716049819::0::1::::<><>::uid://bn1entgc01mgl::::res://Assets/new_asset/Platform_raised_half_rigth.png
 foreground.tscn::PackedScene::7493916213224654329::1715962276::0::1::::<><>::uid://bdjagaobwvm3c::::res://Background/ParallaxMapForeGround.png
 ground.tscn::PackedScene::8290940604060478077::1715962276::0::1::::<><>::uid://cvura2olavrg::::res://Assets/Stage1_Ground.png
-main_menu.tscn::PackedScene::352071566427983976::1716050226::0::1::::<><>::res://UI/main_menu.gd
 map_1.tscn::PackedScene::212681372617364451::1716049819::0::1::::<><>::uid://djvfxrcs2qr14::::res://Background/parallax_map.tscn<>uid://cp2bbnswmv3l2::::res://Background/elevations_3.tscn<>uid://bxiaeq65eg700::::res://Background/pillar.tscn<>uid://dw4ehd5c4fhrt::::res://Background/elevations_2.tscn<>uid://q3cll4wq2bqi::::res://Background/elevated_ground.tscn<>uid://dqegty8d5heqv::::res://Background/ground.tscn<>uid://c1dljhtx200hs::::res://Background/moving_platform_left.tscn<>uid://baflhuawycse8::::res://Assets/moving_platform_right.tscn
 moving_platform_left.tscn::PackedScene::6604628792399641084::1715962276::0::1::::<><>::uid://dp8f2iv5545ii::::res://Assets/MovingPlatform.png
 ParallaxMap1.png::CompressedTexture2D::1615087834912503257::1715962276::1715962276::1::::<><>::
@@ -271,7 +270,7 @@ Golden-Tree.png::CompressedTexture2D::1753661733434083892::1715962276::171596227
 Green-Tree.png::CompressedTexture2D::7407506876880890868::1715962276::1715962276::1::::<><>::
 Red-Tree.png::CompressedTexture2D::6300193828204992584::1715962276::1715962276::1::::<><>::
 Yellow-Tree.png::CompressedTexture2D::5939447558542868095::1715962276::1715962276::1::::<><>::
-::res://UI/::1716050226
+::res://UI/::1716050238
 game_screen.tscn::PackedScene::7809271026261677451::1715962276::0::1::::<><>::uid://bt3rkc2ams3wr::::res://UI/health_bar/health_bar.tscn<>res://UI/health_bar/health_bar.gd
 health_changed_label.gd::GDScript::-1::1715962276::0::1::::<>Label<>::
 health_changed_label.tscn::PackedScene::1279945868522004912::1715962276::0::1::::<><>::res://UI/health_changed_label.gd
@@ -286,6 +285,8 @@ heart_gui.tscn::PackedScene::6519080751622138441::1715962276::0::1::::<><>::res:
 hp_bar.gd::GDScript::-1::1715962276::0::1::::<>Node2D<>::
 hp_bar.tscn::PackedScene::496914171223051886::1715962276::0::1::::<><>::uid://cs4p0xvuo1v5e::::res://Heart_corazón.svg.png<>res://UI/hp_bar.gd
 main_menu.gd::GDScript::-1::1716048925::0::1::::Mainmenu<>Control<>::
+main_menu.tscn::PackedScene::352071566427983976::1716050226::0::1::::<><>::res://UI/main_menu.gd
+Youdied.tscn::PackedScene::4810998772313408757::1716050725::0::1::::<><>::res://UI/main_menu.gd
 ::res://UI/health_bar/::1716047508
 healthbarProgress.png::CompressedTexture2D::2200242490466532757::1715962276::1715962276::1::::<><>::
 healthbarUnder.png::CompressedTexture2D::436315784760213941::1715962276::1715962276::1::::<><>::
