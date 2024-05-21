@@ -1,3 +1,5 @@
+res://Enemies/virusslime
+res://Enemies/Virus1
 res://UI
 res://Background
 res://Levels
@@ -5,7 +7,6 @@ res://Character/Enemies/virus_roll
 res://Scripts
 res://Characters/Attack-02
 res://Characters/Faint
-res://Enemies/Virus1
 res://fx/Player_FX
 res://Characters/Attack-01
 res://UI/health_bar
@@ -19,4 +20,3 @@ res://Characters/Jumlp-All
 res://Characters/run
 res://Characters/Jump-Start
 res://Characters/Jump-End
-res://Characters/Idle

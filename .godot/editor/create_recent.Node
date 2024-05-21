@@ -1,3 +1,9 @@
+AnimatedSprite2D
+AnimationPlayer
+Virus_3
+CollisionShape2D
+Area2D
+CharacterBody2D
 ColorRect
 Button
 Label
@@ -5,10 +11,4 @@ HBoxContainer
 VBoxContainer
 MarginContainer
 Timer
-AnimationPlayer
 Node
-AnimatedSprite2D
-CollisionShape2D
-CharacterBody2D
-Node2D
-Sprite2D

@@ -13,3 +13,5 @@ res://UI/main_menu.tscn
 res://UI/youdied.gd
 res://UI/youdied.tscn
 res://Characters/player.gd
+res://virus_2.gd
+res://UI/virus_3.tscn
