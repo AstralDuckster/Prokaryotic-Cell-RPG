@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" path="res://Character/Enemies/virus/virus.gd" id="1_feo50"]
 [ext_resource type="Script" path="res://Character/Enemies/virus/Damageable.gd" id="2_0pyvv"]
-[ext_resource type="Texture2D" path="res://Art/Enemy/Virus_1/bacteria1idle.png" id="2_ftb3p"]
-[ext_resource type="Texture2D" path="res://Art/Enemy/Virus_1/bacteria1 attack.png" id="2_s30o3"]
+[ext_resource type="Texture2D" uid="uid://clli7axeg7hux" path="res://Art/Enemy/Virus_1/bacteria1idle.png" id="2_ftb3p"]
+[ext_resource type="Texture2D" uid="uid://ds46oosf6j3ig" path="res://Art/Enemy/Virus_1/bacteria1 attack.png" id="2_s30o3"]
 [ext_resource type="Script" path="res://Character/Player/CharacterStateMachine.gd" id="4_271e3"]
 [ext_resource type="Script" path="res://Character/Player/State.gd" id="5_isk7w"]
 [ext_resource type="Script" path="res://Character/Player/HitState.gd" id="6_gsdee"]

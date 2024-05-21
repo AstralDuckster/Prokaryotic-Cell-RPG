@@ -21,6 +21,7 @@ var can_double_jump = false
 var attack_ip = false
 var can_be_puffed = false
 var is_alive = true
+var is_trapped = false
 
 @export var maxHealth = 30
 @onready var currentHealth: int = maxHealth
@@ -129,7 +130,7 @@ func player_attack(delta):
 func _on_deal_attack_timer_timeout():
 	attack_ip = false
 	
-func _on_hurtbox_body_entered(body : Node2D):
+func _on_hurtbox_body_entered(body : Node2D, Area2d):
 	var virus1_damage = 5
 	if body.is_in_group("Enemy"):
 		print("Virus_1 entered ")
@@ -150,10 +151,20 @@ func _on_hurtbox_area_entered(area):
 	var puff_damage = 5
 	if area.is_in_group("Enemy_puff") and can_be_puffed == false:
 		print("damage detected")
-		
 		currentHealth -= puff_damage
 		healthChanged.emit()
 		
+	if area.is_in_group("slime") and is_trapped == false:
+		print("captured")
+		SPEED = 2
+		JUMP_HEIGHT = 2
+		is_trapped = true
+		
+func _on_hurtbox_area_exited(area):
+	if area.is_in_group("slime") and is_trapped == true:
+		is_trapped = false
+		SPEED = 400
+		JUMP_HEIGHT = -500
 	
 func player_knockback():
 	velocity.y -= knockbackPower * 0.2
@@ -191,11 +202,6 @@ func die():
 func reset_game():
 	maxHealth = 30
 	get_tree().change_scene_to_file("res://UI/youdied.tscn")
-
-
-
-
-
 
 
 

@@ -1,8 +1,8 @@
+CollisionShape2D
+Area2D
 AnimationPlayer
 AnimatedSprite2D
 Virus_3
-CollisionShape2D
-Area2D
 CharacterBody2D
 ColorRect
 Button

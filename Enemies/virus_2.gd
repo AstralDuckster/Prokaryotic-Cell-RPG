@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-class_name Virus_3
+class_name Virus_2
 
 signal healthChanged
 
