@@ -62,6 +62,12 @@ func _on_detection_area_body_exited(body):
 	player_chase = false
 	$AnimationPlayer.queue("idle")
 
-
 func _on_capture_area_body_entered(body):
-	$AnimationPlayer.queue("idle")
+	if body.is_in_group("Player"):
+		player_chase = false
+		$AnimationPlayer.queue("idle")
+		print("stop")
+
+func _on_capture_area_body_exited(body):
+	if body.is_in_group("Player"):
+		player_chase = true

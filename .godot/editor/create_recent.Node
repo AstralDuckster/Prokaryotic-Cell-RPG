@@ -1,3 +1,4 @@
+Timer
 CollisionShape2D
 Area2D
 AnimationPlayer
@@ -10,5 +11,4 @@ Label
 HBoxContainer
 VBoxContainer
 MarginContainer
-Timer
 Node
