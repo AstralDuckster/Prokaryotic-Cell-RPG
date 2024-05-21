@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://ghmb7fkpwg82" path="res://UI/health_bar/healthbarUnder.png" id="10_ddmei"]
 [ext_resource type="Script" path="res://UI/health_bar/health_bar.gd" id="10_f7sd1"]
 [ext_resource type="Texture2D" uid="uid://6l2w4im6ayjt" path="res://UI/health_bar/healthbarProgress.png" id="11_mw32i"]
-[ext_resource type="Script" path="res://virus_2.gd" id="12_t2tyu"]
+[ext_resource type="PackedScene" uid="uid://h80qus7h807b" path="res://Enemies/virus_3.tscn" id="12_87e6o"]
 [ext_resource type="PackedScene" uid="uid://cqkrhyonckpiu" path="res://Enemies/Virus1/virus_1.tscn" id="13_saadn"]
 [ext_resource type="PackedScene" uid="uid://c77dop60ohldt" path="res://Character/Enemies/virus_roll/virus_roll.tscn" id="15_tkhjy"]
 [ext_resource type="PackedScene" uid="uid://c12eruh4gxl3n" path="res://Scripts/transitioner.tscn" id="15_v657u"]
@@ -93,7 +93,7 @@ drag_vertical_offset = -0.06
 editor_draw_limits = true
 
 [node name="Virus1" parent="." groups=["Hit"] instance=ExtResource("13_saadn")]
-position = Vector2(543.75, -803.75)
+position = Vector2(216.797, -823.521)
 scale = Vector2(1.5, 1.5)
 
 [node name="AnimationPlayer2" type="AnimationPlayer" parent="Virus1"]
@@ -122,8 +122,8 @@ focus_mode = 0
 script = ExtResource("16_adusq")
 transitioner = NodePath("../Transition")
 
-[node name="Virus_3" type="CharacterBody2D" parent="."]
-script = ExtResource("12_t2tyu")
+[node name="virus_2" parent="." instance=ExtResource("12_87e6o")]
+position = Vector2(252.5, -1112.5)
 
 [connection signal="decrease_enemy_health" from="Player" to="Virus1" method="_on_player_decrease_enemy_health"]
 [connection signal="knockback_to_enemy" from="Player" to="Virus1" method="_on_player_knockback_to_enemy"]

@@ -1,8 +1,7 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1716271016
+::res://::1716275552
 Heart_corazón.svg.png::CompressedTexture2D::6097064148884048324::1715962276::1715962276::1::::<><>::
 icon.svg::CompressedTexture2D::1701750855830309230::1715962276::1715962276::1::::<><>::
-virus_2.gd::GDScript::-1::1716271016::0::1::::Virus_3<>CharacterBody2D<>::
 signal_bus.gd::GDScript::-1::1715962276::0::1::::<>Node<>::
 wander.gd::GDScript::-1::1715962276::0::1::::<>Node2D<>::
 ::res://ART/::1715962276
@@ -194,13 +193,14 @@ Jump-Start-Sheet.png::CompressedTexture2D::4100369834402666524::1715962276::1715
 running sprite sheet.PNG::CompressedTexture2D::1727446773417116628::1715962276::1715962276::1::::<><>::
 ::res://Characters/Run-Shoot/::1715962276
 player-run-shoot.png::CompressedTexture2D::1634519837117040063::1715962276::1715962276::1::::<><>::
-::res://Enemies/::1716267942
+::res://Enemies/::1716275551
 enemy_needle.tscn::PackedScene::8265545128412189595::1715962276::0::1::::<><>::uid://dwphv7j2vql0q::::res://Enemies/Needle.png<>uid://df4ttf0mssadb::::res://Enemies/NeedleMound.png
 enemy_slime.gd::GDScript::-1::1715962276::0::1::::<>CharacterBody2D<>::
 enemy_slime.tscn::PackedScene::8685993971472073063::1715962276::0::1::::<><>::res://Enemies/enemy_slime.gd<>uid://bttvmeqe7hha8::::res://Enemies/slime.png<>uid://bpng8lcelk51y::::res://Assets/virus.png
 Needle.png::CompressedTexture2D::8734846493954186622::1715962276::1715962276::1::::<><>::
 NeedleMound.png::CompressedTexture2D::7571261078890802263::1715962276::1715962276::1::::<><>::
 slime.png::CompressedTexture2D::3760528611552865525::1715962276::1715962276::1::::<><>::
+virus_2.gd::GDScript::-1::1716271016::0::1::::Virus_3<>CharacterBody2D<>::
 ::res://Enemies/Virus1/::1716271439
 bacteria1 attack.png::CompressedTexture2D::7051081360408304126::1715962276::1715962276::1::::<><>::
 bacteria1idle.png::CompressedTexture2D::4444261076061127426::1715962276::1715962276::1::::<><>::
@@ -211,7 +211,7 @@ Virus1_HealthBar.gd::GDScript::-1::1715962276::0::1::::<>TextureProgressBar<>::
 virus_1.gd::GDScript::-1::1715963733::0::1::::Virus_1<>CharacterBody2D<>::
 virus_1.tscn::PackedScene::5917552615351091312::1716271439::0::1::::<><>::res://Enemies/Virus1/virus_1.gd<>uid://b4k3lighpjag5::::res://Enemies/Virus1/bacteria1idle.png<>res://Enemies/Virus1/Damageable.gd<>uid://ghmb7fkpwg82::::res://UI/health_bar/healthbarUnder.png<>uid://6l2w4im6ayjt::::res://UI/health_bar/healthbarProgress.png<>res://Enemies/Virus1/Virus1_HealthBar.gd<>uid://c7pujrqo702ec::::res://Enemies/Virus1/bacteria1 attack.png
 Wander.gd::GDScript::-1::1715962276::0::1::::<>RefCounted<>::
-::res://Enemies/virusslime/::1716275224
+::res://Enemies/virusslime/::1716275240
 slime attack(slightly transparent).png::CompressedTexture2D::6367859030661135137::1712213851::1716267981::1::::<><>::
 slimeidle sheet(slightly transparent).png::CompressedTexture2D::4671638914997912787::1711987091::1716267981::1::::<><>::
 slimeidle sheet.png::CompressedTexture2D::8324487309282643255::1716275180::1716275240::1::::<><>::
@@ -223,10 +223,10 @@ small_slash_2.png::CompressedTexture2D::8545051565550332038::1715962276::1715962
 small_sting.png::CompressedTexture2D::4404454495402468483::1715962276::1715962276::1::::<><>::
 ::res://HUD/::1715962276
 Base-01.png::CompressedTexture2D::2338104455004281644::1715962276::1715962276::1::::<><>::
-::res://Levels/::1716271439
+::res://Levels/::1716275551
 AnimationPlayer.gd::GDScript::-1::1715962276::0::1::::<>AnimationPlayer<>::
 base_level.gd::GDScript::-1::1715962276::0::1::::<>Node2D<>::
-base_level.tscn::PackedScene::1404962825927599650::1716271439::0::1::::<><>::res://Levels/base_level.gd<>uid://jfbb0iht2n34::::res://Characters/player.tscn<>uid://dba3i15d2svj::::res://Background/map_1.tscn<>uid://b70pjn5cijl4n::::res://UI/hearts_container.tscn<>uid://ghmb7fkpwg82::::res://UI/health_bar/healthbarUnder.png<>res://UI/health_bar/health_bar.gd<>uid://6l2w4im6ayjt::::res://UI/health_bar/healthbarProgress.png<>res://virus_2.gd<>uid://cqkrhyonckpiu::::res://Enemies/Virus1/virus_1.tscn<>uid://c77dop60ohldt::::res://Character/Enemies/virus_roll/virus_roll.tscn<>uid://c12eruh4gxl3n::::res://Scripts/transitioner.tscn<>res://Levels/CheckButton.gd
+base_level.tscn::PackedScene::1404962825927599650::1716275551::0::1::::<><>::res://Levels/base_level.gd<>uid://jfbb0iht2n34::::res://Characters/player.tscn<>uid://dba3i15d2svj::::res://Background/map_1.tscn<>uid://b70pjn5cijl4n::::res://UI/hearts_container.tscn<>uid://ghmb7fkpwg82::::res://UI/health_bar/healthbarUnder.png<>res://UI/health_bar/health_bar.gd<>uid://6l2w4im6ayjt::::res://UI/health_bar/healthbarProgress.png<>res://Enemies/virus_2.gd<>uid://cqkrhyonckpiu::::res://Enemies/Virus1/virus_1.tscn<>uid://c77dop60ohldt::::res://Character/Enemies/virus_roll/virus_roll.tscn<>uid://c12eruh4gxl3n::::res://Scripts/transitioner.tscn<>res://Levels/CheckButton.gd
 CheckButton.gd::GDScript::-1::1715962276::0::1::::<>CheckButton<>::
 level_1.tscn::PackedScene::4831683762949657602::1715962276::0::1::::<><>::uid://djvfxrcs2qr14::::res://Background/parallax_map.tscn<>uid://dqegty8d5heqv::::res://Background/ground.tscn<>uid://jfbb0iht2n34::::res://Characters/player.tscn<>uid://dw4ehd5c4fhrt::::res://Background/elevations_2.tscn
 ParallaxBackground.gd::GDScript::-1::1715962276::0::1::::<>RefCounted<>::
@@ -276,7 +276,7 @@ Golden-Tree.png::CompressedTexture2D::1753661733434083892::1715962276::171596227
 Green-Tree.png::CompressedTexture2D::7407506876880890868::1715962276::1715962276::1::::<><>::
 Red-Tree.png::CompressedTexture2D::6300193828204992584::1715962276::1715962276::1::::<><>::
 Yellow-Tree.png::CompressedTexture2D::5939447558542868095::1715962276::1715962276::1::::<><>::
-::res://UI/::1716271439
+::res://UI/::1716275551
 game_screen.tscn::PackedScene::7809271026261677451::1715962276::0::1::::<><>::uid://bt3rkc2ams3wr::::res://UI/health_bar/health_bar.tscn<>res://UI/health_bar/health_bar.gd
 health_changed_label.gd::GDScript::-1::1715962276::0::1::::<>Label<>::
 health_changed_label.tscn::PackedScene::1279945868522004912::1715962276::0::1::::<><>::res://UI/health_changed_label.gd
@@ -290,10 +290,10 @@ heart_gui.gd::GDScript::-1::1715962276::0::1::::<>Panel<>::
 heart_gui.tscn::PackedScene::6519080751622138441::1715962276::0::1::::<><>::res://UI/heart_gui.gd<>uid://5cweuaycxf42::::res://ART/Heart.png
 hp_bar.gd::GDScript::-1::1715962276::0::1::::<>Node2D<>::
 hp_bar.tscn::PackedScene::496914171223051886::1715962276::0::1::::<><>::uid://cs4p0xvuo1v5e::::res://Heart_corazón.svg.png<>res://UI/hp_bar.gd
+Label.gd::GDScript::-1::1716050969::0::1::::<>Label<>::
 main_menu.gd::GDScript::-1::1716100664::0::1::::Mainmenu<>Control<>::
 main_menu.tscn::PackedScene::352071566427983976::1716271438::0::1::::<><>::uid://6or5qfixty57::::res://Assets/SuperPixel-m2L8j.ttf<>res://UI/main_menu.gd
-Label.gd::GDScript::-1::1716050969::0::1::::<>Label<>::
-virus_3.tscn::PackedScene::560993948609936541::1716271439::0::1::::<><>::res://virus_2.gd<>uid://b7s8hfhmpkxo2::::res://Enemies/virusslime/slimeidle sheet(slightly transparent).png<>uid://cwyvyckqm6gcn::::res://Enemies/virusslime/slime attack(slightly transparent).png
+virus_3.tscn::PackedScene::560993948609936541::1716275551::0::1::::<><>::res://Enemies/virus_2.gd<>uid://cwyvyckqm6gcn::::res://Enemies/virusslime/slime attack(slightly transparent).png<>uid://dqupdb077gtdv::::res://Enemies/virusslime/slimeidle sheet.png
 youdied.gd::GDScript::-1::1716051411::0::1::::<>Control<>::
 youdied.tscn::PackedScene::6600841565493565491::1716271438::0::1::::<><>::uid://fastj0u8tono::::res://UI/main_menu.tscn<>res://UI/youdied.gd<>res://UI/Label.gd
 ::res://UI/health_bar/::1716047508

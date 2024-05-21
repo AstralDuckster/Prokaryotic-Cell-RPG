@@ -1,3 +1,4 @@
+res://Enemies
 res://Enemies/virusslime
 res://Enemies/Virus1
 res://UI
@@ -12,7 +13,6 @@ res://Characters/Attack-01
 res://UI/health_bar
 res://Characters/Jump
 res://Assets
-res://Enemies
 res://fx
 res://characters/Run-Shoot
 res://Characters/run-shoot
