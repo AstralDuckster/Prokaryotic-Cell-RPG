@@ -2,4 +2,4 @@ res://Levels/base_level.tscn
 res://Characters/MeleeArea.gd
 res://UI/health_bar/health_bar.gd
 res://Characters/player.gd
-res://Enemies/virus_3.gd
+res://Characters/player.tscn

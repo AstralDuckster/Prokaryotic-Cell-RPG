@@ -214,5 +214,8 @@ func reset_game():
 	get_tree().change_scene_to_file("res://UI/youdied.tscn")
 
 
-
-
+func _on_chasm_body_entered(body):
+	if body.is_in_group("Player"):
+		print("fallen")
+		currentHealth -= 100
+		healthChanged.emit()

@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://uatsdsobdsdm"]
+[gd_scene load_steps=15 format=3 uid="uid://uatsdsobdsdm"]
 
 [ext_resource type="Script" path="res://Levels/base_level.gd" id="1_uwduk"]
 [ext_resource type="PackedScene" uid="uid://jfbb0iht2n34" path="res://Characters/player.tscn" id="2_fyndp"]
@@ -34,6 +34,9 @@ _data = {
 "movement": SubResource("Animation_6pyex")
 }
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ou3dy"]
+size = Vector2(2079.38, 320)
+
 [node name="BaseLevel" type="Node2D"]
 position = Vector2(1523, -393)
 scale = Vector2(0.8, 0.8)
@@ -43,7 +46,7 @@ script = ExtResource("1_uwduk")
 position = Vector2(-66.25, -405)
 
 [node name="Player" parent="." instance=ExtResource("2_fyndp")]
-position = Vector2(-1716.25, -835)
+position = Vector2(2701.25, -532.5)
 scale = Vector2(2, 2)
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player"]
@@ -75,10 +78,11 @@ script = ExtResource("10_f7sd1")
 player = NodePath("../../Player")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(-1716.25, -835)
+position = Vector2(2701.25, -532.5)
 scale = Vector2(2, 2)
 offset = Vector2(0, -33)
 ignore_rotation = false
+zoom = Vector2(0.75, 0.75)
 process_callback = 0
 limit_left = 100
 limit_top = -2000
@@ -122,9 +126,18 @@ focus_mode = 0
 script = ExtResource("16_adusq")
 transitioner = NodePath("../Transition")
 
+[node name="chasm" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="chasm"]
+position = Vector2(3646.25, 140)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_ou3dy")
+
 [connection signal="decrease_enemy_health" from="Player" to="Virus1" method="_on_player_decrease_enemy_health"]
 [connection signal="decrease_virus3_health" from="Player" to="virus_slime" method="_on_player_decrease_virus_3_health"]
 [connection signal="knockback_to_enemy" from="Player" to="Virus1" method="_on_player_knockback_to_enemy"]
 [connection signal="knockback_to_virus3" from="Player" to="virus_slime" method="_on_player_knockback_to_virus_3"]
 [connection signal="stop_moving" from="Player" to="virus_slime" method="_on_player_stop_moving"]
 [connection signal="toggled" from="CanvasLayer/TransitionButton" to="CanvasLayer/TransitionButton" method="_on_toggled"]
+[connection signal="body_entered" from="chasm" to="Player" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="chasm" to="Player" method="_on_chasm_body_entered"]
