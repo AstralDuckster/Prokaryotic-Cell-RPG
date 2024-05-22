@@ -1,14 +1,14 @@
 Timer
+TextureProgressBar
+CharacterBody2D
 CollisionShape2D
 Area2D
 AnimationPlayer
 AnimatedSprite2D
 Virus_3
-CharacterBody2D
 ColorRect
 Button
 Label
 HBoxContainer
 VBoxContainer
 MarginContainer
-Node

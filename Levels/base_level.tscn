@@ -124,7 +124,11 @@ script = ExtResource("16_adusq")
 transitioner = NodePath("../Transition")
 
 [node name="Node2D" parent="." instance=ExtResource("15_tkhjy")]
+visible = false
 
 [connection signal="decrease_enemy_health" from="Player" to="Virus1" method="_on_player_decrease_enemy_health"]
+[connection signal="decrease_virus3_health" from="Player" to="virus_3_slime" method="_on_player_decrease_virus_3_health"]
 [connection signal="knockback_to_enemy" from="Player" to="Virus1" method="_on_player_knockback_to_enemy"]
+[connection signal="knockback_to_virus3" from="Player" to="virus_3_slime" method="_on_player_knockback_to_virus_3"]
+[connection signal="stop_moving" from="Player" to="virus_3_slime" method="_on_player_stop_moving"]
 [connection signal="toggled" from="CanvasLayer/TransitionButton" to="CanvasLayer/TransitionButton" method="_on_toggled"]

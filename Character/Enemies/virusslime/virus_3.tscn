@@ -1,10 +1,13 @@
-[gd_scene load_steps=47 format=3 uid="uid://h80qus7h807b"]
+[gd_scene load_steps=50 format=3 uid="uid://h80qus7h807b"]
 
 [ext_resource type="Script" path="res://Enemies/virus_3.gd" id="1_fg8f3"]
 [ext_resource type="Texture2D" uid="uid://cxokhjoxdbk4" path="res://Character/Enemies/virusslime/slime start.PNG" id="2_1vtoo"]
 [ext_resource type="Texture2D" uid="uid://cx3trcmkpg3q0" path="res://Character/Enemies/virusslime/slime mid air.PNG" id="3_uyxqn"]
 [ext_resource type="Texture2D" uid="uid://bre270idjtooq" path="res://Character/Enemies/virusslime/slime end.PNG" id="4_aivcp"]
 [ext_resource type="Texture2D" uid="uid://dqupdb077gtdv" path="res://Character/Enemies/virusslime/slimeidle sheet.png" id="5_ymgrf"]
+[ext_resource type="Texture2D" uid="uid://ghmb7fkpwg82" path="res://UI/health_bar/healthbarUnder.png" id="6_hy1rg"]
+[ext_resource type="Texture2D" uid="uid://6l2w4im6ayjt" path="res://UI/health_bar/healthbarProgress.png" id="7_0acwr"]
+[ext_resource type="Script" path="res://Character/Enemies/virusslime/Virus3_HealthBar.gd" id="8_qib6k"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yi5od"]
 atlas = ExtResource("2_1vtoo")
@@ -375,22 +378,41 @@ position = Vector2(3.8147e-06, -45)
 rotation = -3.14159
 scale = Vector2(15.2451, -14.2759)
 shape = SubResource("RectangleShape2D_vfi3g")
+debug_color = Color(0.278431, 0.631373, 0, 0.419608)
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="." node_paths=PackedStringArray("virus3")]
+offset_left = 1.0
+offset_top = -88.0
+offset_right = 67.0
+offset_bottom = -76.0
+step = 0.1
+value = 100.0
+nine_patch_stretch = true
+texture_under = ExtResource("6_hy1rg")
+texture_progress = ExtResource("7_0acwr")
+script = ExtResource("8_qib6k")
+virus3 = NodePath("..")
 
 [node name="capture_area" type="Area2D" parent="." groups=["slime"]]
-collision_layer = 3
-collision_mask = 3
+collision_layer = 2
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="capture_area" groups=["slime"]]
 position = Vector2(0, -33)
 shape = SubResource("CapsuleShape2D_254vk")
+debug_color = Color(0.945098, 0.235294, 0, 0.419608)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -4)
 scale = Vector2(-2.30846, -2.9571)
 shape = SubResource("CapsuleShape2D_4otu1")
 
+[node name="death_timer" type="Timer" parent="."]
+
+[connection signal="healthChanged" from="." to="TextureProgressBar" method="_on_virus_3_slime_health_changed"]
 [connection signal="animation_finished" from="AnimatedSprite2D2" to="." method="_on_animated_sprite_2d_2_animation_finished"]
 [connection signal="body_entered" from="detection_area" to="." method="_on_detection_area_body_entered"]
 [connection signal="body_exited" from="detection_area" to="." method="_on_detection_area_body_exited"]
 [connection signal="body_entered" from="capture_area" to="." method="_on_capture_area_body_entered"]
 [connection signal="body_exited" from="capture_area" to="." method="_on_capture_area_body_exited"]
+[connection signal="timeout" from="death_timer" to="." method="_on_death_timer_timeout"]

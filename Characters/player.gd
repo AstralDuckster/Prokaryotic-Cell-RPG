@@ -5,7 +5,10 @@ class_name Player
 signal healthChanged
 signal facing_direction_changed(facing_right: bool)
 signal knockback_to_enemy
+signal knockback_to_virus3
 signal decrease_enemy_health
+signal decrease_virus3_health
+signal stop_moving
 
 @export var SPEED = 400.0
 const GRAVITY = 700
@@ -33,7 +36,7 @@ var knockback_dir = Vector2()
 var knockback_wait = -1
 @export var dir = 1
 
-var isHurt: bool = false
+var isHurt = false
 var current_state
 
 enum State { Idle, Run, Jump, DoubleJump, Shoot, Attack1, Dead }
@@ -124,9 +127,15 @@ func player_attack(delta):
 			var parent = area.get_parent()
 			print(parent.name)
 			await get_tree().create_timer(0.4).timeout 
-			emit_signal("knockback_to_enemy")
-			emit_signal("decrease_enemy_health")
 			
+			if parent.name == "Virus1":
+				emit_signal("knockback_to_enemy")
+				emit_signal("decrease_enemy_health")
+			if parent.name == "virus_3_slime":
+				emit_signal("decrease_virus3_health")
+				emit_signal("knockback_to_virus3")
+			else:
+				pass
 func _on_deal_attack_timer_timeout():
 	attack_ip = false
 	
@@ -159,6 +168,7 @@ func _on_hurtbox_area_entered(area):
 		SPEED = 2
 		JUMP_HEIGHT = 2
 		is_trapped = true
+		emit_signal("stop_moving")
 		
 func _on_hurtbox_area_exited(area):
 	if area.is_in_group("slime") and is_trapped == true:

@@ -16,6 +16,8 @@ var current_state
 @onready var currentHealth: int = maxHealth
 
 var is_movement_enabled: bool = true
+var knockback
+var knockback_dir
 
 var player_chase = false
 var player = null
@@ -71,3 +73,32 @@ func _on_capture_area_body_entered(body):
 func _on_capture_area_body_exited(body):
 	if body.is_in_group("Player"):
 		player_chase = true
+
+func _on_player_decrease_virus_3_health():
+	var sword_damage = 10
+	print("Virus_3_Slime entered ")
+	currentHealth -= sword_damage
+	if currentHealth <= 0:
+		$AnimatedSprite2D2.modulate = Color.RED
+		$death_timer.start()
+
+	healthChanged.emit()
+	print_debug(currentHealth)
+	
+	$AnimatedSprite2D2.modulate = Color.RED
+	await get_tree().create_timer(0.1).timeout
+	$AnimatedSprite2D2.modulate = Color.WHITE
+
+func _on_player_knockback_to_virus_3():
+	var player_dir = get_parent().get_node("Player").dir
+	knockback_dir = player_dir
+	direction = knockback_dir * -1
+	knockback = true
+
+func _on_death_timer_timeout():
+	queue_free()
+
+func _on_player_stop_moving():
+	player_chase = false
+	$AnimationPlayer.queue("idle")
+	print("stop")

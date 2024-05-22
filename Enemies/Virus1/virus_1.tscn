@@ -1,8 +1,7 @@
-[gd_scene load_steps=34 format=3 uid="uid://cqkrhyonckpiu"]
+[gd_scene load_steps=33 format=3 uid="uid://cqkrhyonckpiu"]
 
 [ext_resource type="Script" path="res://Enemies/Virus1/virus_1.gd" id="1_eyodk"]
 [ext_resource type="Texture2D" uid="uid://b4k3lighpjag5" path="res://Enemies/Virus1/bacteria1idle.png" id="1_w56q2"]
-[ext_resource type="Script" path="res://Enemies/Virus1/Damageable.gd" id="3_j0jot"]
 [ext_resource type="Texture2D" uid="uid://ghmb7fkpwg82" path="res://UI/health_bar/healthbarUnder.png" id="4_3yhju"]
 [ext_resource type="Texture2D" uid="uid://6l2w4im6ayjt" path="res://UI/health_bar/healthbarProgress.png" id="5_owhvk"]
 [ext_resource type="Script" path="res://Enemies/Virus1/Virus1_HealthBar.gd" id="6_qvvmk"]
@@ -258,9 +257,6 @@ visibility_layer = 2
 position = Vector2(0, -29)
 shape = SubResource("CircleShape2D_748na")
 debug_color = Color(1, 0, 0.0901961, 0.419608)
-
-[node name="Damageable" type="Node" parent="."]
-script = ExtResource("3_j0jot")
 
 [node name="TextureProgressBar" type="TextureProgressBar" parent="." node_paths=PackedStringArray("virus1")]
 offset_left = -23.0

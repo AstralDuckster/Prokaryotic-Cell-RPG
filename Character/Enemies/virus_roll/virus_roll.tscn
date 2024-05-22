@@ -1,8 +1,7 @@
-[gd_scene load_steps=26 format=3 uid="uid://c77dop60ohldt"]
+[gd_scene load_steps=25 format=3 uid="uid://c77dop60ohldt"]
 
 [ext_resource type="Script" path="res://Character/Enemies/virus/virus.gd" id="1_p6dwt"]
 [ext_resource type="Texture2D" uid="uid://6lvvdxvojt11" path="res://Character/Enemies/virus_roll/blue bacteria atk.PNG" id="2_pigdk"]
-[ext_resource type="Script" path="res://Character/Enemies/virus/Damageable.gd" id="3_vlbme"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hok6j"]
 radius = 53.1507
@@ -155,7 +154,7 @@ animations = [{
 "speed": 10.0
 }]
 
-[node name="Node2D" type="Node2D"]
+[node name="VirusRoll" type="CharacterBody2D"]
 position = Vector2(305, 3)
 script = ExtResource("1_p6dwt")
 
@@ -170,6 +169,3 @@ position = Vector2(0, 3)
 sprite_frames = SubResource("SpriteFrames_d72a7")
 autoplay = "default"
 frame_progress = 0.750433
-
-[node name="Damageable" type="Node" parent="."]
-script = ExtResource("3_vlbme")

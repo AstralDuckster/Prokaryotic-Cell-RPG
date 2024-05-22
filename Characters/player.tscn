@@ -923,7 +923,7 @@ radius = 11.0
 height = 44.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_owi11"]
-size = Vector2(120.25, 69)
+size = Vector2(120.25, 46)
 
 [sub_resource type="Animation" id="Animation_jr2pq"]
 length = 0.001
@@ -1121,7 +1121,7 @@ player = NodePath("..")
 facing_shape = NodePath("CollisionShape2D")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Weapon"]
-position = Vector2(80.875, 2.5)
+position = Vector2(80.875, -9)
 shape = SubResource("RectangleShape2D_owi11")
 debug_color = Color(0.756863, 0.00392157, 0.94902, 0.419608)
 script = ExtResource("9_g6ys2")
