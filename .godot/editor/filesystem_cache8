@@ -145,7 +145,7 @@ Virus1_attack.gd::GDScript::-1::1716285608::0::1::::<>Area2D<>::
 virus.gd::GDScript::-1::1716353856::0::1::::<>CharacterBody2D<>::
 virus.tscn::PackedScene::597922987428026333::1716327442::0::1::::<><>::res://Character/Enemies/virus/virus.gd<>res://Character/Enemies/virus/Damageable.gd<>uid://clli7axeg7hux::::res://Art/Enemy/Virus_1/bacteria1idle.png<>uid://ds46oosf6j3ig::::res://Art/Enemy/Virus_1/bacteria1 attack.png<>res://Character/Player/CharacterStateMachine.gd<>res://Character/Player/State.gd<>res://Character/Player/HitState.gd
 Walk.gd::GDScript::-1::1716285608::0::1::::<>State<>::
-::res://Character/Enemies/virusslime/::1716354857
+::res://Character/Enemies/virusslime/::1716355036
 slime attack(slightly transparent).png::CompressedTexture2D::6367859030661135137::1716285608::1716326854::1::::<><>::
 slime end.PNG::CompressedTexture2D::3589586366356827564::1716326876::1716326876::1::::<><>::
 slime mid air.PNG::CompressedTexture2D::6446171453592588041::1716326876::1716326876::1::::<><>::
@@ -153,10 +153,10 @@ slime start.PNG::CompressedTexture2D::188726653690860925::1716326876::1716326876
 slimeidle sheet(slightly transparent).png::CompressedTexture2D::4671638914997912787::1716285608::1716326854::1::::<><>::
 slimeidle sheet.png::CompressedTexture2D::8324487309282643255::1716285608::1716326854::1::::<><>::
 Virus3_HealthBar.gd::GDScript::-1::1716353856::0::1::::<>TextureProgressBar<>::
-virus_3.tscn::PackedScene::560993948609936541::1716354857::0::1::::<><>::res://Enemies/virus_3.gd<>uid://cxokhjoxdbk4::::res://Character/Enemies/virusslime/slime start.PNG<>uid://cx3trcmkpg3q0::::res://Character/Enemies/virusslime/slime mid air.PNG<>uid://bre270idjtooq::::res://Character/Enemies/virusslime/slime end.PNG<>uid://dqupdb077gtdv::::res://Character/Enemies/virusslime/slimeidle sheet.png<>uid://ghmb7fkpwg82::::res://UI/health_bar/healthbarUnder.png<>uid://6l2w4im6ayjt::::res://UI/health_bar/healthbarProgress.png<>res://Character/Enemies/virusslime/Virus3_HealthBar.gd
-::res://Character/Enemies/virus_roll/::1716354857
+virus_3.tscn::PackedScene::560993948609936541::1716355036::0::1::::<><>::res://Enemies/virus_3.gd<>uid://cxokhjoxdbk4::::res://Character/Enemies/virusslime/slime start.PNG<>uid://cx3trcmkpg3q0::::res://Character/Enemies/virusslime/slime mid air.PNG<>uid://bre270idjtooq::::res://Character/Enemies/virusslime/slime end.PNG<>uid://dqupdb077gtdv::::res://Character/Enemies/virusslime/slimeidle sheet.png<>uid://ghmb7fkpwg82::::res://UI/health_bar/healthbarUnder.png<>uid://6l2w4im6ayjt::::res://UI/health_bar/healthbarProgress.png<>res://Character/Enemies/virusslime/Virus3_HealthBar.gd
+::res://Character/Enemies/virus_roll/::1716355027
 blue bacteria atk.PNG::CompressedTexture2D::2199875060667541218::1716327278::1716327281::1::::<><>::
-virus_roll.tscn::PackedScene::7085152440920190493::1716354857::0::1::::<><>::res://Character/Enemies/virus/virus.gd<>uid://6lvvdxvojt11::::res://Character/Enemies/virus_roll/blue bacteria atk.PNG
+virus_roll.tscn::PackedScene::7085152440920190493::1716355027::0::1::::<><>::res://Character/Enemies/virus/virus.gd<>uid://6lvvdxvojt11::::res://Character/Enemies/virus_roll/blue bacteria atk.PNG
 ::res://Character/Player/::1716285608
 AirState.gd::GDScript::-1::1716285608::0::1::::AirState<>State<>::
 Attack.gd::GDScript::-1::1716285608::0::1::::<>State<>::
@@ -170,11 +170,11 @@ player.tscn::PackedScene::2868701488508856280::1716285608::0::1::::<><>::res://C
 State.gd::GDScript::-1::1716285608::0::1::::State<>Node<>::
 StateDebugLabel.gd::GDScript::-1::1716285608::0::1::::<>Label<>::
 Sword.gd::GDScript::-1::1716285608::0::1::::<>Area2D<>::
-::res://Characters/::1716354857
+::res://Characters/::1716355027
 FacingCollisionShape2D.gd::GDScript::-1::1716285608::0::1::::FacingCollisionShape2D<>CollisionShape2D<>::
-MeleeArea.gd::GDScript::-1::1716354140::0::1::::<>Area2D<>::
-player.gd::GDScript::-1::1716353856::0::1::::Player<>CharacterBody2D<>::
-player.tscn::PackedScene::642085310085966193::1716354857::0::1::::<><>::res://Characters/player.gd<>uid://spiuefb8asmj::::res://Characters/Attack-01/set 1 only sprite set.PNG<>uid://dre6acmk5xdyh::::res://Characters/Idle/idle_sprite_sheet.png<>uid://b4qqv50x8seri::::res://Characters/Jump/Jump-all Sprite Set.PNG<>uid://bcoqb2g4k4580::::res://Characters/Attack-02/attack_2.PNG<>uid://nlybobr2ata1::::res://Characters/Jump-End/Jump-End-Sheet.png<>uid://yu12cfad11i3::::res://Characters/Run/running sprite sheet.PNG<>uid://byoiqy4snkf4o::::res://Characters/Jump-Start/Jump-Start-Sheet.png<>uid://xj1kkfu331hj::::res://Characters/Run-Shoot/player-run-shoot.png<>uid://b30sysxcu1y5x::::res://fx/Player_FX/small_sting.png<>res://Characters/FacingCollisionShape2D.gd<>res://Characters/MeleeArea.gd<>uid://cgpn54tkf3jqy::::res://Characters/Faint/faint sprite set.png
+MeleeArea.gd::GDScript::-1::1716354919::0::1::::<>Area2D<>::
+player.gd::GDScript::-1::1716355027::0::1::::Player<>CharacterBody2D<>::
+player.tscn::PackedScene::642085310085966193::1716355027::0::1::::<><>::res://Characters/player.gd<>uid://spiuefb8asmj::::res://Characters/Attack-01/set 1 only sprite set.PNG<>uid://dre6acmk5xdyh::::res://Characters/Idle/idle_sprite_sheet.png<>uid://b4qqv50x8seri::::res://Characters/Jump/Jump-all Sprite Set.PNG<>uid://bcoqb2g4k4580::::res://Characters/Attack-02/attack_2.PNG<>uid://nlybobr2ata1::::res://Characters/Jump-End/Jump-End-Sheet.png<>uid://yu12cfad11i3::::res://Characters/Run/running sprite sheet.PNG<>uid://byoiqy4snkf4o::::res://Characters/Jump-Start/Jump-Start-Sheet.png<>uid://xj1kkfu331hj::::res://Characters/Run-Shoot/player-run-shoot.png<>uid://b30sysxcu1y5x::::res://fx/Player_FX/small_sting.png<>res://Characters/FacingCollisionShape2D.gd<>res://Characters/MeleeArea.gd<>uid://cgpn54tkf3jqy::::res://Characters/Faint/faint sprite set.png
 ::res://Characters/Attack-01/::1716285608
 all atk sprites (set).PNG::CompressedTexture2D::3950528156417226625::1716285608::1716285608::1::::<><>::
 first set only sheet.png::CompressedTexture2D::2469036650608212382::1716285608::1716285608::1::::<><>::
@@ -200,23 +200,25 @@ Jump-Start-Sheet.png::CompressedTexture2D::4100369834402666524::1716285608::1716
 running sprite sheet.PNG::CompressedTexture2D::1727446773417116628::1716285608::1716285608::1::::<><>::
 ::res://Characters/Run-Shoot/::1716285608
 player-run-shoot.png::CompressedTexture2D::1634519837117040063::1716285608::1716285608::1::::<><>::
-::res://Enemies/::1716353856
+::res://Enemies/::1716355579
 enemy_needle.tscn::PackedScene::8265545128412189595::1716285608::0::1::::<><>::uid://dwphv7j2vql0q::::res://Enemies/Needle.png<>uid://df4ttf0mssadb::::res://Enemies/NeedleMound.png
 enemy_slime.gd::GDScript::-1::1716285608::0::1::::<>CharacterBody2D<>::
 enemy_slime.tscn::PackedScene::8685993971472073063::1716285608::0::1::::<><>::res://Enemies/enemy_slime.gd<>uid://bttvmeqe7hha8::::res://Enemies/slime.png<>uid://bpng8lcelk51y::::res://Assets/virus.png
 Needle.png::CompressedTexture2D::8734846493954186622::1716285608::1716285608::1::::<><>::
 NeedleMound.png::CompressedTexture2D::7571261078890802263::1716285608::1716285608::1::::<><>::
+slime attack(slightly transparent).png::CompressedTexture2D::1960150110933390955::1716355429::1716355580::1::::<><>::
+slime sheet.png::CompressedTexture2D::7222337718668321982::1716355431::1716355580::1::::<><>::
 slime.png::CompressedTexture2D::3760528611552865525::1716285608::1716285608::1::::<><>::
 virus_2.gd::GDScript::-1::1716327103::0::1::::Virus_2<>CharacterBody2D<>::
 virus_3.gd::GDScript::-1::1716353856::0::1::::Virus_3<>CharacterBody2D<>::
-::res://Enemies/Virus1/::1716354857
+::res://Enemies/Virus1/::1716355027
 bacteria1 attack.png::CompressedTexture2D::7051081360408304126::1716285608::1716285608::1::::<><>::
 bacteria1idle.png::CompressedTexture2D::4444261076061127426::1716285608::1716285608::1::::<><>::
 Node.gd::GDScript::-1::1716285608::0::1::::<>RefCounted<>::
 Virus1_attack.gd::GDScript::-1::1716285608::0::1::::<>Area2D<>::
 Virus1_HealthBar.gd::GDScript::-1::1716285608::0::1::::<>TextureProgressBar<>::
 virus_1.gd::GDScript::-1::1716285608::0::1::::Virus_1<>CharacterBody2D<>::
-virus_1.tscn::PackedScene::5917552615351091312::1716354857::0::1::::<><>::res://Enemies/Virus1/virus_1.gd<>uid://b4k3lighpjag5::::res://Enemies/Virus1/bacteria1idle.png<>uid://ghmb7fkpwg82::::res://UI/health_bar/healthbarUnder.png<>uid://6l2w4im6ayjt::::res://UI/health_bar/healthbarProgress.png<>res://Enemies/Virus1/Virus1_HealthBar.gd<>uid://c7pujrqo702ec::::res://Enemies/Virus1/bacteria1 attack.png
+virus_1.tscn::PackedScene::5917552615351091312::1716355027::0::1::::<><>::res://Enemies/Virus1/virus_1.gd<>uid://b4k3lighpjag5::::res://Enemies/Virus1/bacteria1idle.png<>uid://ghmb7fkpwg82::::res://UI/health_bar/healthbarUnder.png<>uid://6l2w4im6ayjt::::res://UI/health_bar/healthbarProgress.png<>res://Enemies/Virus1/Virus1_HealthBar.gd<>uid://c7pujrqo702ec::::res://Enemies/Virus1/bacteria1 attack.png
 Wander.gd::GDScript::-1::1716285608::0::1::::<>RefCounted<>::
 ::res://fx/::1716285608
 bullet.tscn::PackedScene::5210197906376981786::1716285608::0::1::::<><>::uid://d3pqt7ut6du4h::::res://fx/shot.png
@@ -226,10 +228,10 @@ small_slash_2.png::CompressedTexture2D::8545051565550332038::1716285608::1716285
 small_sting.png::CompressedTexture2D::4404454495402468483::1716285608::1716285608::1::::<><>::
 ::res://HUD/::1716285608
 Base-01.png::CompressedTexture2D::2338104455004281644::1716285608::1716285608::1::::<><>::
-::res://Levels/::1716354903
+::res://Levels/::1716355234
 AnimationPlayer.gd::GDScript::-1::1716285608::0::1::::<>AnimationPlayer<>::
 base_level.gd::GDScript::-1::1716353526::0::1::::<>Node2D<>::
-base_level.tscn::PackedScene::1404962825927599650::1716354903::0::1::::<><>::res://Levels/base_level.gd<>uid://jfbb0iht2n34::::res://Characters/player.tscn<>uid://dba3i15d2svj::::res://Background/map_1.tscn<>uid://b70pjn5cijl4n::::res://UI/hearts_container.tscn<>uid://ghmb7fkpwg82::::res://UI/health_bar/healthbarUnder.png<>res://UI/health_bar/health_bar.gd<>uid://6l2w4im6ayjt::::res://UI/health_bar/healthbarProgress.png<>uid://h80qus7h807b::::res://Character/Enemies/virusslime/virus_3.tscn<>uid://cqkrhyonckpiu::::res://Enemies/Virus1/virus_1.tscn<>uid://c12eruh4gxl3n::::res://Scripts/transitioner.tscn<>res://Levels/CheckButton.gd
+base_level.tscn::PackedScene::1404962825927599650::1716355234::0::1::::<><>::res://Levels/base_level.gd<>uid://jfbb0iht2n34::::res://Characters/player.tscn<>uid://dba3i15d2svj::::res://Background/map_1.tscn<>uid://b70pjn5cijl4n::::res://UI/hearts_container.tscn<>uid://ghmb7fkpwg82::::res://UI/health_bar/healthbarUnder.png<>res://UI/health_bar/health_bar.gd<>uid://6l2w4im6ayjt::::res://UI/health_bar/healthbarProgress.png<>uid://h80qus7h807b::::res://Character/Enemies/virusslime/virus_3.tscn<>uid://cqkrhyonckpiu::::res://Enemies/Virus1/virus_1.tscn<>uid://c12eruh4gxl3n::::res://Scripts/transitioner.tscn<>res://Levels/CheckButton.gd
 CheckButton.gd::GDScript::-1::1716285608::0::1::::<>CheckButton<>::
 level_1.tscn::PackedScene::4831683762949657602::1716326696::0::1::::<><>::uid://djvfxrcs2qr14::::res://Background/parallax_map.tscn<>uid://dqegty8d5heqv::::res://Background/ground.tscn<>uid://jfbb0iht2n34::::res://Characters/player.tscn<>uid://dw4ehd5c4fhrt::::res://Background/elevations_2.tscn
 ParallaxBackground.gd::GDScript::-1::1716285608::0::1::::<>RefCounted<>::
@@ -298,10 +300,11 @@ main_menu.gd::GDScript::-1::1716285608::0::1::::Mainmenu<>Control<>::
 main_menu.tscn::PackedScene::352071566427983976::1716285608::0::1::::<><>::uid://6or5qfixty57::::res://Assets/SuperPixel-m2L8j.ttf<>res://UI/main_menu.gd
 youdied.gd::GDScript::-1::1716285608::0::1::::<>Control<>::
 youdied.tscn::PackedScene::6600841565493565491::1716285608::0::1::::<><>::uid://fastj0u8tono::::res://UI/main_menu.tscn<>res://UI/youdied.gd<>res://UI/Label.gd
-::res://UI/health_bar/::1716354140
+::res://UI/health_bar/::1716355499
 healthbarProgress.png::CompressedTexture2D::2200242490466532757::1716285608::1716285608::1::::<><>::
 healthbarUnder.png::CompressedTexture2D::436315784760213941::1716285608::1716285608::1::::<><>::
-health_bar.gd::GDScript::-1::1716354140::0::1::::<>TextureProgressBar<>::
+health_bar.gd::GDScript::-1::1716354919::0::1::::<>TextureProgressBar<>::
 health_bar.tscn::PackedScene::3778861483518665085::1716285608::0::1::::<><>::uid://c8158dlix2j4::::res://UI/health_bar/heart_1.png<>res://UI/health_bar/health_bar.gd<>uid://be4odq7riy73b::::res://UI/health_bar/heart_0.png
 heart_0.png::CompressedTexture2D::2727899298984827033::1716285608::1716285608::1::::<><>::
 heart_1.png::CompressedTexture2D::210136107205496211::1716285608::1716285608::1::::<><>::
+slime attack(slightly transparent).png::CompressedTexture2D::880607871935745838::1716355498::1716355499::1::::<><>::
