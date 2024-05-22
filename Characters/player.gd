@@ -157,24 +157,42 @@ func _on_puff_timer_timeout():
 	can_be_puffed = true
 	
 func _on_hurtbox_area_entered(area):
-	var puff_damage = 5
+	var puff_damage = 10
 	if area.is_in_group("Enemy_puff") and can_be_puffed == false:
 		print("damage detected")
 		currentHealth -= puff_damage
 		healthChanged.emit()
 		
+		if currentHealth <= 0:
+			current_state = State.Dead
+			get_tree().call_group("Player", "die")
+		
 	if area.is_in_group("slime") and is_trapped == false:
 		print("captured")
+		var slime_damage = 1
 		SPEED = 2
 		JUMP_HEIGHT = 2
 		is_trapped = true
 		emit_signal("stop_moving")
+		currentHealth -= slime_damage
+		healthChanged.emit()
+		await get_tree().create_timer(0.2).timeout
+		currentHealth -= slime_damage
+		healthChanged.emit()
+		await get_tree().create_timer(0.2).timeout
+		currentHealth -= slime_damage
+		healthChanged.emit()
+		await get_tree().create_timer(0.2).timeout
+		currentHealth -= slime_damage
+		healthChanged.emit()
+		await get_tree().create_timer(0.2).timeout
 		
 func _on_hurtbox_area_exited(area):
 	if area.is_in_group("slime") and is_trapped == true:
 		is_trapped = false
 		SPEED = 400
 		JUMP_HEIGHT = -500
+		
 	
 func player_knockback():
 	velocity.y -= knockbackPower * 0.2
@@ -211,7 +229,7 @@ func die():
 	
 func reset_game():
 	maxHealth = 30
-	get_tree().change_scene_to_file("res://UI/youdied.tscn")
+	get_tree().change_scene_to_file("res://UI/youdied.tscn") 
 
 
 func _on_chasm_body_entered(body):
@@ -219,3 +237,7 @@ func _on_chasm_body_entered(body):
 		print("fallen")
 		currentHealth -= 100
 		healthChanged.emit()
+		
+		if currentHealth <= 0:
+			current_state = State.Dead
+			get_tree().call_group("Player", "die")
