@@ -131,7 +131,7 @@ func player_attack(delta):
 			if parent.name == "Virus1":
 				emit_signal("knockback_to_enemy")
 				emit_signal("decrease_enemy_health")
-			if parent.name == "virus_3_slime":
+			if parent.name == "virus_slime":
 				emit_signal("decrease_virus3_health")
 				emit_signal("knockback_to_virus3")
 			else:

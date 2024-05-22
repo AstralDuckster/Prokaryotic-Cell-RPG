@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://uatsdsobdsdm"]
+[gd_scene load_steps=14 format=3 uid="uid://uatsdsobdsdm"]
 
 [ext_resource type="Script" path="res://Levels/base_level.gd" id="1_uwduk"]
 [ext_resource type="PackedScene" uid="uid://jfbb0iht2n34" path="res://Characters/player.tscn" id="2_fyndp"]
@@ -9,13 +9,12 @@
 [ext_resource type="Texture2D" uid="uid://6l2w4im6ayjt" path="res://UI/health_bar/healthbarProgress.png" id="11_mw32i"]
 [ext_resource type="PackedScene" uid="uid://h80qus7h807b" path="res://Character/Enemies/virusslime/virus_3.tscn" id="12_2pbpn"]
 [ext_resource type="PackedScene" uid="uid://cqkrhyonckpiu" path="res://Enemies/Virus1/virus_1.tscn" id="13_saadn"]
-[ext_resource type="PackedScene" uid="uid://c77dop60ohldt" path="res://Character/Enemies/virus_roll/virus_roll.tscn" id="15_tkhjy"]
 [ext_resource type="PackedScene" uid="uid://c12eruh4gxl3n" path="res://Scripts/transitioner.tscn" id="15_v657u"]
 [ext_resource type="Script" path="res://Levels/CheckButton.gd" id="16_adusq"]
 
 [sub_resource type="Animation" id="Animation_6pyex"]
 resource_name = "movement"
-length = 5.0
+length = 3.5
 loop_mode = 2
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -24,10 +23,10 @@ tracks/0/path = NodePath(".:position")
 tracks/0/interp = 2
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 1.3, 3.2, 5),
+"times": PackedFloat32Array(0.1, 1.2, 2.2, 3.3),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(543.75, -803.75), Vector2(441.25, -796.25), Vector2(152.5, -827.5), Vector2(-72.4999, -802.5)]
+"values": [Vector2(1601.25, -757.5), Vector2(1413.75, -696.25), Vector2(1172.5, -740), Vector2(980, -692.5)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_7kx4i"]
@@ -44,7 +43,7 @@ script = ExtResource("1_uwduk")
 position = Vector2(-66.25, -405)
 
 [node name="Player" parent="." instance=ExtResource("2_fyndp")]
-position = Vector2(-116.25, -463.75)
+position = Vector2(-1716.25, -835)
 scale = Vector2(2, 2)
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player"]
@@ -76,7 +75,7 @@ script = ExtResource("10_f7sd1")
 player = NodePath("../../Player")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(-116.25, -463.75)
+position = Vector2(-1716.25, -835)
 scale = Vector2(2, 2)
 offset = Vector2(0, -33)
 ignore_rotation = false
@@ -92,12 +91,12 @@ drag_horizontal_offset = 0.12
 drag_vertical_offset = -0.06
 editor_draw_limits = true
 
-[node name="virus_3_slime" parent="." instance=ExtResource("12_2pbpn")]
+[node name="virus_slime" parent="." instance=ExtResource("12_2pbpn")]
 position = Vector2(398.75, -416.25)
 scale = Vector2(2, 2)
 
 [node name="Virus1" parent="." groups=["Hit"] instance=ExtResource("13_saadn")]
-position = Vector2(216.797, -823.521)
+position = Vector2(1091.66, -728.868)
 scale = Vector2(1.5, 1.5)
 
 [node name="AnimationPlayer2" type="AnimationPlayer" parent="Virus1"]
@@ -123,12 +122,9 @@ focus_mode = 0
 script = ExtResource("16_adusq")
 transitioner = NodePath("../Transition")
 
-[node name="Node2D" parent="." instance=ExtResource("15_tkhjy")]
-visible = false
-
 [connection signal="decrease_enemy_health" from="Player" to="Virus1" method="_on_player_decrease_enemy_health"]
-[connection signal="decrease_virus3_health" from="Player" to="virus_3_slime" method="_on_player_decrease_virus_3_health"]
+[connection signal="decrease_virus3_health" from="Player" to="virus_slime" method="_on_player_decrease_virus_3_health"]
 [connection signal="knockback_to_enemy" from="Player" to="Virus1" method="_on_player_knockback_to_enemy"]
-[connection signal="knockback_to_virus3" from="Player" to="virus_3_slime" method="_on_player_knockback_to_virus_3"]
-[connection signal="stop_moving" from="Player" to="virus_3_slime" method="_on_player_stop_moving"]
+[connection signal="knockback_to_virus3" from="Player" to="virus_slime" method="_on_player_knockback_to_virus_3"]
+[connection signal="stop_moving" from="Player" to="virus_slime" method="_on_player_stop_moving"]
 [connection signal="toggled" from="CanvasLayer/TransitionButton" to="CanvasLayer/TransitionButton" method="_on_toggled"]
