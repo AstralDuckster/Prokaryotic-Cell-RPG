@@ -80,8 +80,8 @@ func _on_player_decrease_virus_3_health():
 	currentHealth -= sword_damage
 	if currentHealth <= 0:
 		$AnimatedSprite2D2.modulate = Color.RED
-		$death_timer.start()
-
+		queue_free()
+		
 	healthChanged.emit()
 	print_debug(currentHealth)
 	
@@ -94,9 +94,6 @@ func _on_player_knockback_to_virus_3():
 	knockback_dir = player_dir
 	direction = knockback_dir * -1
 	knockback = true
-
-func _on_death_timer_timeout():
-	queue_free()
 
 func _on_player_stop_moving():
 	player_chase = false
