@@ -1,5 +1,6 @@
-res://Levels/base_level.tscn
+res://Character/Enemies/virusslime/virus_3.tscn
 res://Characters/MeleeArea.gd
 res://UI/health_bar/health_bar.gd
-res://Characters/player.gd
+res://Levels/base_level.tscn
 res://Characters/player.tscn
+res://Characters/player.gd

@@ -24,6 +24,10 @@ HealthManager="*res://Scripts/health_manager.gd"
 window/stretch/aspect="expand"
 window/stretch/scale=1.6
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/gut/plugin.cfg")
+
 [input]
 
 up={

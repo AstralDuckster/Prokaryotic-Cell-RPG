@@ -40,19 +40,21 @@ var isHurt = false
 var current_state
 
 enum State { Idle, Run, Jump, DoubleJump, Shoot, Attack1, Dead }
+var had_been_called = false
 
 func _ready():
 	current_state = State.Idle
+	
 		
 func _physics_process(delta):
 	move_and_slide()
 	player_falling(delta)
 	player_idle(delta)
 	player_run(delta)
-	player_jump(delta)
 	player_attack(delta)
-	
-	
+	player_jump(delta)
+
+		
 	player_animations()
 	
 	print("State: ",State.keys()[current_state])
@@ -64,8 +66,12 @@ func player_falling(delta):
 		velocity.y += GRAVITY * delta
 		
 func player_idle(delta):
+	if had_been_called == false:
+		print("Current Position: ",position.x)
+		had_been_called = true
 	if is_on_floor() and is_alive:
 		current_state = State.Idle
+		
 
 func player_run(delta):
 	if !is_on_floor():

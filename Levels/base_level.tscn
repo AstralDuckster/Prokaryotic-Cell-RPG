@@ -129,7 +129,6 @@ transitioner = NodePath("../Transition")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="chasm"]
 position = Vector2(3646.25, 140)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_ou3dy")
 
 [connection signal="decrease_enemy_health" from="Player" to="Virus1" method="_on_player_decrease_enemy_health"]
@@ -138,5 +137,5 @@ shape = SubResource("RectangleShape2D_ou3dy")
 [connection signal="knockback_to_virus3" from="Player" to="virus_slime" method="_on_player_knockback_to_virus_3"]
 [connection signal="stop_moving" from="Player" to="virus_slime" method="_on_player_stop_moving"]
 [connection signal="toggled" from="CanvasLayer/TransitionButton" to="CanvasLayer/TransitionButton" method="_on_toggled"]
-[connection signal="body_entered" from="chasm" to="Player" method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="chasm" to="Player" method="_on_chasm_body_entered"]
+[connection signal="body_entered" from="chasm" to="Player" method="_on_area_2d_body_entered"]

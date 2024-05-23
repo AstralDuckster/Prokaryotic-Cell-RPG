@@ -61,7 +61,7 @@ func _on_player_decrease_enemy_health():
 	$AnimationPlayer.play("attacked")
 	
 	if currentHealth == 0:
-		$death_timer.start()
+		queue_free()
 		$AnimationPlayer.play("attack")	
 		
 	healthChanged.emit()
