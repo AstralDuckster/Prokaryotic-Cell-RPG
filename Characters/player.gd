@@ -89,16 +89,6 @@ func player_run(delta):
 		$AnimatedSprite2D.flip_h = velocity.x < 0
 		$AnimatedSprite2D/fx.flip_h = velocity.x < 0
 	
-	if had_been_called == false:
-		print("Starting Position: ",position.x)
-		had_been_called = true
-		await get_tree().create_timer(5).timeout 
-		print("Ending Position: ",position.x)
-		print(" ")
-		currentHealth -= 10
-		healthChanged.emit()
-		if currentHealth == maxHealth:
-			had_been_called = false
 				
 	if Input.is_action_pressed("right") and is_alive:
 		dir = 1
@@ -118,11 +108,15 @@ func player_jump(delta):
 			velocity.x = direction * JUMP_VELOCITY
 			can_double_jump = true
 			current_state = State.Jump
+			print("Starting position: ", position.y)
+			
 		elif !is_on_floor() and can_double_jump == true:
 			velocity.y = DOUBLE_JUMP
 			velocity.x = direction * DOUBLE_JUMP_VELOCITY
 			current_state = State.DoubleJump
 			can_double_jump = false
+			print("Ending position: ", position.y)
+			
 
 	#One way fall
 	if Input.is_action_just_pressed("down") and is_on_floor() and is_alive:
