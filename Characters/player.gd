@@ -41,6 +41,7 @@ var current_state
 
 enum State { Idle, Run, Jump, DoubleJump, Shoot, Attack1, Dead }
 var had_been_called = false
+var had_ran : bool = false
 
 func _ready():
 	current_state = State.Idle
@@ -66,12 +67,9 @@ func player_falling(delta):
 		velocity.y += GRAVITY * delta
 		
 func player_idle(delta):
-	if had_been_called == false:
-		print("Current Position: ",position.x)
-		had_been_called = true
 	if is_on_floor() and is_alive:
 		current_state = State.Idle
-		
+	
 
 func player_run(delta):
 	if !is_on_floor():
@@ -86,10 +84,22 @@ func player_run(delta):
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	if direction != 0 and is_alive:
+		had_ran = true
 		current_state = State.Run
 		$AnimatedSprite2D.flip_h = velocity.x < 0
 		$AnimatedSprite2D/fx.flip_h = velocity.x < 0
-		
+	
+	if had_been_called == false:
+		print("Starting Position: ",position.x)
+		had_been_called = true
+		await get_tree().create_timer(5).timeout 
+		print("Ending Position: ",position.x)
+		print(" ")
+		currentHealth -= 10
+		healthChanged.emit()
+		if currentHealth == maxHealth:
+			had_been_called = false
+				
 	if Input.is_action_pressed("right") and is_alive:
 		dir = 1
 	if Input.is_action_pressed("left") and is_alive:

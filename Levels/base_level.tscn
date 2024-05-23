@@ -46,7 +46,7 @@ script = ExtResource("1_uwduk")
 position = Vector2(-66.25, -405)
 
 [node name="Player" parent="." instance=ExtResource("2_fyndp")]
-position = Vector2(-1700, -840)
+position = Vector2(-1700, -806.25)
 scale = Vector2(2, 2)
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="Player"]
@@ -78,7 +78,7 @@ script = ExtResource("10_f7sd1")
 player = NodePath("../../Player")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(-1700, -840)
+position = Vector2(-1700, -806.25)
 scale = Vector2(2, 2)
 offset = Vector2(0, -33)
 ignore_rotation = false

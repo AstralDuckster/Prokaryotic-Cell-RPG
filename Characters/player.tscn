@@ -1081,7 +1081,6 @@ _data = {
 script = ExtResource("1_n1yer")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(2.38419e-07, 3)
 scale = Vector2(0.93125, 1.01744)
 sprite_frames = SubResource("SpriteFrames_wn4u2")
 animation = &"attack1"
